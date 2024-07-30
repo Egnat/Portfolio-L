@@ -3096,7 +3096,6 @@ canvas {
 
 .pg-horisont-accordion {
   width: 100%;
-  text-align: justify;
   word-wrap: break-word;
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
