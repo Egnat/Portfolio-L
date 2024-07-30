@@ -1,0 +1,13 @@
+body {
+  /*margin: 0;*/
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Unbounded',
+    'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;/*https://de.wikipedia.org/wiki/Antialiasing_(Computergrafik)*/
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, 'Menlo', 'Monaco', 'Consolas', 'Courier New',
+  'Lucida Console', 'Mono Lisa' ,monospace;
+}

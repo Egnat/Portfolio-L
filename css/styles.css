@@ -1,0 +1,885 @@
+/*СкиллФэктори SASS, SCSS https://apps.skillfactory.ru/learning/course/course-v1:Skillfactory+FR+2020/block-v1:Skillfactory+FR+2020+type@sequential+block@60f23eb56d1b4eacace9c2f7c291b31b/block-v1:Skillfactory+FR+2020+type@vertical+block@d4daed27e5ac4f88a3d55cff7035cc47
+Подключение через @import https://apps.skillfactory.ru/learning/course/course-v1:Skillfactory+FR+2020/block-v1:Skillfactory+FR+2020+type@sequential+block@e371d1d18a024171bd3a57713cc89b51/block-v1:Skillfactory+FR+2020+type@vertical+block@9f8019edf1ed421db8b309d1ace18ff9
+А Сокирко. Быть программистом Штуки для фото и текста https://www.youtube.com/watch?v=VaVpUHUM8JU&list=PLVTUJUbFu7UeD0HL7zOgkoe7fu_n0chaA&index=89*/
+
+/*FILTERS
+Благодаря свойству backdrop-filter в CSS, вы можете применить фильтры к 
+элементу, который находится за ним, создавая уникальные и привлекательные
+визуальные эффекты.
+
+Может принимать следующие значения:
+
+• none — фильтры не применяются (по умолчанию)
+• blur (px) — размывает элемент
+• brightness (%) — изменяет яркость 
+• contrast (%) — изменяет контрастность  
+• grayscale (%) — преобразует элемент в оттенки серого 
+• hue-rotate (градус) — вращает цветной круг элемента
+• invert (%) — инвертирует цвета  
+• opacity (percentage) — изменяет прозрачность  
+• saturate (%) — изменяет насыщенность цветов 
+• sepia (%) — применяет сепийный фильтр к элементу*/
+
+/*1rem=10px
+2rem=20px и так далее
+
+Размер 1em зависит от размера шрифта элемента, для которого он задан.
+По умолчанию 1em равен размеру текущего шрифта в пикселях. Например,
+если размер текста 16пикселей, то:
+1em = 16пикселей
+0.5em = 8пикселей
+1.5em = 24пикселя
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('..fonts/font.css');
+
+@import url('index.css');/*можно писать и в кавычках и без*/
+
+@import "variables";
+
+/* Основные стили */
+
+::-webkit-scrollbar {
+  width:.1px;
+  height:5px;
+  pacity:.02
+  }
+  
+  ::-webkit-scrollbar-button {
+  height:50px;
+  background:#42e10e
+  }
+  
+  ::-webkit-scrollbar-track {
+  background:#274dd7
+  }
+  
+  ::-webkit-scrollbar-track-piece {
+  background:#e91e63
+  }
+  
+  ::-webkit-scrollbar-thumb {
+  background:#fbe100;
+  border-radius:10px;
+  -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3)
+  }
+
+section {
+  margin-top: 130px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-size: 3em;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0;
+  color: #FDFDFD;
+}
+
+/*От 0 до 1 https://www.youtube.com/watch?v=AvMusILfIdQ&list=PLVTUJUbFu7UeD0HL7zOgkoe7fu_n0chaA&index=2*/
+/*html, body { 
+  idth: 100%;
+  min-height: 100%;когда вот так, всё хорошо, если просто видз,
+  то штмл и боди показываются на половину
+  } тогда делаем wrapper, обёртку для header, main footer. main {flex-grow:1;}*/
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+.body-home {
+  /*Живой градиент*/
+  background: linear-gradient(245deg, #64b5f6, #81c784, #ffeb3b, #ff8a65);/*245deg,*/
+  background-size: 400% 400%;
+  animation: gradientAnimation 7s ease infinite;
+  ackground: linear-gradient(245deg, #004882, #07580b, #0b0a00, #3d340c);
+  /*////////////////////////////////////////////*/
+  ackground-image: linear-gradient(0deg, #353535, silver, white, white, white);/*классный градиент не живой*/
+
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  font-weight: 400px;
+  font-style: normal;
+}
+
+@keyframes gradientAnimation {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+  
+.header {
+  position: sticky;/*fixed*/
+  width: 100%;
+  top: 0;
+  left: 0;
+  adding: 15px 20px;
+  background-color: #333;
+  olor: #FDFDFD;
+  z-index: 1000;
+}
+
+.header-container-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.logo {
+  display: flex;
+  lex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10p;
+}
+
+.block-h3-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+.h3-logo {
+  font-family: 'Righteous', sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  font-size: normal;
+  color: #FDFDFD;
+}
+
+.nav-list-desktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-item-list-desktop, .nav-item-list-mobile {
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  color: #FDFDFD;
+  text-decoration: none;
+}
+
+.social-link {
+  display: block;
+  text-decoration: none;
+}
+
+.nav-mobile {
+  display: none;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #FDFDFD;
+}
+
+.container-social-icons-desktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.sectionOne-container-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 40p;
+  gap: 50px;
+}
+
+.offer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0px;
+}
+
+.block-main-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+  
+.h1-main-text {
+  width: 100%;
+  margin: 0;
+  webkit-text-stroke: 2px #000000;/*сделть текст жирнее*/
+  ext-shadow: 
+  -1px -1px 0 black,
+  1px -1px 0 black,
+  -1px 1px 0 black,
+  1px 1px 0 black;
+  ext-shadow: 2px 2px 0 black;
+  ext-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+  ine-height: calc(16vh / 4);/*Растягивает текст на всю высоту контейнера, 
+  регулировать нужно 16vh*/
+  color: #FDFDFD;
+  font-family: 'Playfair Display';/*Markazi Cremona Text Playfair Display Righteous*/
+  font-size: 11em;/*176px 11x16
+  Размер в пикселях = Размер в em * Базовый размер шрифта в пикселях
+  Где:
+  Базовый размер шрифта в пикселях по умолчанию = 16px
+  1em = размеру базового шрифта
+  2em = 2 * размеру базового шрифта
+  0.5em = половина размера базового шрифта*/
+  font-weight: 900;
+  line-height: 114%;
+  letter-spacing: 8px;
+  text-align: justify;
+  word-wrap: break-word;
+  hyphens: auto;
+  order: 2;
+
+  & > .span {
+    color:#28004d;
+  }
+}
+
+.block-of-specialties {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  order: 1;
+}
+
+.h4-main-text {
+  idth: 20%;
+  font-size: 20px;
+  text-transform: uppercase;
+  color:#28004d;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.h2-main-text {
+  font-size: 4em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #FDFDFD;
+  word-wrap: break-word;
+  hyphens: auto;
+  opacity: 0.7;
+}
+
+.h2-main-text::selection {
+  background-color: #FDFDFD;
+  color: #333;
+}
+
+.section-descriptionOfSpecialties {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 50px;
+}
+
+.filter-myPhoto {
+  display: flex;
+  width: auto;
+  height: 600px;/*auto*/
+  background-color: #353535;
+  overflow: hidden;
+  width: 700px;
+}
+
+.myPhoto {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-grow: 1;
+}
+
+.flex-item:nth-child(1) {
+  flex-grow: 4; /* Первый элемент растет в 4 раза быстрее остальных Пример в проекте chat-from-skillfactory-burger*/
+}
+
+.blockGretting.wrapp-chat {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 87%;
+  gap: 20px;
+}
+
+.h4-gretting {
+  font-size: 24px;
+  color:#FDFDFD;
+}
+
+.block-paragraphs-gretting {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+
+.pg-gretting {
+  text-align: justify;
+  color: #28004d;
+}
+
+pg-gretting-4 {
+  /*можно сделать в моб версии
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: horizontal;
+  -webkit-line-clamp: 1;*/
+}
+
+.btnCTA.tech-service {
+  osition: absolute;
+  display: block;
+  width: 120p;
+  height: 30p;
+  right: 1em;
+  bottom: 1em;
+  background-color: transparent;
+  border: none;
+}
+tech-service {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+}
+
+.cta.tech-service-btn {
+  width: 170px;
+  min-height: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  font-family: inherit;
+}
+tech-service-btn {
+  width: 140px;
+  font-family: inherit;
+  padding: 10px;
+  min-height: 40px;
+  background-color: #151314;
+  color: #ede7e8;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chat-message {
+  margin-bottom: 15px;
+  /*text-overflow: ellipsis;
+  -webkit-box-orient: horizontal;
+  -webkit-line-clamp: 1;*/
+}
+
+.chat-message-content {
+  display: inline-block;
+  /*text-overflow: ellipsis;
+  -webkit-box-orient: horizontal;
+  -webkit-line-clamp: 1;*/
+}
+
+.chat-input {
+  width: 100%;
+  min-height: 30px;
+  padding-left: 10px;
+  border: inset;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: horizontal;
+  -webkit-line-clamp: 1;/*Быть программистом А. Сокирко 12-я минута http://127.0.0.1:5500/index.html*/
+}
+.chat-form {
+  display: flex;
+  flex-flow: column;
+  gap: 15px;
+  /*text-overflow: ellipsis;
+  -webkit-box-orient: horizontal;
+  -webkit-line-clamp: 1;/*Быть программистом А. Сокирко 12-я минута http://127.0.0.1:5500/index.html*/
+}
+
+.chat-send-btn {
+  background-color: #28004d;/*#638976*/
+  color: #FDFDFD;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.tech-service-dialog {
+  display: none;
+  position: absolute;
+  width: 60%;
+  bottom: 60px;
+  right: 1em;
+  padding: 25px;
+  border: 1px solid #28004d;
+  border-radius: 5px;
+  background-color: #FDFDFD;
+  color: #333;
+  z-index: 3;
+}
+
+.show {
+  osition: absolute;
+  display: block;
+  transition: 500ms ease-in-out;
+}
+
+oval {
+  width: 120px;
+  height: 80px;
+  border-radius: 30px;
+}
+
+.sectionAdvantages-container-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 70px;
+}
+
+
+/*Slider BROTHER*/
+.sectionSlider {
+  osition: absolute;
+  isplay: flex;
+  width: 943px;/*952px;подключать если сзади слайдера делать картинку(герляны) в виде бэкграунда*/
+  height: 503px;/*472px;подключать если сзади слайдера делать картинку(герляны) в виде бэкграунда*/
+  margin: 0 auto;
+  top: 344p;
+  left: 130p;
+  ackground-image: url(https://i.pinimg.com/originals/f0/6d/24/f06d24a28474a6040c76b41d80a88543.gif);/*изображени герлянды под задний фон слайдера*/
+  ackground-image: url(https://acegif.com/wp-content/uploads/gif/snwflks-53.gif);
+  ackground-size: cover;
+  ox-shadow: 0px 0px 31px 28px beige;
+}
+  
+.sliderWrapFlex {
+  osition: absolute;
+  isplay: flex;
+  width: auto;
+  height: auto;
+  top: 144px;
+  left: 162px;
+  order: 10px double #0006cd;              
+  ackground-color: #ffc107;
+  ox-shadow:0px 0px 30px 26px beige;
+}
+  
+.containerSlider {
+  osition: absolute;
+  width: auto; 
+  height: auto;
+}
+  
+#slides{
+    position: relative;
+    width: 942p;
+    height: 500p;
+    adding: 0px;
+    argin: 0px;
+    list-style-type: none;/* убрали точки у лишек*/
+}
+  
+.slide{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+  
+.showing{
+    opacity: 1;
+    z-index: 2;
+}
+  
+.controls{
+    display: none;
+}
+  
+  /*
+  non-essential styles:
+  just for appearance; change whatever you want
+  */
+  
+.slide{
+    padding: 40p;
+    box-sizing: border-box;
+    background: #333;
+    color: #fff;
+    background-size: cover;
+    font-size: 40px;
+}
+  
+  /* http://unrestrictedstock.com/wp-content/uploads/snowy-winter-vignette-bokeh-night-snow-falling-free-stock-photo.jpg */
+slide:nth-of-type(1){
+    background-color: red;
+  /* background-image: url('images/IMG_2894.png' 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/snowy-winter-vignette-bokeh-night-snow-falling-free-stock-photo.jpg');*/
+  background-size: cover;
+}
+  
+  /* http://www.dawghousedesignstudio.com/wp-content/uploads/2010/01/25/free-stock-photos-1.jpg */
+slide:nth-of-type(7){
+    background-color: orange;
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/free-stock-photos-1.jpg');
+}
+  
+.controls{
+    background: #00000038/*#333*/;
+    color: #fff;
+    border: none;
+    padding: 20px 0px;
+    font-size: 20px;
+    cursor: pointer;
+    order: 2px solid #fff;
+    argin: 10px 0px 0px 10px;
+    width: 70p;
+    ransition: background-color 0.6s ease;
+    transition: opacity 0.4s ease;
+    opacity: 0.4;  
+}
+  
+.controls:hover,
+.controls:focus{
+    /*background: #eee;
+    color: #333;*/
+    opacity: 1; 
+}
+  
+.buttons{
+  osition: absolute;
+  display: flex;
+  padding-top: 456px;
+  width: 942p;
+  top: 413p;
+  left: 295p;
+  z-index: 10;
+  font-size: 0px;
+  ustify-content: space-between;
+  align-items: center;
+  gap: 376p;
+}
+  
+.filterimgSlide {
+  width: 943px/*100%*/;
+  height: 448px/*100%*/;
+  filter: brightness(1);
+}
+  
+.imgSlide {
+  width: 100%;
+  height:100%;
+}
+  
+.textSlide {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 943px;
+  height: 50px;
+  background-color: #00000036;
+  font-family: 'Montserrat';
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+  color: white;
+  z-index: 1;
+}
+  
+.textTwoSlide {
+  position: absolute;
+  width: 600px;
+  bottom: 350px;
+  left: 96px;
+  font-family: 'Pacifico', cursive;
+  font-size: 37px;
+  font-weight: bold;
+  ont-display: fallback; /* ТОЛЬКО ДЛЯ @font-face МГНОВЕННАЯ ПОДГРУЗКА ШРИФТА И ДР.ШРИФТОВ ЕСЛИ НЕТ, 
+УСТАНОВЛЕННОГО МНОЙ. Для шрифта задаётся очень короткий период блокировки 
+и короткий период подмены., но это для font-face https://developer.mozilla.org/ru/docs/Web/CSS/@font-face/font-display*/
+  ont-style: italic;
+  text-align: center;
+  color: #36f482;
+}
+
+.textFiveSlide {
+  position: absolute; 
+  bottom: 70px;
+  left: 57px;
+  color: #ff000063;
+  animation: fade 50s forwards;/*forwards исчезновение текста*/
+  nimation-fill-mode: fade 50s forwards;
+}
+@keyframes fade {/*исчезновение текста*/
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.video__slides-2-5 {
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/image-bg.png');/*../images/image-bg.png https://www.davno.ru/assets/images/cards/big/noviy-god-2234.gif*/
+  background-size: cover;
+  object-fit: fill;/*расстягиает фото и видео на весь контейнер
+  https://msiter.ru/articles/kak-ispolzovat-object-fit-i-background-size-v-css*/
+}
+/*/SLIDER BROTHE*/
+
+
+
+  /* Адаптивные стили */ /* Responsive */
+
+@media screen and (max-width: 1300px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+/* Large: 992px - 1199px */
+@media screen and (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Medium: 768px - 991px */
+@media screen and (max-width: 991px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .nav-desktop {
+    display: none;
+  }
+
+  .nav-mobile {
+      display:block;
+  }
+
+  .nav-list-mobile {
+    display: flex;
+    flex-direction: column;
+    }
+    
+  .nav-item-list-mobile {
+    margin: 20px 0;
+  }
+
+  .menu-toggle {
+      display: block;
+      background-color: transparent;
+      border: none;
+  }
+
+  .menu {
+      position: fixed;
+      top: -100%;
+      left: 0%;
+      width: 80%; /* Ширина меню */
+      height: 100%;
+      background-color: #333;
+      z-index: 600;
+      overflow-y: auto; /* Включаем прокрутку */
+      transition: top 0.5s ease-in-out;
+  }
+  
+  .menu.open {
+      top: 0;
+  }
+  
+  .menu-scroll {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 40px; /* Отступы для прокрутки */
+  }
+
+  .block-connection {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    lign-items: center;
+    width: 100%;
+    margin: 20px 0;
+    gap: 20px;
+  }
+
+  .block-phone, .block-email {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #FDFDFD;
+  }
+
+  .text-email {
+    width: 100%;
+    word-wrap: break-word;
+    hyphens: auto;
+    olor: #FDFDFD;
+  }
+
+  .container-social-icons-mobile {
+    display: none;
+    flex-wrap: wrap;
+    ustify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    gap: 30px;
+  }
+
+  .filter-img-social-icons-mobile {
+    display: block;
+    width: 100%;
+    height: auto;
+    ackground-color: #333;
+  }
+
+  .social-icon-mobile {
+    display: block;
+    width: 120%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    z-index: 500;
+    transition: top 0.5s ease-in-out;
+  }  
+  
+  .overlay.open {
+      display: block;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* Small: 576px - 767px */
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+/* Extra small: 0px (320px) - 575px */
+@media screen and (max-width: 575px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .container-social-icons-desktop {
+    display: none;
+  }
+
+  .block-connection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    lign-items: center;
+    width: 100%;
+    margin: 20px 0;
+    gap: 20px;
+  }
+
+  .text-email {
+    width: 70%;
+    word-wrap: break-word;
+    /* hyphens: auto; */
+  }
+
+  .container-social-icons-mobile {
+    display: flex;
+    flex-wrap: wrap;
+    ustify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    gap: 30px;
+}
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+
+}
