@@ -1,0 +1,128 @@
+/*https://www.youtube.com/watch?v=GwA0BN5RgB0&list=PLVTUJUbFu7UeD0HL7zOgkoe7fu_n0chaA&index=101*/
+
+/*
+font-weight:
+Устанавливает насыщенность шрифта.
+100 - Thin
+200 - UltraLite
+300 - Lite
+400 - Regular/normal
+500 - Medium
+600 - SemiBold
+700 - Bold
+800 - Heavy / ExtraBold
+900 - Black
+*/
+
+/*ОТКЛЮЧИЛ, ПОТОМУ ЧТО ПОДКЛЮЧИЛ В base.scss ЧЕРЕЗ ИМПОРТ С ГУГЛ ФОНТС*
+@font-face {
+    font-family: "Alice";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/Alice-Regular.eot");
+    src: local("0"),
+             url("../fonts/Alice-Regular.woff2") format("woff2"),/*нужно из ttf сконвертировать в woff2, woff и скачать этот шрифт в папку проекта, и тогда этот код будет работать*
+             url("../fonts/Alice-Regular.woff") format("woff"),
+             url('../fonts/Alice-Regular.ttf') format("truetype"),
+             url('../fonts/Alice-Regular.svg') format("svg"),
+             url("../fonts/Alice-Regular.otf") format('opentype');
+    font-display: fallback;         
+    /*font-weight: normal;
+    font-style: normal;*
+  }*/
+  
+  @font-face {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 900;
+    src: url("../fonts/Rubik-Black.eot");
+    src: local("Roboto"),
+              url("../fonts/Rubik-Black.woff2") format("woff2"),/*нужно из ttf сконвертировать в woff2, woff и скачать этот шрифт в папку проекта, и тогда этот код будет работать*/
+              url("../fonts/Rubik-Black.woff") format("woff"),
+              url('../fonts/Rubik-Black.ttf') format("truetype"),
+              url('../fonts/Rubik-Black.svg') format("svg"),
+              url("../fonts/Rubik-Black.otf") format('opentype');
+    font-display: fallback;         
+    /*font-weight: normal;
+    font-style: normal;*/
+  }
+
+  @font-face {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 800;
+    src: url("../fonts/Rubik-Bold.eot");
+    src: local("Roboto"),
+              url("../fonts/Rubik-Bold.woff2") format("woff2"),/*нужно из ttf сконвертировать в woff2, woff и скачать этот шрифт в папку проекта, и тогда этот код будет работать*/
+              url("../fonts/Rubik-Bold.woff") format("woff"),
+              url('../fonts/Rubik-Bold.ttf') format("truetype"),
+              url('../fonts/Rubik-Bold.svg') format("svg"),
+              url("../fonts/Rubik-Bold.otf") format('opentype');
+    font-display: swap;         
+    /*font-weight: normal;
+    font-style: normal;*/
+  }
+
+  @font-face {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/Rubik-ExtraBold.eot");
+    src: local("Roboto"),
+              url("../fonts/Rubik-ExtraBold.woff2") format("woff2"),/*нужно из ttf сконвертировать в woff2, woff и скачать этот шрифт в папку проекта, и тогда этот код будет работать*/
+              url("../fonts/Rubik-ExtraBold.woff") format("woff"),
+              url('../fonts/Rubik-ExtraBold.ttf') format("truetype"),
+              url('../fonts/Rubik-ExtraBold.svg') format("svg"),
+              url("../fonts/Rubik-ExtraBold.otf") format('opentype');
+    font-display: swap;         
+    /*font-weight: normal;
+    font-style: normal;*/
+  }
+
+  @font-face {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/Rubik-SemiBold.eot");
+    src: local("Roboto"),
+              url("../fonts/Rubik-SemiBold.woff2") format("woff2"),/*нужно из ttf сконвертировать в woff2, woff и скачать этот шрифт в папку проекта, и тогда этот код будет работать*/
+              url("../fonts/Rubik-SemiBold.woff") format("woff"),
+              url('../fonts/Rubik-SemiBold.ttf') format("truetype"),
+              url('../fonts/Rubik-SemiBold.svg') format("svg"),
+              url("../fonts/Rubik-SemiBold.otf") format('opentype');
+    font-display: swap;         
+    /*font-weight: normal;
+    font-style: normal;*/
+  }
+
+  @font-face {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/Rubik-Medium.eot");
+    src: local("Roboto"),
+              url("../fonts/Rubik-Medium.woff2") format("woff2"),/*нужно из ttf сконвертировать в woff2, woff и скачать этот шрифт в папку проекта, и тогда этот код будет работать*/
+              url("../fonts/Rubik-Medium.woff") format("woff"),
+              url('../fonts/Rubik-Medium.ttf') format("truetype"),
+              url('../fonts/Rubik-Medium.svg') format("svg"),
+              url("../fonts/Rubik-Medium.otf") format('opentype');
+    font-display: swap;         
+    /*font-weight: normal;
+    font-style: normal;*/
+  }
+
+  @font-face {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/Rubik-Regular.eot");
+    src: local("Roboto"),
+              url("../fonts/Rubik-Regular.woff2") format("woff2"),/*нужно из ttf сконвертировать в woff2, woff и скачать этот шрифт в папку проекта, и тогда этот код будет работать*/
+              url("../fonts/Rubik-Regular.woff") format("woff"),
+              url('../fonts/Rubik-Regular.ttf') format("truetype"),
+              url('../fonts/Rubik-Regular.svg') format("svg"),
+              url("../fonts/Rubik-Regular.otf") format('opentype');
+    font-display: swap;         
+    /*font-weight: normal;
+    font-style: normal;*/
+  }
