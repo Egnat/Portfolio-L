@@ -1518,7 +1518,7 @@ let questions = document.querySelectorAll(".faq_question");
 let colors = ["#2196f3", "#e91e63", "#ffeb3b", "#74ff1d", "#28004d", "#FDFDFD", "#14fef7", "#333"];
 function createSquare() {
   const figure = document.querySelector(".cubiks");//section
-  const square = document.createElement("");// в скобки поставить i ( теги подходящие для этой анимации i div em mark strong span) 
+  const square = document.createElement("i");// в скобки поставить i ( теги подходящие для этой анимации i div em mark strong span) 
   let size = Math.random() * 50;// * 50
   square.style.width = 20 + size + "px";
   square.style.height = 20 + size + "px";

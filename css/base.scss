@@ -175,12 +175,12 @@ html {
 }
 
 body {
-    background-color: #91c42a;//вариант пока собирал проект
+    //background-color: #91c42a;//вариант пока собирал проект
     /*Живой градиент*/
-    //background-image: $body-home-bg/*linear-gradient(245deg, #64b5f6, #81c784, #ffeb3b, #ff8a65)*/;/*245deg,*/
+    background-image: $body-home-bg/*linear-gradient(245deg, #64b5f6, #81c784, #ffeb3b, #ff8a65)*/;/*245deg,*/
     background-size: 400% 400%;
     animation: gradientAnimation 7s linear infinite alternate;
-    ackground: linear-gradient(245deg, #004882, #07580b, #0b0a00, #3d340c);
+    //background: linear-gradient(245deg, #004882, #07580b, #0b0a00, #3d340c);
     /*////////////////////////////////////////////*/
     //background-image: linear-gradient(0deg, #353535, silver, white, white, white);/*классный градиент не живой*/
     opacity:0; transition:.5s;/*добавляем для плавного переключения страниц*/
@@ -3433,7 +3433,7 @@ filter-myPhotobefore { //если фото отключено в штмл, те�
     mask-position: center;
     mask-size: contain; ЭТА НЕ АЛЁ*/
 }
-myPhotoFaq  { //ПОДКЛЮЧИТЬ КАК ЗАКОНЧУ СБОРКУ ПРОЕКТА ЖИВАЯ АНИМАЦИЯ МОЕЙ ФОТКИ
+.myPhotoFaq  { //ПОДКЛЮЧИТЬ КАК ЗАКОНЧУ СБОРКУ ПРОЕКТА ЖИВАЯ АНИМАЦИЯ МОЕЙ ФОТКИ
     animation: clip 3s infinite;
 }
 @keyframes clip {
