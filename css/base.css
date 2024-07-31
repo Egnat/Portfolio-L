@@ -4891,7 +4891,7 @@ img-pageAboutMe {
   gap: 20px; }
 
 .title-img-pageAboutMe:nth-child(1) {
-  width: calc(100% - 20px);
+  width: calc(100% - 0px);
   max-width: 100%;
   font-family: 'Playfaier Displlay';
   color: #FDFDFD;
@@ -4899,7 +4899,7 @@ img-pageAboutMe {
   font-size: clamp(24px, 5vw, 30px);
   font-weight: 500;
   line-height: calc(25vh / 4);
-  text-align: justify;
+  ext-align: justify;
   overflow-wrap: break-word;
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
@@ -5342,6 +5342,7 @@ img-pageAboutMe {
   font-family: 'Playfair Display';
   font-size: clamp(48px, 5vw, 64px);
   font-weight: 800;
+  text-align: left;
   word-wrap: break-word;
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
@@ -6024,6 +6025,9 @@ footer-anchor {
 
   .block-tools-adaptive {
     width: 72%; }
+
+  .titlePageUIKit {
+    text-align: left; }
 
   .footer {
     padding-top: 5.84vw; }
