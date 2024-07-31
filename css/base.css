@@ -5022,13 +5022,13 @@ img-pageAboutMe {
   0%, 100% {
     top: 0; }
   50% {
-    top: calc(96% - 165px); } }
+    top: calc(100% - 155px); } }
 
 @keyframes movieUpDown {
   0%, 100% {
     top: 0; }
   50% {
-    top: calc(96% - 165px); } }
+    top: calc(100% - 155px); } }
 .filter-img-discount:hover {
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
