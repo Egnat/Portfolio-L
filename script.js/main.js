@@ -613,7 +613,7 @@ function closeRightMenu() {
 //ЭТО ПЕРВЫЙ КОД - РАБОЧИЙ ДЛЯ ЧАТА, ДЛЯ САЙДБАРА ВО ВСЕХ СЛАЙДАХ ПОКА НЕТ
 
 //ЭТО ВТОРОЙ КОД - РАБОЧИЙ ДЛЯ ЧАТА, ДЛЯ САЙДБАРА ВО ВСЕХ СЛАЙДАХ
-document.addEventListener('DOMContentLoaded', () => {
+/*document.addEventListener('DOMContentLoaded', () => {
   const slideContainer = document.querySelector('.slideshow-container');
 
   slideContainer.addEventListener('click', (event) => {
@@ -662,7 +662,112 @@ function openRightMenu() {
 function closeRightMenu() {
   document.getElementById('rightMenu').style.display = 'none';
 }
+//ЧТОБ ПРИНИМАТЬ СМС НА ПОЧТУ ОТ ЗАКАЗЧИКОВ PERPLEXITY. В ОРИГИНАЛЕ НЕ БЫЛО
+document.querySelector('.chat-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var form = this;
+  var formData = new FormData(form);
+  
+  fetch(form.action, {
+    method: form.method,
+    body: formData,
+    headers: {
+      'Accept': 'application/json'
+    }
+  }).then(response => {
+    if (response.ok) {
+      // Очистить поле ввода
+      form.reset();
+      // Показать сообщение об успешной отправке
+      alert('Сообщение отправлено!');
+    } else {
+      alert('Ошибка при отправке сообщения.');
+    }
+  }).catch(error => {
+    console.error('Error:', error);
+    alert('Произошла ошибка при отправке сообщения.');
+  });
+});*/
+//ЧТОБ ПРИНИМАТЬ СМС НА ПОЧТУ ОТ ЗАКАЗЧИКОВ PERPLEXITY. В ОРИГИНАЛЕ НЕ БЫЛО///
 //ЭТО ВТОРОЙ КОД - РАБОЧИЙ //ДЛЯ ЧАТА, И ДЛЯ САЙДБАРА ВО ВСЕХ СЛАЙДАХ //
+//КОД ПЕРПЛЕКСИТИ ТРИ, ЧТОБ ЧАТ ОТКРЫВАЛСЯ В КАЖДОМ СЛАЙДЕ И С ОТПРАВКОЙ МНЕ СМС ОТ КЛИЕНТОВ. ПОКА НЕ ПРИНИМАЕТ И НЕ ОТПРАВЛЯЕТ СМС
+document.addEventListener('DOMContentLoaded', () => {
+  const slideContainer = document.querySelector('.slideshow-container');
+
+  slideContainer.addEventListener('click', (event) => {
+    // Обработка клика для чата
+    if (event.target.closest('.btnCTA.tech-service')) {
+      event.preventDefault();
+      const slide = event.target.closest('.mySlides');
+      const techServiceDialog = slide.querySelector('.tech-service-dialog');
+      
+      if (techServiceDialog) {
+        techServiceDialog.classList.toggle('show');
+        
+        const sendBtn = techServiceDialog.querySelector('.chat-send-btn');
+        const input = techServiceDialog.querySelector('.chat-input');
+        
+        if (sendBtn && input) {
+          sendBtn.disabled = false;
+          sendBtn.textContent = 'Отправить'; // Send
+          input.value = '';
+        }
+      }
+    }
+
+    // Обработка клика для кнопки отправки сообщения в чате
+    if (event.target.classList.contains('chat-send-btn')) {
+      event.preventDefault();
+      event.target.textContent = 'Отправлено'; // Sent
+      event.target.disabled = true;
+      const input = event.target.closest('.chat-form').querySelector('.chat-input');
+      if (input) {
+        input.value = '';
+      }
+    }
+
+    // Обработка клика для сайдбара
+    if (event.target.closest('.btnSidebar')) {
+      openRightMenu();
+    }
+  });
+});
+
+function openRightMenu() {
+  document.getElementById('rightMenu').style.display = 'block';
+}
+
+function closeRightMenu() {
+  document.getElementById('rightMenu').style.display = 'none';
+}
+
+// Обработчик отправки формы
+document.querySelector('.chat-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var form = this;
+  var formData = new FormData(form);
+  
+  fetch(form.action, {
+    method: form.method,
+    body: formData,
+    headers: {
+      'Accept': 'application/json'
+    }
+  }).then(response => {
+    if (response.ok) {
+      // Очистить поле ввода
+      form.reset();
+      // Показать сообщение об успешной отправке
+      alert('Сообщение отправлено!');
+    } else {
+      alert('Ошибка при отправке сообщения.');
+    }
+  }).catch(error => {
+    console.error('Error:', error);
+    alert('Произошла ошибка при отправке сообщения.');
+  });
+});//КОД СЕЙЧАС НЕ АКТИВЕН, ПОТОМУ ЧТО ПОМЕНЯЛ ЧАТ В СЛАЙДАХ НА ССЫЛКУ В ТЕЛЕГУ
+//КОД ПЕРПЛЕКСИТИ ТРИ, ЧТОБ ЧАТ ОТКРЫВАЛСЯ В КАЖДОМ СЛАЙДЕ И С ОТПРАВКОЙ МНЕ СМС ОТ КЛИЕНТОВ///
 //ЧТОБЫ ЧАТ И САЙДБАР  ОТКРЫВАЛСЯ В КАЖДОМ СЛАЙДЕ.//
 
 //SLIDER YOUTUBE https://www.youtube.com/watch?v=9v_2YPnRqi0
