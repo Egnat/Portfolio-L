@@ -270,14 +270,15 @@ window.onclick = function(event) {
   //Chat
 const menuToggleBtn = document.querySelector(".menu-toggle");//menuToggle
 const navMenu = document.querySelector(".nav-menu");//menu
+const closedChat = document.querySelector(".oval-2-chat");//тоже можно
   
 menuToggleBtn.addEventListener("click", /*function*/ () => {/*можно перед () прописать function, но тогда стрелку => убрать*/
     if (navMenu.classList.contains("active")) {
       navMenu.classList.remove("active");
-      menu.style.transition = 'transform 500ms easy-in-out';
+      navMenu.style.transition = 'transform 500ms easy-in-out';
     } else {
       navMenu.classList.add("active");
-      menu.style.transition = 'transform 500ms easy-in-out';
+      navMenu.style.transition = 'transform 500ms easy-in-out';
     }
 });
   // тех-поддержка
@@ -691,7 +692,8 @@ document.querySelector('.chat-form').addEventListener('submit', function(e) {
 //ЧТОБ ПРИНИМАТЬ СМС НА ПОЧТУ ОТ ЗАКАЗЧИКОВ PERPLEXITY. В ОРИГИНАЛЕ НЕ БЫЛО///
 //ЭТО ВТОРОЙ КОД - РАБОЧИЙ //ДЛЯ ЧАТА, И ДЛЯ САЙДБАРА ВО ВСЕХ СЛАЙДАХ //
 //КОД ПЕРПЛЕКСИТИ ТРИ, ЧТОБ ЧАТ ОТКРЫВАЛСЯ В КАЖДОМ СЛАЙДЕ И С ОТПРАВКОЙ МНЕ СМС ОТ КЛИЕНТОВ. ПОКА НЕ ПРИНИМАЕТ И НЕ ОТПРАВЛЯЕТ СМС
-document.addEventListener('DOMContentLoaded', () => {
+//КОД СЕЙЧАС НЕ АКТИВЕН, ПОТОМУ ЧТО ПОМЕНЯЛ ЧАТ В СЛАЙДАХ НА ССЫЛКУ В ТЕЛЕГУ
+/*document.addEventListener('DOMContentLoaded', () => {
   const slideContainer = document.querySelector('.slideshow-container');
 
   slideContainer.addEventListener('click', (event) => {
@@ -766,7 +768,8 @@ document.querySelector('.chat-form').addEventListener('submit', function(e) {
     console.error('Error:', error);
     alert('Произошла ошибка при отправке сообщения.');
   });
-});//КОД СЕЙЧАС НЕ АКТИВЕН, ПОТОМУ ЧТО ПОМЕНЯЛ ЧАТ В СЛАЙДАХ НА ССЫЛКУ В ТЕЛЕГУ
+});*/
+//КОД СЕЙЧАС НЕ АКТИВЕН, ПОТОМУ ЧТО ПОМЕНЯЛ ЧАТ В СЛАЙДАХ НА ССЫЛКУ В ТЕЛЕГУ
 //КОД ПЕРПЛЕКСИТИ ТРИ, ЧТОБ ЧАТ ОТКРЫВАЛСЯ В КАЖДОМ СЛАЙДЕ И С ОТПРАВКОЙ МНЕ СМС ОТ КЛИЕНТОВ///
 //ЧТОБЫ ЧАТ И САЙДБАР  ОТКРЫВАЛСЯ В КАЖДОМ СЛАЙДЕ.//
 

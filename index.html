@@ -155,7 +155,7 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
     <!--<script type="text/javascript">alert("Сайт адаптирован под планшетную и мобильную версии. The site is adapted for tablet and mobile versions 😁");</script>-->
     <title>Портфолио</title>
 </head>
-<body class="body-home no-scroll">
+<body class="body-home no-scroll"><!--no-scroll NO ACTIVE-->
   <header class="header" id="header">
     <div class="container header-container">
       <div class=" header-container-content">
@@ -2000,7 +2000,7 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
               </div>
               <figure class="wrapp-blockBtnCTA"><!--сделал обертку, думал разместить кнопки по левому краю-->
                 <picture class="blockBtnCTA blockBtnCTACarusel">
-                <div class="tech-service-dialog tech-service-dialog-carusel" id="showChat"><!--onclick="closeChat()"-->
+                <div class="tech-service-dialog tech-service-dialog-carusel" nclick="closeChat()" id="showChat"><!--onclick="closeChat()"-->
                   <div class="chat-log">
                     <div class="chat-message chat-message-carusel">
                       <span class="chat-message-content">Здравствуйте! <br> <br> Как я могу Вам помочь?</span>
@@ -2017,13 +2017,7 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                 </div>
                 <div class="btnCTA tech-service" onclick="openChat()"><!--onclick="openChat()"-->
                   <span class="oval-1-chat cta tech-service-btn"><p class="text-btnCTA-chat">Заказать PJ</p></span><!--Order PJ-->
-                  <span class="oval-2-chat"></span><!--onclick="closeChat()"  cta tech-service-btn-->
-                </div>
-                <div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none; right:0; top:0;" id="rightMenu">
-                  <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large">Закрыть &times;</button>
-                  <figure class="filter__img-sidebar">
-                    <img class="img-sidebar-1-glow" src="https://i.pinimg.com/originals/a6/74/ed/a674edab9c1218bbefab2cc859f845bf.gif" alt="Santa">
-                  </figure>
+                  <span class="oval-2-chat cta tech-service-btn" onclick="closeChat()"></span><!--onclick="closeChat()"  cta tech-service-btn-->
                 </div>
                 <a href="pages/skills.html" class="link-btnSkills">
                   <div class="btnSkills"><!--onclick="openRightMenu()"-->
@@ -2031,6 +2025,12 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                     <span class="oval-2"></span>
                   </div>
                 </a>
+                <div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none; right:0; top:0;" id="rightMenu">
+                  <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large">Закрыть &times;</button>
+                  <figure class="filter__img-sidebar">
+                    <img class="img-sidebar-1-glow" src="https://i.pinimg.com/originals/a6/74/ed/a674edab9c1218bbefab2cc859f845bf.gif" alt="Santa">
+                  </figure>
+                </div>
                 <!--КНОПКА ОТКРЫТИЯ SIDEBAR
                 <div class="w3-teal" tyle="display: none;">
                   <div class="btnSkills w3-button w3-teal w3-xlarge w3-right" onclick="openRightMenu()">
