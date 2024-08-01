@@ -274,10 +274,10 @@ const navMenu = document.querySelector(".nav-menu");//menu
 menuToggleBtn.addEventListener("click", /*function*/ () => {/*можно перед () прописать function, но тогда стрелку => убрать*/
     if (navMenu.classList.contains("active")) {
       navMenu.classList.remove("active");
-      //menu.style.transition = 'transform 500ms easy-in-out';
+      menu.style.transition = 'transform 500ms easy-in-out';
     } else {
       navMenu.classList.add("active");
-     // menu.style.transition = 'transform 500ms easy-in-out';
+      menu.style.transition = 'transform 500ms easy-in-out';
     }
 });
   // тех-поддержка
@@ -289,7 +289,7 @@ const input = document.querySelector(".chat-input");
 techServiceBtn.addEventListener("click", function (e) {
     e.preventDefault();
     techServiceDialog.classList.toggle("show");
-    //techServiceDialog.style.transition = 'opacity 500ms easy-in-out' я мастерю
+    techServiceDialog.style.transition = 'opacity 500ms easy-in-out' //я мастерю
     sendBtn.disabled = false;
     sendBtn.textContent = "Отправить";//Send
     input.value = "";
@@ -301,7 +301,7 @@ sendBtn.addEventListener("click", function (e) {
     this.disabled = true;
     input.value = "";
 });
-//ЧТОБ ПРИНИМАТЬ СМС НА ПОЧТУ ОТ ЗАКАЗЧИКОВ
+//ЧТОБ ПРИНИМАТЬ СМС НА ПОЧТУ ОТ ЗАКАЗЧИКОВ PERPLEXITY. В ОРИГИНАЛЕ НЕ БЫЛО
 document.querySelector('.chat-form').addEventListener('submit', function(e) {
   e.preventDefault();
   var form = this;
@@ -327,7 +327,7 @@ document.querySelector('.chat-form').addEventListener('submit', function(e) {
     alert('Произошла ошибка при отправке сообщения.');
   });
 });
-//ЧТОБ ПРИНИМАТЬ СМС НА ПОЧТУ ОТ ЗАКАЗЧИКОВ///
+//ЧТОБ ПРИНИМАТЬ СМС НА ПОЧТУ ОТ ЗАКАЗЧИКОВ PERPLEXITY. В ОРИГИНАЛЕ НЕ БЫЛО///
 //ЭТОГО В ОРРИГИНАЛЬНОМ КОДЕ НЕТ, Я ДОБАВИЛ, ЧТОБЫ РАБОТАЛО В СЛАЙДЕРЕ КАРУСЕЛЬ 
 function openChat() {
   document.getElementById("showChat").style.display = "block";
