@@ -301,6 +301,33 @@ sendBtn.addEventListener("click", function (e) {
     this.disabled = true;
     input.value = "";
 });
+//ЧТОБ ПРИНИМАТЬ СМС НА ПОЧТУ ОТ ЗАКАЗЧИКОВ
+document.querySelector('.chat-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var form = this;
+  var formData = new FormData(form);
+  
+  fetch(form.action, {
+    method: form.method,
+    body: formData,
+    headers: {
+      'Accept': 'application/json'
+    }
+  }).then(response => {
+    if (response.ok) {
+      // Очистить поле ввода
+      form.reset();
+      // Показать сообщение об успешной отправке
+      alert('Сообщение отправлено!');
+    } else {
+      alert('Ошибка при отправке сообщения.');
+    }
+  }).catch(error => {
+    console.error('Error:', error);
+    alert('Произошла ошибка при отправке сообщения.');
+  });
+});
+//ЧТОБ ПРИНИМАТЬ СМС НА ПОЧТУ ОТ ЗАКАЗЧИКОВ///
 //ЭТОГО В ОРРИГИНАЛЬНОМ КОДЕ НЕТ, Я ДОБАВИЛ, ЧТОБЫ РАБОТАЛО В СЛАЙДЕРЕ КАРУСЕЛЬ 
 function openChat() {
   document.getElementById("showChat").style.display = "block";
@@ -317,7 +344,7 @@ function openChatMobile() {
 function closeChatMobile() {
   document.getElementById("showChatMobile").style.display = "none";
 }
-///ЭТОГО В ОРРИГИНАЛЬНОМ КОДЕ НЕТ, Я ДОБАВИЛ, ЧТОБЫ РАБОТАЛО В СЛАЙДЕРЕ КАРУСЕЛЬ //
+///ЭТОГО В ОРИГИНАЛЬНОМ КОДЕ НЕТ, Я ДОБАВИЛ, ЧТОБЫ РАБОТАЛО В СЛАЙДЕРЕ КАРУСЕЛЬ //
 //Chat//
 
 /*
