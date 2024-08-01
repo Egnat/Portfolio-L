@@ -1622,7 +1622,7 @@ function showSlidesss() {
 }*/
 //ORIGIN////
 
-//СЛАДЫ УХОДЯТ СПРАВО НАЛЕВО
+//СЛАЙДЫ УХОДЯТ СПРАВО НАЛЕВО
 //VARIANT-1
 let slideIndexxx = 0;
 showSlidesss();
