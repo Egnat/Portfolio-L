@@ -4091,7 +4091,7 @@ flex-item:nth-child(1) {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  width: calc(40% - 0px);
+  width: calc(41% - 0px);
   gap: 20px; }
 
 .title-info {
@@ -5845,7 +5845,7 @@ footer-anchor {
     width: 50%; }
 
   .info-block {
-    width: calc(44% - 0px); }
+    width: calc(45% - 0px); }
 
   .big-pg {
     width: 86%; }
@@ -6004,7 +6004,7 @@ footer-anchor {
     text-align: center; }
 
   .info-block {
-    width: calc(83% - 0px); }
+    width: calc(85% - 0px); }
 
   .title-pageAboutMe {
     text-align: left; }
@@ -6500,7 +6500,7 @@ footer-anchor {
     width: 100%; }
 
   .info-block {
-    width: calc(67% - 0px); }
+    width: calc(68% - 0px); }
 
   .wrapp-info-map {
     gap: 30px; }
@@ -7499,6 +7499,9 @@ footer-anchor {
 
   .title-form {
     width: 67%; }
+
+  .info-block {
+    width: calc(100% - 0px); }
 
   .filter-map {
     height: 235px; }

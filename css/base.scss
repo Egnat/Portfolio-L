@@ -3663,7 +3663,7 @@ flex-item:nth-child(1) {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    width: calc(40% - 0px);//40%
+    width: calc(41% - 0px);//40%
     gap: 20px;
 }
 
@@ -5132,7 +5132,7 @@ footer-anchor {
     }
 
     .info-block {
-        width: calc(44% - 0px);//40%
+        width: calc(45% - 0px);//40%
     }
 
     //PAGE TWO ABOUT ME
@@ -5350,7 +5350,7 @@ footer-anchor {
     }
 
     .info-block {
-        width: calc(83% - 0px);//40%
+        width: calc(85% - 0px);//40%
     }
 
     //PAGE TWO ABOUT ME
@@ -5891,7 +5891,7 @@ footer-anchor {
     }
 
     .info-block {
-        width: calc(67% - 0px);
+        width: calc(68% - 0px);
     }
 
     .wrapp-info-map {
@@ -6945,6 +6945,10 @@ footer-anchor {
 
     .title-form {
         width: 67%;
+    }
+
+    .info-block {
+        width: calc(100% - 0px);
     }
 
     .filter-map {
