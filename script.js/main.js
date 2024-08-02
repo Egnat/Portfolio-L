@@ -270,7 +270,7 @@ window.onclick = function(event) {
   //Chat
 const menuToggleBtn = document.querySelector(".menu-toggle");//menuToggle
 const navMenu = document.querySelector(".nav-menu");//menu
-const closedChat = document.querySelector(".oval-2-chat");//тоже можно
+const closedChat = document.querySelector(".oval-2-chat");//тоже можно, я добавил
   
 menuToggleBtn.addEventListener("click", /*function*/ () => {/*можно перед () прописать function, но тогда стрелку => убрать*/
     if (navMenu.classList.contains("active")) {

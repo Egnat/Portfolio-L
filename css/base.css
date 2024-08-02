@@ -2829,6 +2829,9 @@ swiper-slide img {
   z-index: 1;
   gap: 15px; }
 
+.block-description-cube-app {
+  top: 45%; }
+
 .title-cube {
   font-size: 24px;
   font-weight: 600;

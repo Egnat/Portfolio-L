@@ -1209,7 +1209,7 @@ tech-service {
     right: 1em;
 }
 
-.oval-1-chat.cta.tech-service-btn {
+.oval-1-chat.cta.tech-service-btn  {//.cta.tech-service-btn
     position: absolute; 
     display: flex; 
     justify-content: center;//space-around
@@ -2584,6 +2584,10 @@ swiper-slide img {
     transform: translate(-50%, -50%);
     z-index: 1;
     gap: 15px;
+}
+
+.block-description-cube-app {
+    top: 45%;
 }
 
 .title-cube {
