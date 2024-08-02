@@ -3663,6 +3663,7 @@ flex-item:nth-child(1) {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    width: calc(40% - 0px);//40%
     gap: 20px;
 }
 
@@ -5130,6 +5131,10 @@ footer-anchor {
         width: 50%;//40%
     }
 
+    .info-block {
+        width: calc(44% - 0px);//40%
+    }
+
     //PAGE TWO ABOUT ME
     .big-pg {
         width: 86%;
@@ -5342,6 +5347,10 @@ footer-anchor {
 
     .sectionTitle {
         text-align: center;
+    }
+
+    .info-block {
+        width: calc(83% - 0px);//40%
     }
 
     //PAGE TWO ABOUT ME
@@ -5879,6 +5888,10 @@ footer-anchor {
 
     .common-form  {
         width: 100%;
+    }
+
+    .info-block {
+        width: calc(67% - 0px);
     }
 
     .wrapp-info-map {
