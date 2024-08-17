@@ -158,6 +158,9 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
     <title>Портфолио</title>
 </head>
 <body class="body-home no-scroll"><!--no-scroll NO ACTIVE-->
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
   <header class="header" id="header">
     <div class="container header-container">
       <div class=" header-container-content">
@@ -4220,5 +4223,13 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
     })();
     </script>
     <!--End of Tawk.to Script-->
+    <!--ПРЕЛОАДЕР-->
+    <script>
+      window.onload = function() {
+          document.getElementById('preloader').style.display = 'none';
+          document.getElementById('preloader').style.zIndex = 'none';
+      };
+    </script>
+    <!--ПРЕЛОАДЕР-->
 </body>
 </html>
