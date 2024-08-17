@@ -30,6 +30,9 @@
     <title>Портфолио / UI Kit</title>
 </head>
 <body class="body-aboutme no-scroll"><!--body-home-->
+    <div id="preloader"><!--с его добавлением страницы загружаются очень быстро-->
+        <div class="loader"></div>
+    </div>
     <header class="header" id="header">
         <div class="container header-container">
             <div class=" header-container-content">
@@ -456,5 +459,14 @@
     })();
     </script>
     <!--End of Tawk.to Script-->
+    <!--ПРЕЛОАДЕР ПОСЛЕ ТОГО КАК ДОБАВИЛ ПРЕЛОАДЕР НА САЙТ, 
+        СТРАНИЦЫ НАЧАЛИ ЗАГРУЖАТЬСЯ ОЧЕНЬ БЫСТРО-->
+        <script>
+            window.onload = function() {
+                document.getElementById('preloader').style.display = 'none';
+              //document.getElementById('preloader').style.zIndex = '-9999';
+            };
+        </script>
+        <!--ПРЕЛОАДЕР-->
 </body>
 </html>
