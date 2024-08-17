@@ -158,7 +158,7 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
     <title>Портфолио</title>
 </head>
 <body class="body-home no-scroll"><!--no-scroll NO ACTIVE-->
-  <div id="preloader">
+  <div id="preloader"><!--с его добавлением страницы загружаются очень быстро-->
     <div class="loader"></div>
   </div>
   <header class="header" id="header">
@@ -4223,11 +4223,12 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
     })();
     </script>
     <!--End of Tawk.to Script-->
-    <!--ПРЕЛОАДЕР-->
+    <!--ПРЕЛОАДЕР ПОСЛЕ ТОГО КАК ДОБАВИЛ ПРЕЛОАДЕР НА САЙТ, 
+        СТРАНИЦЫ НАЧАЛИ ЗАГРУЖАТЬСЯ ОЧЕНЬ БЫСТРО-->
     <script>
       window.onload = function() {
-          document.getElementById('preloader').style.display = 'none';
-          document.getElementById('preloader').style.zIndex = 'none';
+        document.getElementById('preloader').style.display = 'none';
+        //document.getElementById('preloader').style.zIndex = '-9999';
       };
     </script>
     <!--ПРЕЛОАДЕР-->

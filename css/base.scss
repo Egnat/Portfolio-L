@@ -252,14 +252,14 @@ body .light-dark-theme {// кнопка для переключения тем <
     overflow: hidden;
 }*/
 
-//ПРЕЛОАДЕР
+//ПРЕЛОАДЕР с его добавлением страницы загружаются очень быстро
 #preloader {
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    ackground: #ffffff; /* Цвет фона */
+    //background: #ffffff; /* Цвет фона */
     //z-index: 9999; /* Находится выше всего контента */
     opacity: 0;
 }
