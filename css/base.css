@@ -2972,7 +2972,7 @@ swiper-slide img {
 .filter-img-cube {
   display: block;
   width: auto;
-  height: auto;
+  height: 100%;
   ox-shadow: inset 1280px 844px rgba(0, 0, 0, 0.8);
   overflow: hidden;
   -webkit-filter: brightness(0.5);
