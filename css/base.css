@@ -1936,7 +1936,7 @@ https://www.youtube.com/watch?v=UNaWqWvytKk&list=PLVTUJUbFu7UeD0HL7zOgkoe7fu_n0c
           align-items: center;
   width: 100%;
   height: 100%;
-  padding: 2px 2px;
+  padding: 2px 0 2px 2px;
   background-color: #28004d;
   border-radius: 0px;
   -webkit-animation: show-advantages 2s ease-in-out 0s 1 both;
