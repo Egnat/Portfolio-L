@@ -165,7 +165,8 @@ section {
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
-    transition: scroll-behavior 1.5s ease-in-out;
+    transition: scroll-behavior 1.5s ease-in-out; //ПРИ НАЖАТИИ НА ЛОГО В ФУТЕРЕ, ПОДНИМАЕМСЯ К ХЕДЕРУ
+    //transition-behavior: allow-discrete; //увидел у чувака на ютюбе https://www.youtube.com/watch?v=UxFnW2cPRi8, ДЛЯ АНИМАЦИИ ДИСПЛЕЙ НОН
 }
 
 *, *::before, *::after {
@@ -7694,6 +7695,10 @@ footer-anchor {
     .title-form {
         width: 73%;
         text-align: center;
+    }
+
+    .form-contact-me {
+        align-items: center;//flex-start
     }
 
     .wrapp-info-map {
