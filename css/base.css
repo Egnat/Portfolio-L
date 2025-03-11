@@ -1509,7 +1509,10 @@ tech-service-btn {
   -webkit-transition: visibility 0.5s, opacity .4s ease;
   transition: visibility 0.5s, opacity .4s ease;
                                               /* Плавное появление у кнопок слайдера
-или фото. Сюда не подходит.*/ }
+или фото. Сюда не подходит.*/
+  -webkit-transition: margin-left .3s ease-in-out, left .3s ease-in-out,  margin-right .3s ease-in-out, right .3s ease-in-out;
+  transition: margin-left .3s ease-in-out, left .3s ease-in-out,  margin-right .3s ease-in-out, right .3s ease-in-out;
+  /*ЭТОТ КОД ВЗЯЛ С ВЫРУЧАЙ ДЕНЬГИ С NAV SIDEBAR, ПОКА НЕ АЛ*/ }
 
 /*////@keyframes slowing {
     from {opacity: .2} 
@@ -8671,5 +8674,4 @@ footer-anchor {
   .text-two-floor-footer {
     display: none;
     letter-spacing: 3px; } }
-
 /*# sourceMappingURL=base.css.map */

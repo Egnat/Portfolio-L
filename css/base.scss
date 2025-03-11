@@ -1382,6 +1382,9 @@ tech-service-btn {
     для плавного выезда сайдбара Кейфреймс отключенный к этим свойствам*/
     transition: visibility 0.5s, opacity .4s ease;/* Плавное появление у кнопок слайдера
     или фото. Сюда не подходит.*/
+    transition: 
+    margin-left .3s ease-in-out, left .3s ease-in-out, 
+    margin-right .3s ease-in-out, right .3s ease-in-out;/*ЭТОТ КОД ВЗЯЛ С ВЫРУЧАЙ ДЕНЬГИ С NAV SIDEBAR, ПОКА НЕ АЛЕ*/
 }
 
 /*////@keyframes slowing {
