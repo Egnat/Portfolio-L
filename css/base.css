@@ -1512,7 +1512,7 @@ tech-service-btn {
 или фото. Сюда не подходит.*/
   -webkit-transition: margin-left .3s ease-in-out, left .3s ease-in-out,  margin-right .3s ease-in-out, right .3s ease-in-out;
   transition: margin-left .3s ease-in-out, left .3s ease-in-out,  margin-right .3s ease-in-out, right .3s ease-in-out;
-  /*ЭТОТ КОД ВЗЯЛ С ВЫРУЧАЙ ДЕНЬГИ С NAV SIDEBAR, ПОКА НЕ АЛ*/ }
+  /*ЭТОТ КОД ВЗЯЛ С ВЫРУЧАЙ ДЕНЬГИ С NAV SIDEBAR, ПОКА НЕ АЛЕ*/ }
 
 /*////@keyframes slowing {
     from {opacity: .2} 
@@ -4878,6 +4878,8 @@ filter-item-like:hover {
   background-repeat: no-repeat;
   background-position: 20% 40%;
   background-color: black;
+  -webkit-box-shadow: inset 1280px 844px hwb(0 0% 100%/0.23);
+          box-shadow: inset 1280px 844px hwb(0 0% 100%/0.23);
   overflow: hidden; }
 
 .sectionTwoAboutMe-container-content {
@@ -5032,7 +5034,7 @@ img-pageAboutMe {
 .swimming-block-discount {
   position: relative;
   width: 67%;
-  height: 337vh;
+  height: 205vh;
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2; }
@@ -8674,4 +8676,5 @@ footer-anchor {
   .text-two-floor-footer {
     display: none;
     letter-spacing: 3px; } }
+
 /*# sourceMappingURL=base.css.map */

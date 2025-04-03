@@ -4303,6 +4303,7 @@ filter-item-like:hover {
     background-position: 20% 40%;//center
     //mask-image: linear-gradient(to left, #000 0%, #000 38%, transparent 92%, transparent 100%);//linear-gradient(to left, #000 0%, #000 30%, transparant 134%, transparant 100%)
     background-color: rgb(0, 0, 0);
+    box-shadow: inset 1280px 844px hwb(0 0% 100% / 0.23); //тонировка фото изнутри. rgb, rgba scss не любит в этом свойстве
     //background: linear-gradient(180.12deg, #5883fd 46%, #FFC700 9%);
     //transform: matrix(-1, 0, 0, 1, 0, 0);
     overflow: hidden;
@@ -4452,7 +4453,7 @@ img-pageAboutMe {
 .swimming-block-discount {
     position: relative;
     width: 67%;
-    height: 337vh;
+    height: 205vh;//337vh
     order: 2;
 }
 
