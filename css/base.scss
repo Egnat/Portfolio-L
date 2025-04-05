@@ -785,7 +785,6 @@ to { left: 840px; } /*1040px ставим размер экрана, чтобы 
     color:$light-color;
 }
 
-
 // ДВИГАЮЩАЯСЯ РУКА ПРИ НАВЕДЕНИИ МЫШИ РАБОТАЕТ ОТКЛЮЧИЛ, ПОТОМУ ЧТО ПОДКЛЮЧИЛ АВТОМАТ
 /*.hand {
     osition: absolute;
@@ -1914,8 +1913,8 @@ https://www.youtube.com/watch?v=UNaWqWvytKk&list=PLVTUJUbFu7UeD0HL7zOgkoe7fu_n0c
 .accordion .contentBx .label {
     position: relative;
     display: flex;
-    //justify-content: space-between;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;//flex-start
     width: 100%;
     padding: 20px;
     background: $light-color;//#E64A19
