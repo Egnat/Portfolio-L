@@ -3979,16 +3979,31 @@ flex-item:nth-child(1) {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #FDFDFD;
+  caret-color: #FDFDFD;
   font-size: 16px;
   font-weight: 600;
   font-style: normal;
-  color: #FDFDFD;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none; }
 
-.inp-contacts:focus-visible {
-  outline: none; }
+/*.inp-contacts:focus-visible {
+    outline: none;
+}*/
+.inp-contacts:focus {
+  outline: 1px solid #7d00f3; }
+
+.inp-contacts::-webkit-input-placeholder {
+  color: #fdfdfd; }
+
+.inp-contacts:-ms-input-placeholder {
+  color: #fdfdfd; }
+
+.inp-contacts::-ms-input-placeholder {
+  color: #fdfdfd; }
+
+.inp-contacts::placeholder {
+  color: #fdfdfd; }
 
 .first-checkbox {
   width: 100%;
@@ -5335,8 +5350,22 @@ img-pageAboutMe {
   font-size: 16px;
   font-weight: 600;
   font-style: normal;
-  color: #FDFDFD;
-  outline: none; }
+  color: #FDFDFD; }
+
+.input-contactMe:focus {
+  outline: 1px solid #7d00f3; }
+
+.input-contactMe::-webkit-input-placeholder {
+  color: #fdfdfdb1; }
+
+.input-contactMe:-ms-input-placeholder {
+  color: #fdfdfdb1; }
+
+.input-contactMe::-ms-input-placeholder {
+  color: #fdfdfdb1; }
+
+.input-contactMe::placeholder {
+  color: #fdfdfdb1; }
 
 .textarea-contactMe {
   height: 100px;

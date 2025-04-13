@@ -3551,18 +3551,27 @@ flex-item:nth-child(1) {
     background-color: transparent;
     border: none;
     border-bottom: 1px solid $light-color;
+    caret-color: $light-color;//КРАСИТ КУРСОР В НУЖНЫЙ ЦВЕТ https://www.youtube.com/watch?v=jLJU27MNdQs A SOKIRKA
     //outline: none;
     font-size: 16px;
     font-weight: 600;
     font-style: normal;
-    color: $light-color;
+    //color: $light-color;
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
+    appearance: none;//Значение appearance: none; позволяет удалить стандартный стиль элемента, что дает возможность применять пользовательские стили без ограничений, налагаемых браузером.
 }
 
-.inp-contacts:focus-visible {
+/*.inp-contacts:focus-visible {
     outline: none;
+}*/
+
+.inp-contacts:focus {//https://www.youtube.com/watch?v=jLJU27MNdQs A SOKIRKA
+    outline: 1px solid #7d00f3;
+}
+
+.inp-contacts::placeholder {//https://www.youtube.com/watch?v=jLJU27MNdQs A SOKIRKA
+    color: #fdfdfd;
 }
 
 .first-checkbox {
@@ -4668,7 +4677,15 @@ img-pageAboutMe {
     font-weight: 600;
     font-style: normal;
     color: #FDFDFD;
-    outline: none;
+    //outline: none;
+}
+
+.input-contactMe:focus{//https://www.youtube.com/watch?v=jLJU27MNdQs A SOKIRKA
+    outline: 1px solid #7d00f3;
+}
+
+.input-contactMe::placeholder{//https://www.youtube.com/watch?v=jLJU27MNdQs A SOKIRKA
+    color: #fdfdfdb1;
 }
 
 .textarea-contactMe {
