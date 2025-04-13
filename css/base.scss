@@ -148,7 +148,7 @@ section {
 
 .sectionTitle {
     margin: 0;
-    font-size: clamp(36px, 5vw, 64px);//3em/4em
+    font-size: clamp(36px, 5vw, 64px);// 3em/4em /так тоже пишут, но калк у меня не работает в этой схеме clamp(1.13rem, calc(0.1rem + 5.13vw), 6.25rem);/
     font-weight: 800;
     font-style: normal;
     text-transform: uppercase;
@@ -758,7 +758,7 @@ to { left: 840px; } /*1040px ставим размер экрана, чтобы 
     }
 }
 
-.h2-main-text::selection {
+.h2-main-text::selection {//текст меняют цвет на оранжевый, когда выделяю его курсором мыши
     background-color: rgb(255, 136, 0);
     color: #333333;
 }
@@ -2971,22 +2971,24 @@ canvas {
     justify-content: center;
     align-items: center;
     width: 100%;//1435px;
-    height: auto;//468px
+    height: auto;//474px;
     eight: auto;
     order: 2;
+    background-color: rgb(123, 123, 123);//МОЖНО ПРОПИСАТЬ ВЫСОТУ 474РХ И С УСТАНОВЛЕННЫМ БГ ЕСЛИ НЕ ОТОБРАЗИТСЯ ФОТО, ОТОБРАЗИТСЯ СЕРЫЙ ФОН ОБЁРТКИ И ВЁРСТКА НЕ ПОЕДЕТ, ЗДЕСЬ ПРИ ДАННЫХ ЗНАЧЕНИЯХ ВЁРСТКА И ТАК НЕ ЕДЕТ, НО СЕРОГО ФОНА НЕТ, ПОТОМУ ЧТО ВЫСОТА НА АВТО (А. СОКИРКА https://www.youtube.com/watch?v=VaVpUHUM8JU&t=11s)
     animation: slowingg 1.5s ease-in-out both;
 }
 
-@keyframes slowingg {//УБРАЛ АНИМАЦИЮ СО ВСЕГО СЛАЙДА И УСТАНОВИЛ ТОЛЬКО НА ФОТО
+@keyframes slowingg {//УБРАЛ АНИМАЦИЮ СО ВСЕГО СЛАЙДА И УСТАНОВИЛ ТОЛЬКО НА ВРЕП ФОТО
     from {opacity: .5} 
     to {opacity: 1}
 }
 
 .img-reviews {
     display: block;
-    width: 100%;
+    width: 100%;//МОЖНО ПРОПИСАТЬ ФОТО ТОЛЬКО ЭТО СВОЙСТВО max-width: 100%; ОСТАЛЬНЫЕ УБРАТЬ
     height: 100%;
     object-fit: cover;
+    //object-position: 50% 50%;
     lex: 1;
 }
 
