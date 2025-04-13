@@ -2986,7 +2986,8 @@ canvas {
 .img-reviews {
     display: block;
     width: 100%;//МОЖНО ПРОПИСАТЬ ФОТО ТОЛЬКО ЭТО СВОЙСТВО max-width: 100%; ОСТАЛЬНЫЕ УБРАТЬ
-    height: 100%;
+    height: 100%;//aspect-ratio: 16/9;такое свойство пишут фото и блокам вместо высоты в респонсив макетах для автоматического увиличения и уменьшения
+    //aspect-ratio: 16/16;
     object-fit: cover;
     //object-position: 50% 50%;
     lex: 1;
