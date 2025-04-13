@@ -148,7 +148,7 @@ section {
 
 .sectionTitle {
     margin: 0;
-    font-size: clamp(36px, 5vw, 64px);// 3em/4em /так тоже пишут, но калк у меня не работает в этой схеме clamp(1.13rem, calc(0.1rem + 5.13vw), 6.25rem);/
+    font-size: clamp(36px, 5vw, 64px);// 3em/4em /так тоже пишут, но калк у меня не работает в этой схеме,потому что в каждой секции у заголовка секции свое название, а не одно и тоже clamp(1.13rem, calc(0.1rem + 5.13vw), 6.25rem); A.SOKIRKA https://www.youtube.com/watch?v=jLJU27MNdQs/
     font-weight: 800;
     font-style: normal;
     text-transform: uppercase;
