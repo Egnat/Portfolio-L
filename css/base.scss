@@ -361,7 +361,7 @@ body .light-dark-theme {// кнопка для переключения тем <
     display:inline-block;
     top: 0;
     left: 0;
-    //cursor:pointer;
+    cursor:pointer;
     ransition: opacity 500ms ease-in-out;
     pacity: 1;
 }
@@ -371,6 +371,10 @@ body .light-dark-theme {// кнопка для переключения тем <
     transition: transform 300ms ease-in-out;
     left: 754p
 }
+
+/*.imgDropShevronLinkItemListContentHeaderNavig:hover {
+    transform: scale(1.5);
+}*/
     
 .dropdownShevron-content {
     position:absolute;
