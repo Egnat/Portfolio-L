@@ -4779,7 +4779,7 @@ img-pageAboutMe {
     height: 30px;
     background-color: transparent;
     border: none;
-    transform: translate(-50%);
+    //transform: translate(-50%);
     overflow: hidden;
     cursor: pointer;
 }
@@ -4799,7 +4799,15 @@ img-pageAboutMe {
     width: auto;
     height: auto;
     transition: all 500ms ease-in-out;
+    -webkit-animation-duration: 1.5s;
+    animation-name: slo;
+    animation-duration: 1.5s;
     overflow: hidden;
+}
+
+@keyframes slo {
+    from {opacity: .5} 
+    to {opacity: 1}
 }
 
 .imgPageUIKit {

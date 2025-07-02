@@ -5477,8 +5477,6 @@ img-pageAboutMe {
   height: 30px;
   background-color: transparent;
   border: none;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
   overflow: hidden;
   cursor: pointer; }
 
@@ -5503,8 +5501,23 @@ img-pageAboutMe {
   height: auto;
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-name: slo;
+          animation-name: slo;
+  animation-duration: 1.5s;
   overflow: hidden; }
 
+@-webkit-keyframes slo {
+  from {
+    opacity: .5; }
+  to {
+    opacity: 1; } }
+
+@keyframes slo {
+  from {
+    opacity: .5; }
+  to {
+    opacity: 1; } }
 .imgPageUIKit {
   display: block;
   width: 100%;

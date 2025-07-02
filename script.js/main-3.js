@@ -56,7 +56,7 @@ cardAdd.addEventListener('click', (event) => {/*нажимаем на шишку
     newText.innerHTML = "Спасибо за внимание";
   if (photoOff.style.display == "flex") { // block если элемент найден // 
     photoOff.style.display = "none";//none
-    cardAdd.style.transition = 'all 500ms ease-in-out';//я добавил
+    //cardAdd.style.transition = 'all 500ms ease-in-out';//я добавил
     btnAround.style.transform = "rotate(0deg)";
     btnAround.style.transition = 'transform 300ms ease-in-out';
     return true;
@@ -107,5 +107,4 @@ setInterval(() => {
     }
 }, 3000);
 console.log(colorNames);
-
 //PAGE FIVE UI KIT///
