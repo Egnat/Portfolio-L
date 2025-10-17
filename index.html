@@ -48,7 +48,6 @@ GIT BASH https://www.youtube.com/watch?v=zacqjREKWM4, https://www.google.com/sea
 но только после -м скобки не нужны, название коммита пишем просто в кавычках
 
 
-
 CHAT , ПОДКЛЮЧЁННЫЙ В ПОРТФОЛИО https://dashboard.tawk.to/#/dashboard/66ab8bf81601a2195b9f76dd
 
 FORM SUBMIT БЕСПЛАТНЫЙ СЕРВИС https://formsubmit.co/el/confirm/76a2efec2678c1defc876e5ae10f523f
@@ -78,6 +77,7 @@ BOOTSTRAP. СТАРТОВЫЙ ШАБЛОН С КОДОМ ШТМЛ, ССЫЛКО�
 https://cdnjs.com/libraries/bootstrap
 https://getbootstrap.com/docs/5.0/getting-started/introduction/
 
+ССЫЛКА НА СКИЛЛФЭКТОРИ МОДУЛЬ ГИТХАБ С КОМАНДАИ В ТЕРМИНАЛЕ https://apps.skillfactory.ru/learning/course/course-v1:Skillfactory+FR+2020/block-v1:Skillfactory+FR+2020+type@sequential+block@7f7b221e97814d7d9a1059be0922740e/block-v1:Skillfactory+FR+2020+type@vertical+block@833b646e4d114e99add7122c32d2dbe1
 СКИЛЛФЕКТОРИ РАССКАЗЫВАЕТ О BOOTSTRAP 29 МИНУТА https://apps.skillfactory.ru/learning/course/course-v1:Skillfactory+FR+2020/block-v1:Skillfactory+FR+2020+type@sequential+block@696df835559a4a8680b206c428b9dc9f/block-v1:Skillfactory+FR+2020+type@vertical+block@afd917eb459d4b60963cf6a8e56672b6
 АЛИСА МИЛЛЕР СКИЛЛФЕКТОРИ О ТЕГАХ ВИДЕО АУДИО ИНПУТ И ДР. 1ЧАС.17МИН. https://apps.skillfactory.ru/learning/course/course-v1:Skillfactory+FR+2020/block-v1:Skillfactory+FR+2020+type@sequential+block@57963351fe7a4c33b99ea062fbcc0fe3/block-v1:Skillfactory+FR+2020+type@vertical+block@e5006a4dab8549de88548959df50292c
 СКИЛЛФЭКТОРИ ФОРМЫ / ИНПУТЫ https://apps.skillfactory.ru/learning/course/course-v1:Skillfactory+FR+2020/block-v1:Skillfactory+FR+2020+type@sequential+block@029fdc48732e415ebf5b5d7d72874696/block-v1:Skillfactory+FR+2020+type@vertical+block@7401b0940e3a4e45ad898d73be015626
@@ -107,7 +107,7 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <noscript><!--<link rel="icon" type="image/svg+xml" href="images/head-red.png">--></noscript>
     <link rel="icon" type="image/png" href="images/logos_atom-icon-favicon.png">
-    <!--<link rel="stylesheet" type="text/css" href="fonts/font.css">--><noscript>первыми подключаются шрифты, а потом стили. подключмл файл в scss</noscript>
+    <!--<link rel="stylesheet" type="text/css" href="fonts/font.css">--><noscript>первыми подключаются шрифты, а потом стили. подключил файл в base.scss через @import</noscript>
     <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
     <link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.csc">
     <link rel="stylesheet" type="text/css" href="css/base.css">
@@ -164,8 +164,11 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
     <!--<script type="text/javascript">alert("Сайт адаптирован под планшетную и мобильную версии. The site is adapted for tablet and mobile versions 😁");</script>-->
     <title>Портфолио</title>
 </head>
-<body class="body-home no-scroll" style="display:none;"><!--no-scroll NO ACTIVE-->
-  <div id="preloader"><!--с его добавлением страницы загружаются очень быстро-->
+<body class="body-home no-scroll"><!--no-scroll NO ACTIVE style="display:none;" в гтхаб отправил выключенный боди, нужно снова загрузить в гитхаб без дисплей нон и тогда в гитхабе будет всё снова видно-->
+  <!--<div id="preloader">!--с его добавлением страницы загружаются очень быстро--
+    <div class="loader"></div>
+  </div>-->
+  <div id="preloader">
     <div class="loader"></div>
   </div>
   <header class="header" id="header">
@@ -1613,7 +1616,7 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
           <h3 class="sectionTitle sectionAdvantagesTitle">Почему я</h3><!--Advantages-->
           <picture class="blockAdvantages wow"><!--анимация с библиотеки wow.js, если отключить мою анимацию и кейфреймс, то эту конструкцию  data-wow-duration = "3s"  нужно вставить в анимируемый элемент перед class и подключить в голове сайт анимейт.цсс через линк или файл, который я скачал в папку цсс. эти классы animate__animated animate__fadeInUpBig сейчас можно убрать, так как использую свою анимацию, а не анимэйт.цсс -->
             <div class="itemAdvantages" style=" border-radius: 0px 0 0 0px">
-              <h3 class="h3-itemAdvantages">2 Y + </h3>
+              <h3 class="h3-itemAdvantages">2 Y +</h3>
               <p class="text-itemAdvantages">опыта</p>
             </div>
             <div class="itemAdvantages">

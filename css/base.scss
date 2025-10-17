@@ -92,7 +92,7 @@ line-height: calc(16vh / 4);/*Растягивает текст на всю вы
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-@import url('..fonts/font.css');
+@import url('../fonts/font.css');
 
 @import "swiper-bundle.min.css";
 
@@ -227,7 +227,7 @@ body.dark_theme {
     animation: gradientAnimation2 7s linear infinite alternate;
     //background-color: #161616;// #131313 //вариант пока собирал проект
     transition: all 500ms ease-in-out;
-    olor: gold;
+    //olor: gold;
 }
 /*Живой градиент для темной темы*/
 @keyframes gradientAnimation2 {
@@ -256,27 +256,28 @@ body .light-dark-theme {// кнопка для переключения тем <
 //ПРЕЛОАДЕР с его добавлением страницы загружаются очень быстро
 #preloader {
     position: fixed;
-    left: 0;
     top: 0;
-    width: 100%;
-    eight: 100%;
-    //background: #ffffff; /* Цвет фона */
-    //z-index: 9999; /* Находится выше всего контента */
-    opacity: 0;
+    left: 0; 
+    width: 3vw;//100VH
+    height: 14vh;//100VH
+    background: #05000c;// #242424
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .loader {
-    border: 16px solid #f3f3f3; /* Цвет фона */
-    border-top: 16px solid #3498db; /* Цвет верхней части */
+    border: 3px solid #f9f9f9;// 8pxf3f3f3
+    border-top: 2px solid #f4ff24;//8px #3498db
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    animation: spin 2s linear infinite; /* Анимация вращения */
+    width: 30px;//60px 
+    height: 30px;//60px
+    animation: spin 1s linear infinite;
 }
-
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0%   { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
 }
 //ПРЕЛОАДЕР//
 
@@ -458,6 +459,13 @@ linkItemListContentHeaderNavig {
 }
 /*DROPDOWN SHEVRON CONTACT*/
 
+.container-social-icons-header-desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
 .social-link {
     display: flex;
     justify-content: space-between;
@@ -471,13 +479,67 @@ linkItemListContentHeaderNavig {
         //opacity: 0.1;
         color: $dark-color;
         transition: color 300ms ease-in-out;//opacity
+        /*&:hover{//МОЖНО НАПИСАТЬ ХОВЕР ВНУТРИ .textWorld, ВОТ ТАК И ХОВЕР ПРИМЕНЯЕТСЯ ТОЛЬКО К .textWorld
+        //opacity: 1;
+        color: $light-color;
+        transition: color 300ms ease-in-out;//opacity
+        }*/
     }
     
-    &:hover .textWorld  {
+    &:hover .textWorld {// А МОЖНО НАПИСАТЬ ЗДЕСЬ, НО ТОГДА ХОВЕР ОТНОСИТСЯ К .social-link И СТИЛЬ МЕНЯЕТСЯ У .textWorld, ПОТОМУ ЧТО МЫ УКАЗАЛИ ЭЛЕМЕНТ, У КОТОРОГО БУДУТ МЕНЯТЬСЯ СТИЛИ &:hover .textWorld
         //opacity: 1;
         color: $light-color;
         transition: color 300ms ease-in-out;//opacity
     }
+
+    .social-icon-desktop {
+        filter: $filterIconTextWorld;
+
+            &:hover {
+                filter: brightness(0.5); //filter: contrast(0.8); 
+            }
+    }
+    /* ПРИМЕР-ОБЪЯСНЕНИЕ ПРО ЭЛЕМЕНТЫ С АMПЕРСАНДАМИ И БЕЗ С ПЕРПЛЕКСИТИ
+    <div class="social-link">
+    <div>
+    <p class="textWorld">Это глубоко вложенный элемент</p>
+    </div>
+    <span>
+        <div>
+            <div class="textWorld">Это ещё один вложенный элемент</div>
+        </div>
+    </span>
+    <div class="textWorld">А это прямой потомок</div>
+    </div>
+    .social-link {
+        .textWorld { 
+            color:white;
+        }
+        & > .textWorld {
+            color: red; 
+        }
+    }
+    ПРЕДПОЛОЖИМ, ЧТО В КОДЕ ЕСТЬ НЕСКОЛЬКО ЭЛЕМЕНТОВ С КЛАССОМ .textWorld С РАЗНЫМИ УРОВНЯМИ ВЛОЖЕННОСТИ
+    И ДЛЯ НИХ ДЕЙСТВУЕТ СТИЛЬ ЦВЕТ БЫЛЙ (Все элементы с классом .textWorld, которые находятся внутри .social-link на любом уровне (глубоко вложенные или нет), станут белыми),
+    А ТОТ .textWorld, ПЕРЕД КОТРЫМ СТОИТ & > БУДЕТ КРАСНОГО ЦВЕТА (Элемент .textWorld, который стоит напрямую внутри .social-link (без промежуточных вложенных элементов(без других контейнеров между ними)), будет красного цвета, так как правило с & > .textWorld точнее и имеет более высокий приоритет.)
+    Так работает приоритет и выбор селекторов в CSS — самые точные правила выигрывают и применяются последними(точный стиль перекрывает общий).
+    Чтобы изменить цвет именно у элемента <p> с классом .textWorld, нужно написать так в SCSS
+    .social-link {
+        p.textWorld {
+          color: yellow; /* Этот параграф станет жёлтым *
+        }
+
+        .textWorld {
+          color: white; /* Остальные элементы .textWorld будут белыми *
+        }
+
+        & > .textWorld {
+         color: red; /* Прямые потомки .textWorld - красные *
+        }
+    }
+    SKILLFACTORY ABOUT SASS / SCSS / УРОВНИ ВЛОЖЕННОСТИ ЭЛЕМЕНТОВ / МИКСИНЫ / КАЛЬКУЛЯТОР
+    https://apps.skillfactory.ru/learning/course/course-v1:Skillfactory+FR+2020/block-v1:Skillfactory+FR+2020+type@sequential+block@60f23eb56d1b4eacace9c2f7c291b31b/block-v1:Skillfactory+FR+2020+type@vertical+block@d4daed27e5ac4f88a3d55cff7035cc47
+    */
 }
 
 .nav-mobile {
@@ -489,13 +551,6 @@ linkItemListContentHeaderNavig {
     font-size: 24px;
     color: $light-color;
     cursor: pointer;
-}
-
-.container-social-icons-header-desktop {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
 }
 
 //SECTION ONE

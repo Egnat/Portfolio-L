@@ -1,4 +1,15 @@
-//ЧТОБ ХЕДЕР НЕ НАЛИЗАЛ НА ФУТЕР РАБОЧАЯ, ЕСЛИ НЕ МЕНЯТЬ ВЫЧОТУ В ЭЛЕМЕНТАХ ФУТЕРА
+//PRELOSDER КОД С ПЕРПЛЕКСИТИ
+window.addEventListener('load', function() {
+    const preloader = document.getElementById('preloader');
+    preloader.style.transition = 'opacity 0.5s';
+    preloader.style.opacity = 0;
+    setTimeout(function() {
+    preloader.style.display = 'block';//none
+    document.getElementById('content').style.display = 'block';
+    }, 500);
+});
+
+//ЧТОБ ХЕДЕР НЕ НАЛEЗАЛ НА ФУТЕР РАБОЧАЯ, ЕСЛИ НЕ МЕНЯТЬ ВЫЧОТУ В ЭЛЕМЕНТАХ ФУТЕРА
 /*const header = document.querySelector('header');
 const footer = document.querySelector('footer');
 
