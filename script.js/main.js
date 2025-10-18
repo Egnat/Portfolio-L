@@ -6,7 +6,7 @@ window.addEventListener('load', function() {
     setTimeout(function() {
     preloader.style.display = 'block';//none
     document.getElementById('content').style.display = 'block';
-    }, 100);
+    }, 800);
 });
 
 //ЧТОБ ХЕДЕР НЕ НАЛEЗАЛ НА ФУТЕР РАБОЧАЯ, ЕСЛИ НЕ МЕНЯТЬ ВЫЧОТУ В ЭЛЕМЕНТАХ ФУТЕРА
