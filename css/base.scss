@@ -253,33 +253,43 @@ body .light-dark-theme {// кнопка для переключения тем <
     overflow: hidden;
 }*/
 
-//ПРЕЛОАДЕР с его добавлением страницы загружаются очень быстро
+//ПРЕЛОАДЕР с его добавлением страницы загружаются очень быстро(НЕ ФАКТ, ТО ЧТО С ДОБАВЛЕНИЕМ ПРЕЛОАДЕРА САЙТ ГРУЗИТСЯ БЫСТРЕЕ!)
 #preloader {
     position: fixed;
     top: 0;
     left: 0; 
-    width: 3vw;// 100vw
-    height: 7vw;// 100vw
-    background: #05000c;// #242424
-    z-index: 9999;
+    width: 100vw;// 3vw
+    height: 100vh;// 7vh
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
+    background: #05000c;// #242424
+    opacity: 0.8;
+    z-index: 9999;
 }
 
 .loader {
-    border: 3px solid #f9f9f9;// 8pxf3f3f3
-    border-top: 2px solid #f4ff24;//8px #3498db
+    width: 60px;//30px 
+    height: 60px;//30px
+    border: 8px solid #f9f9f9;// 3px f3f3f3
+    border-top: 8px solid #f4ff24;//2px #3498db
     border-radius: 50%;
-    width: 30px;//60px 
-    height: 30px;//60px
     animation: spin 1s linear infinite;
 }
 @keyframes spin {
     0%   { transform: rotate(0deg);}
     100% { transform: rotate(360deg);}
 }
-//ПРЕЛОАДЕР//
+
+.percent {//ЦИФРЫ ПРИ ЗАГРУЗКЕ СТРАНИЦЫ
+    margin-left: 30px;
+    font-size: 30px;//28px
+    font-weight: bold;
+    color: #f4ff24;//#3498db
+    letter-spacing: 2px;
+}
+///ПРЕЛОАДЕР///
 
 .header {
     position: sticky;/*fixed*/

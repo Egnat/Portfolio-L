@@ -1,13 +1,40 @@
-//PRELOSDER КОД С ПЕРПЛЕКСИТИ
+//PRELOADER КОД С PERPLEXITY С ЧИСЛАМИ
+ // Индикатор для имитации загрузки (цифра 0-100)
+let percent = 0;
+const percentElem = document.getElementById('percent');
+const preloader = document.getElementById('preloader');
+// Интервал до полной загрузки (пример — обновляется каждые 10 мс)
+const interval = setInterval(() => {
+  percent++;
+  percentElem.textContent = percent + '%';
+  if (percent >= 100) {
+    clearInterval(interval);
+  }
+}, 570);//БЫЛО ИЗНАЧАЛЬНО 10, НО 10 МАЛО ВРЕМЕНИ ДЛЯ ПОЛНОЙ ЗАГРУЗКИ СТРАНИЦЫ
 window.addEventListener('load', function() {
+  // Убедиться, что счетчик дошёл до 100
+  percent = 100;
+  percentElem.textContent = '100%';
+  setTimeout(function() {
+    preloader.style.opacity = 0;
+    setTimeout(function() {
+      preloader.style.display = 'none';
+      document.getElementById('content').style.display = 'block';
+    }, 500);
+  }, 300);
+});
+////PRELOADER КОД С PERPLEXITY С ЧИСЛАМИ///
+//PRELOАDER КОД С ПЕРПЛЕКСИТИ БЕЗ ЦИФР
+/*window.addEventListener('load', function() {
     const preloader = document.getElementById('preloader');
     preloader.style.transition = 'opacity 0.5s';
     preloader.style.opacity = 0;
     setTimeout(function() {
     preloader.style.display = 'none';
     document.getElementById('content').style.display = 'block';
-    }, 500);/*500 это скорость исчезновения прелоадера Увеличить, например, до 800 мс — это сделать анимацию исчезновения прелоадера более плавной и долгой; уменьшить до 200 мс — прелоадер исчезнет почти мгновенно, и основной контент покажется быстрее после полной загрузки. Для согласованности UX держите время в диапазоне 400–800 мс для анимации скрытия и последовательности показа контента.*/
-});
+    }, 500);///*500 это скорость исчезновения прелоадера Увеличить, например, до 800 мс — это сделать анимацию исчезновения прелоадера более плавной и долгой; уменьшить до 200 мс — прелоадер исчезнет почти мгновенно, и основной контент покажется быстрее после полной загрузки. Для согласованности UX держите время в диапазоне 400–800 мс для анимации скрытия и последовательности показа контента.
+});*/
+///PRELOАDER КОД С ПЕРПЛЕКСИТИ БЕЗ ЦИФР ТОЖЕ РАБОЧИЙ///
 
 //ЧТОБ ХЕДЕР НЕ НАЛEЗАЛ НА ФУТЕР РАБОЧАЯ, ЕСЛИ НЕ МЕНЯТЬ ВЫЧОТУ В ЭЛЕМЕНТАХ ФУТЕРА
 /*const header = document.querySelector('header');
