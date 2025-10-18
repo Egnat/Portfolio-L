@@ -4,7 +4,7 @@ window.addEventListener('load', function() {
     preloader.style.transition = 'opacity 0.5s';
     preloader.style.opacity = 0;
     setTimeout(function() {
-    preloader.style.display = 'block';//none
+    preloader.style.display = 'none';
     document.getElementById('content').style.display = 'block';
     }, 800);
 });
