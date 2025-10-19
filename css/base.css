@@ -4533,9 +4533,9 @@ flex-item:nth-child(1) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   gap: 10px;
   cursor: pointer;
 }
@@ -4570,7 +4570,7 @@ flex-item:nth-child(1) {
 
 .text-checkbox {
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 15px;
   line-height: 163.68%;
   color: #FDFDFD;
@@ -10081,5 +10081,4 @@ footer-anchor {
     letter-spacing: 3px;
   }
 }
-
 /*# sourceMappingURL=base.css.map */

@@ -183,7 +183,7 @@ body {
     background-image: $body-home-bg/*linear-gradient(245deg, #64b5f6, #81c784, #ffeb3b, #ff8a65)*/;/*245deg,*/
     background-size: 400% 400%;
     animation: gradientAnimation 7s linear infinite alternate;
-    //background: linear-gradient(245deg, #004882, #07580b, #0b0a00, #3d340c);
+    //background-image: linear-gradient(245deg, #004882, #07580b, #0b0a00, #3d340c);
     /*////////////////////////////////////////////*/
     //background-image: linear-gradient(0deg, #353535, silver, white, white, white);/*классный градиент не живой*/
     opacity:0; transition:.5s;/*добавляем для плавного переключения страниц*/
@@ -3671,7 +3671,7 @@ flex-item:nth-child(1) {
 .label-contacts {
     display: flex;
     //justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     gap: 10px;
     cursor:pointer
 }
@@ -3702,7 +3702,7 @@ flex-item:nth-child(1) {
 
 .text-checkbox {
     font-style: normal;
-    font-weight: 500;//bolder
+    font-weight: 400;//bolder
     font-size: 15px;
     line-height: 163.68%;
     color: $light-color;

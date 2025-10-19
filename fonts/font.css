@@ -30,6 +30,19 @@ font-weight:
     /*font-weight: normal;
     font-style: normal;*
   }*/
+
+  /*
+https://web.dev/articles/variable-fonts?hl=ru
+https://www.youtube.com/watch?v=N9cNuSF6mK0 ОТ 0 ДО 1
+@font-face {
+    font-family: 'NunitoSans-Variable';
+    src: url('../fonts/NunitoSans-Variable.woff2') format('woff2-variations');
+    src: url('../fonts/NunitoSans-Variable.woff2') format('woff2') tech('variations');
+    font-weight: 300 700;
+    /*font-stretch: 25% 151%; В ЭТОМ ПРОЕКТЕ ЭТА СТРОЧКА НЕ НУЖНА*
+}
+такой код используют, когда шрифт VariableFont, как здесь => NunitoSans-Italic-VariableFont_YTLC,opsz,wdth,wght это из проекта AGROTON
+*/
   
   @font-face {
     font-family: "Rubik";
@@ -42,7 +55,8 @@ font-weight:
               url('../fonts/Rubik-Black.ttf') format("truetype"),
               url('../fonts/Rubik-Black.svg') format("svg"),
               url("../fonts/Rubik-Black.otf") format('opentype');
-    font-display: fallback;         
+    font-display: fallback;
+    /*font-display: swap; от 0 до 1 рекомендует включать это свойство для быстрой загрузки шрифтов*/         
     /*font-weight: normal;
     font-style: normal;*/
   }
@@ -58,7 +72,8 @@ font-weight:
               url('../fonts/Rubik-Bold.ttf') format("truetype"),
               url('../fonts/Rubik-Bold.svg') format("svg"),
               url("../fonts/Rubik-Bold.otf") format('opentype');
-    font-display: swap;         
+    font-display: swap;
+    /*font-display: fallback;*/       
     /*font-weight: normal;
     font-style: normal;*/
   }
@@ -74,7 +89,8 @@ font-weight:
               url('../fonts/Rubik-ExtraBold.ttf') format("truetype"),
               url('../fonts/Rubik-ExtraBold.svg') format("svg"),
               url("../fonts/Rubik-ExtraBold.otf") format('opentype');
-    font-display: swap;         
+    font-display: swap;
+    /*font-display: fallback;*/         
     /*font-weight: normal;
     font-style: normal;*/
   }
@@ -90,7 +106,8 @@ font-weight:
               url('../fonts/Rubik-SemiBold.ttf') format("truetype"),
               url('../fonts/Rubik-SemiBold.svg') format("svg"),
               url("../fonts/Rubik-SemiBold.otf") format('opentype');
-    font-display: swap;         
+    font-display: swap;
+    /*font-display: fallback;*/        
     /*font-weight: normal;
     font-style: normal;*/
   }
@@ -106,7 +123,8 @@ font-weight:
               url('../fonts/Rubik-Medium.ttf') format("truetype"),
               url('../fonts/Rubik-Medium.svg') format("svg"),
               url("../fonts/Rubik-Medium.otf") format('opentype');
-    font-display: swap;         
+    font-display: swap;
+    /*font-display: fallback;*/         
     /*font-weight: normal;
     font-style: normal;*/
   }
@@ -122,7 +140,8 @@ font-weight:
               url('../fonts/Rubik-Regular.ttf') format("truetype"),
               url('../fonts/Rubik-Regular.svg') format("svg"),
               url("../fonts/Rubik-Regular.otf") format('opentype');
-    font-display: swap;         
+    font-display: swap;
+    /*font-display: fallback;*/         
     /*font-weight: normal;
     font-style: normal;*/
   }
