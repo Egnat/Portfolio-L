@@ -36,7 +36,7 @@ font-weight:
     font-style: normal;
     font-weight: 900;
     src: url("../fonts/Rubik-Black.eot");
-    src: local("Roboto"),
+    src: local("0"),/*Roboto ПОХОДУ ОСТАЛСЯ С ДРУГОГО САЙТА*/
               url("../fonts/Rubik-Black.woff2") format("woff2"),/*нужно из ttf сконвертировать в woff2, woff и скачать этот шрифт в папку проекта, и тогда этот код будет работать*/
               url("../fonts/Rubik-Black.woff") format("woff"),
               url('../fonts/Rubik-Black.ttf') format("truetype"),
@@ -52,7 +52,7 @@ font-weight:
     font-style: normal;
     font-weight: 800;
     src: url("../fonts/Rubik-Bold.eot");
-    src: local("Roboto"),
+    src: local("0"),/*Roboto*/
               url("../fonts/Rubik-Bold.woff2") format("woff2"),/*нужно из ttf сконвертировать в woff2, woff и скачать этот шрифт в папку проекта, и тогда этот код будет работать*/
               url("../fonts/Rubik-Bold.woff") format("woff"),
               url('../fonts/Rubik-Bold.ttf') format("truetype"),
@@ -68,7 +68,7 @@ font-weight:
     font-style: normal;
     font-weight: 700;
     src: url("../fonts/Rubik-ExtraBold.eot");
-    src: local("Roboto"),
+    src: local("0"),/*Roboto*/
               url("../fonts/Rubik-ExtraBold.woff2") format("woff2"),/*нужно из ttf сконвертировать в woff2, woff и скачать этот шрифт в папку проекта, и тогда этот код будет работать*/
               url("../fonts/Rubik-ExtraBold.woff") format("woff"),
               url('../fonts/Rubik-ExtraBold.ttf') format("truetype"),
@@ -84,7 +84,7 @@ font-weight:
     font-style: normal;
     font-weight: 600;
     src: url("../fonts/Rubik-SemiBold.eot");
-    src: local("Roboto"),
+    src: local("0"),/*Roboto*/
               url("../fonts/Rubik-SemiBold.woff2") format("woff2"),/*нужно из ttf сконвертировать в woff2, woff и скачать этот шрифт в папку проекта, и тогда этот код будет работать*/
               url("../fonts/Rubik-SemiBold.woff") format("woff"),
               url('../fonts/Rubik-SemiBold.ttf') format("truetype"),
@@ -100,7 +100,7 @@ font-weight:
     font-style: normal;
     font-weight: 500;
     src: url("../fonts/Rubik-Medium.eot");
-    src: local("Roboto"),
+    src: local("0"),/*Roboto*/
               url("../fonts/Rubik-Medium.woff2") format("woff2"),/*нужно из ttf сконвертировать в woff2, woff и скачать этот шрифт в папку проекта, и тогда этот код будет работать*/
               url("../fonts/Rubik-Medium.woff") format("woff"),
               url('../fonts/Rubik-Medium.ttf') format("truetype"),
@@ -116,7 +116,7 @@ font-weight:
     font-style: normal;
     font-weight: 400;
     src: url("../fonts/Rubik-Regular.eot");
-    src: local("Roboto"),
+    src: local("0"),/*Roboto*/
               url("../fonts/Rubik-Regular.woff2") format("woff2"),/*нужно из ttf сконвертировать в woff2, woff и скачать этот шрифт в папку проекта, и тогда этот код будет работать*/
               url("../fonts/Rubik-Regular.woff") format("woff"),
               url('../fonts/Rubik-Regular.ttf') format("truetype"),

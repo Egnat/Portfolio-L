@@ -135,7 +135,7 @@ section {
 .sectionTitle {
   margin: 0;
   font-size: clamp(36px, 5vw, 64px);
-  font-weight: 800;
+  font-weight: 600;
   font-style: normal;
   text-transform: uppercase;
   color: #FDFDFD;
@@ -768,6 +768,7 @@ linkItemListContentHeaderNavig {
 
 .h5-main-text {
   font-size: 20px;
+  font-weight: 500;
   text-transform: uppercase;
   color: #28004d;
   word-wrap: break-word;
@@ -952,6 +953,7 @@ to { left: 840px; } /*1040px ставим размер экрана, чтобы 
 
 .h2-main-text {
   font-size: clamp(36px, 5vw, 64px);
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 7px;
   word-wrap: break-word;
@@ -1046,7 +1048,7 @@ to { left: 840px; } /*1040px ставим размер экрана, чтобы 
 
 .h4-gretting {
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 500;
   color: #FDFDFD;
 }
 
@@ -2373,14 +2375,14 @@ https://www.youtube.com/watch?v=UNaWqWvytKk&list=PLVTUJUbFu7UeD0HL7zOgkoe7fu_n0c
 
 .h3-itemAdvantages {
   font-size: 30px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: normal;
   color: #FDFDFD;
 }
 
 .text-itemAdvantages {
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 400;
   color: #FDFDFD;
 }
 
@@ -2474,7 +2476,7 @@ https://www.youtube.com/watch?v=UNaWqWvytKk&list=PLVTUJUbFu7UeD0HL7zOgkoe7fu_n0c
 .title-lable {
   color: #28004d;
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
 }
 
@@ -3262,13 +3264,19 @@ swiper-slide img {
   gap: 15px;
 }
 
-.block-description-cube-app {
+.block-description-cube-app, .block-description-cube-fd,
+.block-description-cube-youtube, .block-description-cube-insta,
+.block-description-cube-reels {
   top: 45%;
+}
+
+.block-description-cube.block-description-cube-shorts {
+  top: 49%;
 }
 
 .title-cube {
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   color: #FDFDFD;
 }
@@ -3293,6 +3301,7 @@ swiper-slide img {
 .subtitle-cube {
   width: 91%;
   font-size: 20px;
+  font-weight: 500;
   color: #FDFDFD;
   text-transform: uppercase;
   word-wrap: break-word;
@@ -3320,11 +3329,13 @@ swiper-slide img {
 
 .h4-cube {
   font-size: 18px;
+  font-weight: 500;
   color: #FDFDFD;
 }
 
 .h2-cube {
   font-size: 32px;
+  font-weight: 600;
   color: #FDFDFD;
 }
 .h2-cube .from {
@@ -3550,7 +3561,7 @@ canvas {
 .title-horisont-accordion {
   idth: 70%;
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 500;
   olor: #FDFDFD;
   ext-align: justify;
   text-transform: uppercase;
@@ -3858,6 +3869,7 @@ canvas {
 
 .name {
   font-size: 20px;
+  font-weight: 500;
   text-transform: capitalize;
   color: #28004d;
 }
@@ -4111,7 +4123,7 @@ pg-answer {
 .title-question {
   font-size: 22p;
   font-size: 1.5em;
-  font-weight: 600;
+  font-weight: 500;
   color: #FDFDFD;
   word-wrap: break-word;
   -webkit-hyphens: auto;
@@ -4446,7 +4458,7 @@ flex-item:nth-child(1) {
 
 .title-form {
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 500;
   color: #FDFDFD;
   word-wrap: break-word;
   -webkit-hyphens: auto;
@@ -4481,7 +4493,7 @@ flex-item:nth-child(1) {
   border-bottom: 1px solid #FDFDFD;
   caret-color: #FDFDFD;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 400;
   font-style: normal;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -4676,7 +4688,7 @@ flex-item:nth-child(1) {
 
 .title-info {
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 500;
   color: #FDFDFD;
 }
 
@@ -4748,6 +4760,10 @@ flex-item:nth-child(1) {
 
 .link-info {
   text-decoration: none;
+}
+
+.medium {
+  font-weight: 500;
 }
 
 .icon-social-info {
@@ -5112,6 +5128,10 @@ numbertext {
   color: #FDFDFD;
 }
 
+.pg-slide-contacts b {
+  font-weight: 500;
+}
+
 .line-bottom {
   width: 100%;
   border: 1px solid #FDFDFD;
@@ -5335,7 +5355,7 @@ filter-item-like:hover {
 .descriptor-pageAboutMe {
   width: 100%;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 400;
   color: #FDFDFD;
   word-wrap: break-word;
   -webkit-hyphens: auto;
@@ -6278,6 +6298,7 @@ footer-anchor {
   display: block;
   color: #FDFDFD;
   font-size: 24px;
+  font-weight: 500;
   text-decoration: none;
   -webkit-transition: opacity 300ms ease-in-out, -webkit-text-decoration 300ms ease-in-out;
   transition: opacity 300ms ease-in-out, -webkit-text-decoration 300ms ease-in-out;
@@ -6328,7 +6349,7 @@ footer-anchor {
   width: 100%;
   gap: 30px;
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.7px;
   color: #FDFDFD;
 }
@@ -6602,6 +6623,11 @@ footer-anchor {
   letter-spacing: 2px;
 }
 
+.link-footer.social-link {
+  font-size: 16px;
+  font-weight: 400;
+}
+
 .two-floor-footer .social-link:nth-child(4) {
   display: none;
 }
@@ -6712,7 +6738,6 @@ footer-anchor {
   .h2-main-text {
     font-size: 3.1em;
     letter-spacing: 6px;
-    font-weight: 700;
   }
 
   .blockBtnCTA {
@@ -6732,11 +6757,11 @@ footer-anchor {
       top: 48%;
   }*/
   .block-description-cube-app {
-    top: 48%;
+    top: 49%;
   }
 
   .block-description-cube-landing {
-    top: 47%;
+    top: 45%;
   }
 
   .block-description-cube-site-five {
@@ -6747,9 +6772,12 @@ footer-anchor {
     top: 49%;
   }
 
-  .block-description-cube-shorts, .block-description-cube-insta,
-  .block-description-cube-reels {
+  .block-description-cube-shorts {
     top: 50%;
+  }
+
+  .block-description-cube-insta, .block-description-cube-reels {
+    top: 49%;
   }
 
   .accordion-header {
@@ -7380,8 +7408,24 @@ footer-anchor {
     text-align: center;
   }
 
+  .block-description-cube-landing {
+    top: 49%;
+  }
+
+  .block-description-cube-fd {
+    top: 49%;
+  }
+
+  .block-description-cube-youtube {
+    top: 49%;
+  }
+
   .block-description-cube-shorts, .block-description-cube-insta,
-  .block-description-cube-reels, .block-description-cube-app {
+  .block-description-cube-reels {
+    top: 49%;
+  }
+
+  .block-description-cube-app {
     top: 47%;
   }
 

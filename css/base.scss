@@ -149,9 +149,11 @@ section {
 .sectionTitle {
     margin: 0;
     font-size: clamp(36px, 5vw, 64px);// 3em/4em /так тоже пишут, но калк у меня не работает в этой схеме,потому что в каждой секции у заголовка секции свое название, а не одно и тоже clamp(1.13rem, calc(0.1rem + 5.13vw), 6.25rem); A.SOKIRKA https://www.youtube.com/watch?v=jLJU27MNdQs/
-    font-weight: 800;
+    font-weight: 600;
     font-style: normal;
     text-transform: uppercase;
+    //-webkit-text-stroke: 4px #FDFDFD;/*сделть текст жирнее*/
+    //letter-spacing: 4px;
     color: #FDFDFD;
 }
 
@@ -623,6 +625,7 @@ linkItemListContentHeaderNavig {
 .h5-main-text {
     //width: 20%;
     font-size: 20px;
+    font-weight: 500;
     text-transform: uppercase;
     color:#28004d;
     word-wrap: break-word;
@@ -783,6 +786,7 @@ to { left: 840px; } /*1040px ставим размер экрана, чтобы 
 
 .h2-main-text {
     font-size: clamp(36px, 5vw, 64px);//4em-64px
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 7px;
     //color: $dark-color;
@@ -850,7 +854,7 @@ to { left: 840px; } /*1040px ставим размер экрана, чтобы 
 
 .h4-gretting {
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 500;
     color:$light-color;
 }
 
@@ -1926,14 +1930,14 @@ https://www.youtube.com/watch?v=UNaWqWvytKk&list=PLVTUJUbFu7UeD0HL7zOgkoe7fu_n0c
 
 .h3-itemAdvantages {
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: normal;
     color: $light-color;
 }
 
 .text-itemAdvantages {
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 400;
     color:$light-color;
 }
 
@@ -2004,7 +2008,7 @@ https://www.youtube.com/watch?v=UNaWqWvytKk&list=PLVTUJUbFu7UeD0HL7zOgkoe7fu_n0c
 .title-lable {
     color: $dark-color;
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
 }
 
@@ -2687,13 +2691,19 @@ swiper-slide img {
     gap: 15px;
 }
 
-.block-description-cube-app {
+.block-description-cube-app, .block-description-cube-fd,
+.block-description-cube-youtube, .block-description-cube-insta,
+.block-description-cube-reels {
     top: 45%;
+}
+
+.block-description-cube.block-description-cube-shorts {
+    top: 49%;
 }
 
 .title-cube {
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
     color:$light-color; 
 }
@@ -2709,6 +2719,7 @@ swiper-slide img {
 .subtitle-cube {
     width: 91%;
     font-size: 20px;
+    font-weight: 500;
     color: $light-color;
     text-transform: uppercase;
     word-wrap: break-word;
@@ -2725,11 +2736,13 @@ swiper-slide img {
 
 .h4-cube {
     font-size: 18px;
+    font-weight: 500;
     color: $light-color;
 }
 
 .h2-cube {
     font-size: 32px;
+    font-weight: 600;
     color: $light-color;
 
     .from {
@@ -2911,7 +2924,7 @@ canvas {
 .title-horisont-accordion {
     idth: 70%;
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 500;
     olor: $light-color;
     ext-align: justify;
     text-transform: uppercase;
@@ -2982,6 +2995,8 @@ canvas {
 }
 
 .titleSectionReviews {
+    //-webkit-text-stroke: 4px $dark-color;/*сделть текст жирнее*/
+    //letter-spacing: 4px;
     color:$dark-color;
 }
 
@@ -3127,6 +3142,7 @@ canvas {
 
 .name {
     font-size: 20px;
+    font-weight: 500;
     text-transform: capitalize;
     color: $dark-color;
 }
@@ -3342,7 +3358,7 @@ pg-answer {
 .title-question {
     font-size: 22p;
     font-size: 1.5em;//20px
-    font-weight: 600;
+    font-weight: 500;
     color: $light-color;
     word-wrap: break-word;
     hyphens: auto;
@@ -3601,7 +3617,7 @@ flex-item:nth-child(1) {
 
 .title-form {
     font-size: 32px;
-    font-weight: 700;
+    font-weight: 500;
     color: $light-color;
     word-wrap: break-word;
     hyphens: auto;
@@ -3626,7 +3642,7 @@ flex-item:nth-child(1) {
     caret-color: $light-color;//КРАСИТ КУРСОР В НУЖНЫЙ ЦВЕТ https://www.youtube.com/watch?v=jLJU27MNdQs A SOKIRKA
     //outline: none;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 400;
     font-style: normal;
     //color: $light-color;
     -webkit-appearance: none;
@@ -3782,7 +3798,7 @@ flex-item:nth-child(1) {
 
 .title-info {
     font-size: 32px;
-    font-weight: 700;
+    font-weight: 500;
     color: $light-color;
 }
 
@@ -3830,6 +3846,10 @@ flex-item:nth-child(1) {
 
 .link-info {
     text-decoration: none;
+}
+
+.medium {
+    font-weight: 500;
 }
 
 .icon-social-info {
@@ -4069,6 +4089,8 @@ numbertext {
     //font-size: 4em;//64px - 4em / 48px - 3em
     font-weight: 600;
     text-transform: uppercase;
+    //letter-spacing: 4px;//
+    //-webkit-text-stroke: 4px $light-color;/*сделть текст жирнее*///
     color: $light-color;
 }
 
@@ -4103,6 +4125,10 @@ numbertext {
     word-wrap: break-word;
     hyphens: auto;
     color: $light-color;
+}
+
+.pg-slide-contacts b {
+    font-weight: 500;
 }
 
 .line-bottom {
@@ -4271,7 +4297,7 @@ filter-item-like:hover {
 .descriptor-pageAboutMe {
     width: 100%;//41
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 400;
     color: $light-color;
     word-wrap: break-word;
     hyphens: auto;
@@ -4948,6 +4974,7 @@ footer-anchor {
     display: block;
     color: #FDFDFD;
     font-size: 24px;
+    font-weight: 500;
     text-decoration: none;
     transition: text-decoration 300ms ease-in-out,
                 opacity 300ms ease-in-out;
@@ -4977,7 +5004,7 @@ footer-anchor {
     width: 100%;
     gap: 30px;
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 0.7px;
     color: $light-color;
 }
@@ -5216,7 +5243,12 @@ footer-anchor {
     letter-spacing: 2px;
 }
 
-.two-floor-footer .social-link:nth-child(4) {
+.link-footer.social-link {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.two-floor-footer .social-link:nth-child(4) {//Youtube
     display: none;
 }
 //FOOTER///
@@ -5334,7 +5366,7 @@ footer-anchor {
     .h2-main-text {
         font-size: 3.1em;
         letter-spacing: 6px;
-        font-weight: 700;
+        //font-weight: 700;
     }
 
     .blockBtnCTA {
@@ -5356,11 +5388,11 @@ footer-anchor {
     }*/
 
     .block-description-cube-app {
-        top: 48%;
+        top: 49%;
     }
 
     .block-description-cube-landing {
-        top: 47%;
+        top: 45%;
     }
 
     .block-description-cube-site-five {
@@ -5371,9 +5403,12 @@ footer-anchor {
         top: 49%;
     }
 
-    .block-description-cube-shorts, .block-description-cube-insta,
-    .block-description-cube-reels {
+    .block-description-cube-shorts {
         top: 50%;
+    }
+
+    .block-description-cube-insta, .block-description-cube-reels {
+        top: 49%;
     }
 
     .accordion-header {
@@ -5945,8 +5980,24 @@ footer-anchor {
         text-align: center;
     }
 
+    .block-description-cube-landing {
+        top: 49%;
+    }
+
+    .block-description-cube-fd {
+        top: 49%;
+    }
+
+    .block-description-cube-youtube {
+        top: 49%;
+    }
+
     .block-description-cube-shorts, .block-description-cube-insta,
-    .block-description-cube-reels, .block-description-cube-app {
+    .block-description-cube-reels {
+        top: 49%;
+    }
+
+    .block-description-cube-app {
         top: 47%;
     }
 
