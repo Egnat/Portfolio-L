@@ -164,7 +164,7 @@ html {
 
 body {
   /*Живой градиент*/
-  background-image: linear-gradient(245deg, #64b5f6, #81c784, #ffeb3b, #ff8a65);
+  background-image: linear-gradient(245deg, #65afea, #38d85d, #ecd516, #e0572a);
   /*245deg,*/
   background-size: 400% 400%;
   -webkit-animation: gradientAnimation 7s linear infinite alternate;
@@ -10081,4 +10081,5 @@ footer-anchor {
     letter-spacing: 3px;
   }
 }
+
 /*# sourceMappingURL=base.css.map */
