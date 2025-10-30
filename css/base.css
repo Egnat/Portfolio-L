@@ -294,7 +294,7 @@ body .light-dark-theme themes-span {
 .loader {
   width: 60px;
   height: 60px;
-  border: 8px solid #f9f9f9;
+  border: 8px solid #28004d;
   border-top: 8px solid #f4ff24;
   border-radius: 50%;
   -webkit-animation: spin 1s linear infinite;

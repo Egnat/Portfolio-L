@@ -1,6 +1,40 @@
+//ПРЕЛОАДЕР КОД С ГРОК 3
+// Счётчик процентов
+    let percent = 0;
+    const percentElem = document.getElementById('percent');
+    const preloader = document.getElementById('preloader');
+    const content = document.getElementById('content');
+
+    // Имитация прогресса (можно убрать, если не нужен)
+    const progressInterval = setInterval(() => {
+      if (percent < 90) {
+        percent += Math.floor(Math.random() * 10) + 1;
+        percentElem.textContent = percent + '%';
+      }
+    }, 1700);//100
+
+    // Когда всё загрузилось
+    window.addEventListener('load', () => {
+      clearInterval(progressInterval);
+      percent = 100;
+      percentElem.textContent = '100%';
+
+      // Плавное исчезновение прелоадера
+      setTimeout(() => {
+        preloader.style.transition = 'opacity 0.6s ease';
+        preloader.style.opacity = '0';
+
+        setTimeout(() => {
+          preloader.style.display = 'none';
+          content.style.display = 'block';// в html эти свойства не использовал id="content" style="display:none;". Работает без них
+        }, 600);
+      }, 300); // Пауза на 100%
+    });
+///ПРЕЛОАДЕР КОД С ГРОК 3
+
 //PRELOADER КОД С PERPLEXITY С ЧИСЛАМИ
  // Индикатор для имитации загрузки (цифра 0-100)
-let percent = 0;
+/*let percent = 0;
 const percentElem = document.getElementById('percent');
 const preloader = document.getElementById('preloader');
 // Интервал до полной загрузки (пример — обновляется каждые 10 мс)
@@ -22,7 +56,7 @@ window.addEventListener('load', function() {
       document.getElementById('content').style.display = 'block';
     }, 500);//500 это скорость исчезновения прелоадера Увеличить, например, до 800 мс — это сделать анимацию исчезновения прелоадера более плавной и долгой; уменьшить до 200 мс — прелоадер исчезнет почти мгновенно, и основной контент покажется быстрее после полной загрузки. Для согласованности UX держите время в диапазоне 400–800 мс для анимации скрытия и последовательности показа контента.
   }, 300);//300 — задержка перед началом плавного исчезновения прелоадера после того, как счетчик достиг 100%. То есть прелоадер с цифрой “100%” остаётся видимым еще 300 мс, чтобы пользователь заметил завершение загрузки.
-});
+});*\
 ////PRELOADER КОД С PERPLEXITY С ЧИСЛАМИ///
 //PRELOАDER КОД С ПЕРПЛЕКСИТИ БЕЗ ЦИФР
 /*window.addEventListener('load', function() {
