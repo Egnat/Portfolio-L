@@ -287,6 +287,7 @@ body .light-dark-theme themes-span {
           justify-content: center;
   margin: 0 auto;
   background: #05000c;
+  gap: 1px;
   opacity: 0.8;
   z-index: 9999;
 }
