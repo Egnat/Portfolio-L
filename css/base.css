@@ -292,7 +292,7 @@ body.loaded {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 5px;
-  opacity: 0.9;
+  opacity: 0.8;
   overflow: hidden;
   z-index: 9999;
   -webkit-transition: opacity 0.6s ease;
@@ -330,14 +330,18 @@ body.loaded {
   letter-spacing: 2px;
 }
 
-/* Контент скрыт, пока body не loaded */
+/* Контент скрыт, пока body не loaded id content c html убрал. эти свойства не нужны*/
 #content {
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
   opacity: 0;
-  -webkit-transition: opacity 0.6s ease;
-  transition: opacity 0.6s ease;
 }
 
 body.loaded #content {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
   opacity: 1;
 }
 
@@ -10129,4 +10133,5 @@ footer-anchor {
     letter-spacing: 3px;
   }
 }
+
 /*# sourceMappingURL=base.css.map */
