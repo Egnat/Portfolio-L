@@ -332,16 +332,12 @@ body.loaded {
 
 /* Контент скрыт, пока body не loaded id content c html убрал. эти свойства не нужны*/
 #content {
-  -webkit-transform: translateY(20px);
-          transform: translateY(20px);
-  -webkit-transition: all 0.8s ease;
-  transition: all 0.8s ease;
   opacity: 0;
+  -webkit-transition: opacity 0.6s ease;
+  transition: opacity 0.6s ease;
 }
 
 body.loaded #content {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
   opacity: 1;
 }
 
