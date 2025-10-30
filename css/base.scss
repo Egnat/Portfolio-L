@@ -196,6 +196,8 @@ body {
     transition: scroll-behavior 1.5s ease-in-out;
     //ЖИВОЙ ГРАДИЕНТ 2 С САЙТА О ВКЛАДАХ В НЕДВИЖКУ https://quantumnetoiw.website/?38443=1&gclid=Cj0KCQjwkdO0BhDxARIsANkNcrfXISQLauVcgGeF73GuqjcgvJ8Kt5HYsj8rFv_YuS91nLbBFR-Sx1oaAl15EALw_wcB
     //animation: bg-anima-3x 6s linear infinite alternate both;
+    //overflow: hidden; /* Блокируем скролл ЭТО КО ВТОРОМУ КОДУ С ГРОК 3*/
+    //visibility: hidden; /* Скрываем всё ЭТО КО ВТОРОМУ КОДУ С ГРОК 3*/
 }
 
 //ЖИВОЙ ГРАДИЕНТ 2 С САЙТА О ВКЛАДАХ В НЕДВИЖКУ ПОЯВЛЯЕТСЯ БЕЛЫЙ ЦВЕТ
@@ -272,7 +274,7 @@ body.loaded {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 7px;
     opacity: 0.8;
     overflow: hidden;
     z-index: 9999;

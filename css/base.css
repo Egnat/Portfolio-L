@@ -291,7 +291,7 @@ body.loaded {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 5px;
+  gap: 7px;
   opacity: 0.8;
   overflow: hidden;
   z-index: 9999;
