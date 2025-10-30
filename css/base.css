@@ -287,9 +287,10 @@ body .light-dark-theme themes-span {
           justify-content: center;
   margin: 0 auto;
   background: #05000c;
-  gap: 1px;
-  opacity: 0.8;
+  gap: 5px;
+  opacity: 0.9;
   z-index: 9999;
+  overflow: hidden;
 }
 
 .loader {

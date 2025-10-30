@@ -267,9 +267,10 @@ body .light-dark-theme {// кнопка для переключения тем <
     justify-content: center;
     margin: 0 auto;
     background: #05000c;// #242424
-    gap: 1px;
-    opacity: 0.8;
+    gap: 5px;
+    opacity: 0.9;
     z-index: 9999;
+    overflow: hidden;
 }
 
 .loader {
@@ -443,7 +444,7 @@ linkItemListContentHeaderNavig {
         transition: transform 300ms ease-in-out;
     
         &:hover {
-             transform: scale(1.5); /* Увеличение на 20% при наведении */
+            transform: scale(1.5); /* Увеличение на 20% при наведении */
             transition: transform 300ms ease-in-out;
         }
     }
