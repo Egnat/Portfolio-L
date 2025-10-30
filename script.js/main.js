@@ -1,6 +1,37 @@
+    const percentElem = document.getElementById('percent');
+    const preloader = document.getElementById('preloader');
+    const body = document.body;
+    let percent = 0;
+
+    // Имитация загрузки
+    const interval = setInterval(() => {
+      if (percent < 90) {
+        percent += Math.floor(Math.random() * 10) + 1;//ИЗНАЧАЛЬНО* 15) + 5
+        percentElem.textContent = percent + '%';
+      }
+    }, 2300);//120
+
+    // Когда всё загрузилось
+    window.addEventListener('load', () => {
+      clearInterval(interval);
+      percent = 100;
+      percentElem.textContent = '100%';
+
+      setTimeout(() => {
+        // Плавное исчезновение
+        preloader.style.transition = 'opacity 0.6s ease';
+        preloader.style.opacity = '0';
+
+        setTimeout(() => {
+          preloader.style.display = 'none';
+          body.classList.add('loaded'); // Показываем сайт
+        }, 600);
+      }, 300);
+    });
+
 //ПРЕЛОАДЕР КОД С ЦИФРАМИ С ГРОК 3 В ЭТОМ КОДЕ СРАЗУ ПОЯВЛЯЕТСЯ ЛОАДЕР И ИЗНАЧАЛЬНО ФОНА БОДИ НЕ ВИДНО, А В КОДЕ ПЕРПЛЕКСИТИ НА НЕСКОЛЬКО СЕКУНД ПЕРЕД ПОЯВЛЕНИЕМ ЛОАДЕРА, ПОЯВЛЯЕТСЯ ФОН БОДИ - ЭТО НЕ ПРИКОЛЬНО
 // Счётчик процентов
-    let percent = 0;
+   /* let percent = 0;
     const percentElem = document.getElementById('percent');
     const preloader = document.getElementById('preloader');
     const content = document.getElementById('content');
@@ -29,7 +60,7 @@
           content.style.display = 'block';// в html эти свойства не использовал id="content" style="display:none;". Работает без них
         }, 600);
       }, 300); // Пауза на 100%
-    });
+    });*/
 ///ПРЕЛОАДЕР КОД С ЦИФРАМИ С ГРОК 3///
 
 //PRELOADER КОД С PERPLEXITY С ЧИСЛАМИ В ЭТОМ КОДЕ НА НЕСКОЛЬКО СЕКУНД ПЕРЕД ПОЯВЛЕНИЕМ ЛОАДЕРА, ПОЯВЛЯЕТСЯ ФОН БОДИ - ЭТО НЕ ПРИКОЛЬНО

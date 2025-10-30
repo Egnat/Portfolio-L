@@ -270,12 +270,18 @@ body .light-dark-theme themes-span {
 /*body.no-scroll {
     overflow: hidden;
 }*/
+body.loaded {
+  visibility: visible;
+  overflow: auto;
+}
+
 #preloader {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
+  background: #05000c;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -285,12 +291,12 @@ body .light-dark-theme themes-span {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0 auto;
-  background: #05000c;
   gap: 5px;
   opacity: 0.9;
-  z-index: 9999;
   overflow: hidden;
+  z-index: 9999;
+  -webkit-transition: opacity 0.6s ease;
+  transition: opacity 0.6s ease;
 }
 
 .loader {
@@ -301,37 +307,77 @@ body .light-dark-theme themes-span {
   border-radius: 50%;
   -webkit-animation: spin 1s linear infinite;
           animation: spin 1s linear infinite;
+  margin-right: 20px;
 }
 
 @-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
+  to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
 }
 
 @keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
+  to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
 }
 .percent {
-  margin-left: 30px;
   font-size: 30px;
   font-weight: bold;
   color: #f4ff24;
   letter-spacing: 2px;
 }
 
+/* Контент скрыт, пока body не loaded */
+#content {
+  opacity: 0;
+  -webkit-transition: opacity 0.6s ease;
+  transition: opacity 0.6s ease;
+}
+
+body.loaded #content {
+  opacity: 1;
+}
+
+/*#preloader {
+    position: fixed;
+    top: 0;
+    left: 0; 
+    width: 100vw;// 3vw
+    height: 100vh;// 7vh
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background: #05000c;// #242424
+    gap: 5px;
+    opacity: 0.9;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.loader {
+    width: 60px;//30px 
+    height: 60px;//30px
+    border: 8px solid #28004d;// 3px f3f3f3  #f9f9f9
+    border-top: 8px solid #f4ff24;//2px #3498db  
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0%   { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}
+
+.percent {//ЦИФРЫ ПРИ ЗАГРУЗКЕ СТРАНИЦЫ
+    margin-left: 30px;
+    font-size: 30px;//28px
+    font-weight: bold;
+    color: #f4ff24;//#3498db
+    letter-spacing: 2px;
+}*/
 .header {
   position: -webkit-sticky;
   position: sticky;
@@ -10083,5 +10129,4 @@ footer-anchor {
     letter-spacing: 3px;
   }
 }
-
 /*# sourceMappingURL=base.css.map */
