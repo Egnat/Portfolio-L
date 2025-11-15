@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <script src="../script.js/wow.min.js"></script>
     <script>new WOW().init();</script>
-    <script type="text/javascript" defer src="../script.js/main.js"></script>
+    <script defer type="text/javascript" src="../script.js/main.js"></script>
     <link rel="stylesheet" media="screen and (max-width: 1300px)" href="../css/base.css">
     <noscript>
         <link rel="stylesheet" href=" https://use.fontawesome.com/releases/v6.4.4/css/all.css">
@@ -30,9 +30,10 @@
     <title>Портфолио / Связаться со Мной</title>
 </head>
 <body class="body-aboutme no-scroll"><!--body-home-->
-    <div id="preloader"><!--с его добавлением страницы загружаются очень быстро-->
+    <!--<div id="preloader">!--с его добавлением страницы загружаются очень быстро--
         <div class="loader"></div>
-    </div>
+        <div class="percent" id="percent">0%</div>
+    </div>-->
     <header class="header" id="header">
         <div class="container header-container">
             <div class=" header-container-content">
@@ -445,8 +446,8 @@
         </div>
         <script type="text/javascript" src="../script.js/main-3.js"></script><!--ПОДКЛЮЧИЛ ЭТОТ ФАЙЛ, ДЛЯ ТОГО ЧТОБЫ РАБОТАЛА ПЕРЕКЛЮЧАЛКА ТЕМ-->
         <script type="text/javascript" src="../library-jq.js/main-jq.js"></script><!--для плавного переключения страниц-->
-        <script defer type="text/javascript" src="../script.js/jquery-3.6.1.min.js"></script>
-        <script defer type="text/javascript" src="../script.js/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="../script.js/jquery-3.6.1.min.js"></script>
+        <script type="text/javascript" src="../script.js/owl.carousel.min.js"></script>
         <!-- Swiper CUBE SUNDBOX JS РАБОЧИЙ-->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script><!--Я СКАЧАЛ СКРИПТ В ФАЙЛ ПРОЕКТА SWIPER-BUNDLE.MI.JS, МОЖНО ПОДКЛЮЧИТЬ ЭТОТ ФАЙЛ, А ССЫЛКУ ОТКЛЮЧИТЬ-->
         <!--<script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>!--FOR CUBE РАБОЧИЙ-->
@@ -473,13 +474,13 @@
     </script>
     <!--End of Tawk.to Script-->
     <!--ПРЕЛОАДЕР ПОСЛЕ ТОГО КАК ДОБАВИЛ ПРЕЛОАДЕР НА САЙТ, 
-        СТРАНИЦЫ НАЧАЛИ ЗАГРУЖАТЬСЯ ОЧЕНЬ БЫСТРО-->
+        СТРАНИЦЫ НАЧАЛИ ЗАГРУЖАТЬСЯ ОЧЕНЬ БЫСТРО--
         <script>
             window.onload = function() {
                 document.getElementById('preloader').style.display = 'none';
                 document.getElementById('preloader').style.zIndex = '-9999';
             };
         </script>
-        <!--ПРЕЛОАДЕР-->
+        !--ПРЕЛОАДЕР-->
 </body>
 </html>

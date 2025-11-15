@@ -123,9 +123,12 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
     <!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
     <!--<script type="text/javascript" defer src="script.js/bootstrap.bundle.min.js"></script>-->
     <!--<link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css">подключил через импорт в бейз.цсс-->
-    <script src="script.js/wow.min.js"></script>
+    <script src="script.js/wow.min.js"></script><!--type="text/javascript" это свойство уже устарело. сейчас, с 2025 года его писать не нужно-->
     <script>new WOW().init();</script>
-    <script type="text/javascript" defer src="script.js/main.js"></script>
+    <script defer type="text/javascript" src="script.js/main.js"></script><!--здесь type="text/javascript" оставил на память-->
+    <!--<script defer src="script.js/jquery-3.6.1.min.js"></script>
+    <script defer src="script.js/owl.carousel.min.js"></script>
+    -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <link rel="stylesheet" media="screen and (max-width: 1300px)" href="css/base.css">
     <noscript><!--<script type="text/javascript">alert("Сайт не адаптирован под планшетную и мобильную версии. The site is not adapted for tablet and mobile versions 😁");</script>--></noscript>
@@ -165,10 +168,10 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
     <title>Портфолио</title>
 </head>
 <body class="body-home no-scroll"><!--no-scroll NO ACTIVE id="content" style="display:none;" в гтхаб отправил выключенный боди, нужно снова загрузить в гитхаб без дисплей нон и тогда в гитхабе будет всё снова видно-->
-  <div id="preloader">
+  <!--<div id="preloader">
     <div class="loader"></div>
     <div class="percent" id="percent">0%</div>
-  </div>
+  </div>-->
   <header class="header" id="header"><!-- ЭТО КО ВТОРОМУ КОДУ С ГРОК 3 id="content"-->
     <div class="container header-container">
       <div class=" header-container-content">
@@ -4212,8 +4215,8 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
         </div>
       </div>
       <script type="text/javascript" src="library-jq.js/main-jq.js"></script><!--для плавного переключения страниц-->
-      <script defer type="text/javascript" src="script.js/jquery-3.6.1.min.js"></script>
-      <script defer type="text/javascript" src="script.js/owl.carousel.min.js"></script>
+      <script type="text/javascript" src="script.js/jquery-3.6.1.min.js"></script>
+      <script type="text/javascript" src="script.js/owl.carousel.min.js"></script>
       <!-- Swiper CUBE SUNDBOX JS РАБОЧИЙ-->
       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script><!--Я СКАЧАЛ СКРИПТ В ФАЙЛ ПРОЕКТА SWIPER-BUNDLE.MI.JS, МОЖНО ПОДКЛЮЧИТЬ ЭТОТ ФАЙЛ, А ССЫЛКУ ОТКЛЮЧИТЬ-->
       <!--<script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>!--FOR CUBE РАБОЧИЙ-->
@@ -4240,13 +4243,13 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
     </script>
     <!--End of Tawk.to Script-->
     <!--ПРЕЛОАДЕР ПОСЛЕ ТОГО КАК ДОБАВИЛ ПРЕЛОАДЕР НА САЙТ, 
-        СТРАНИЦЫ НАЧАЛИ ЗАГРУЖАТЬСЯ ОЧЕНЬ БЫСТРО-->
+        СТРАНИЦЫ НАЧАЛИ ЗАГРУЖАТЬСЯ ОЧЕНЬ БЫСТРО--
     <script>
       window.onload = function() {
         document.getElementById('preloader').style.display = 'none';
         document.getElementById('preloader').style.zIndex = '-9999';
       };
     </script>
-    <!--ПРЕЛОАДЕР-->
+    !--ПРЕЛОАДЕР-->
 </body>
 </html>

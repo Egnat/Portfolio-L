@@ -1,5 +1,5 @@
     //ЛОАДЕР, ПРЕЛОАДЕР С ЦИФРАМИ КОД ВТОРОЙ С ГРОК 3
-    const percentElem = document.getElementById('percent');
+    /*const percentElem = document.getElementById('percent');
     const preloader = document.getElementById('preloader');
     const body = document.body;
     let percent = 0;
@@ -10,7 +10,7 @@
         percent += Math.floor(Math.random() * 10) + 1;//ИЗНАЧАЛЬНО* 15) + 5
         percentElem.textContent = percent + '%';
       }
-    }, 2300);//120
+    }, 2500);//120
 
     // Когда всё загрузилось
     window.addEventListener('load', () => {
@@ -28,7 +28,7 @@
           body.classList.add('loaded'); // Показываем сайт
         }, 600);
       }, 300);
-    });
+    });*/
 
 //ПРЕЛОАДЕР ПЕРВЫЙ КОД С ЦИФРАМИ С ГРОК 3 ( НЕ ТОЧНО, ЧТО В ЭТОМ КОДЕ СРАЗУ ПОЯВЛЯЕТСЯ ЛОАДЕР И ИЗНАЧАЛЬНО ФОНА БОДИ НЕ ВИДНО), А В КОДЕ ПЕРПЛЕКСИТИ НА НЕСКОЛЬКО СЕКУНД ПЕРЕД ПОЯВЛЕНИЕМ ЛОАДЕРА, ПОЯВЛЯЕТСЯ ФОН БОДИ - ЭТО НЕ ПРИКОЛЬНО
 // Счётчик процентов
