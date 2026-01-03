@@ -5086,12 +5086,12 @@ footer-anchor {
     border-bottom: none;
 }
 
-.inp-contacts, .input-email-footer:focus {
+.inp-contacts.input-email-footer:focus {
     outline: none;
     color: rgb(255, 255, 0);
 }
 
-.inp-contacts, .input-email-footer::placeholder {
+.inp-contacts.input-email-footer::placeholder {
     color: #FDFDFD;
 }
 
