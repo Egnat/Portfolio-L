@@ -123,13 +123,13 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
     <!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
     <!--<script type="text/javascript" defer src="script.js/bootstrap.bundle.min.js"></script>-->
     <!--<link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css">подключил через импорт в бейз.цсс-->
-    <script src="script.js/wow.min.js"></script><!--type="text/javascript" это свойство уже устарело. сейчас, с 2025 года его писать не нужно-->
+    <script src="script.js/wow.min.js"></script><!--type="text/javascript" это свойство уже устарело. сейчас, с 2025 года его писать не нужно. Нужно если используешь не JavaScript, а ES6 модули type="module" или шаблоны type="text/template"-->
     <script>new WOW().init();</script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>-->
     <script defer type="text/javascript" src="script.js/main.js"></script><!--здесь type="text/javascript" оставил на память-->
     <!--<script defer src="script.js/jquery-3.6.1.min.js"></script>
-    <script defer src="script.js/owl.carousel.min.js"></script>
-    -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script defer src="script.js/owl.carousel.min.js"></script>-->
     <link rel="stylesheet" media="screen and (max-width: 1300px)" href="css/base.css">
     <noscript><!--<script type="text/javascript">alert("Сайт не адаптирован под планшетную и мобильную версии. The site is not adapted for tablet and mobile versions 😁");</script>--></noscript>
     <!--SWIPER https://swiperjs.com/ SLIDERS https://swiperjs.com/demos#null 
@@ -3889,7 +3889,7 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                   </figure>
                   <figure class="point-info">
                     <img class="icon-info" src="images/clock-sand-light.svg" alt="icon">
-                    <p class="pg-info">Часы работы: Пн-Сб, 9:00 - 19:00</p>
+                    <p class="pg-info">Часы работы: Пн-Пт, 09 - 18</p>
                   </figure>
                   <p class="under-pg-info"><b class="medium" style="letter-spacing: 1px;">Sergey SVN / Фрилансер:</b>
                     <br><!--<a class="link-info" href="https://t.me/Sergey_p_i">Telegram</a> -->
@@ -4187,7 +4187,7 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
           <div class="wrapp-linear-two-floor-footer">
             <article class="two-floor-footer">
             <div class="footer-logo">
-              <p class="copyright">&copy; 2022 - 2025</p>
+              <p class="copyright">&copy; 2022 - 2026</p>
               <picture class="title-umpersand">
                 <img class="umpersand-footer" src="images//svg-programms-shavron/ampersand.svg" alt="and">
                 <p>FormatFusion</p>
@@ -4242,6 +4242,33 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
     })();
     </script>
     <!--End of Tawk.to Script-->
+
+    <!--GSAP--
+    <script>
+    // use a script tag or an external JS file
+    document.addEventListener("DOMContentLoaded", (event) => {
+    // gsap code here!
+      ScrollTrigger.create({
+	    trigger: '#id',
+	    start: 'top top',
+	    endTrigger: '#otherID',
+	    end: 'bottom 50%+=100px',
+	    onToggle: (self) => console.log('toggled, isActive:', self.isActive),
+	    onUpdate: (self) => {
+		  console.log(
+			'progress:',
+			self.progress.toFixed(3),
+			'direction:',
+			self.direction,
+			'velocity',
+			self.getVelocity()
+		  );
+	  }
+    });
+    });
+    </script>
+    !--GSAP-->
+    
     <!--ПРЕЛОАДЕР ПОСЛЕ ТОГО КАК ДОБАВИЛ ПРЕЛОАДЕР НА САЙТ, 
         СТРАНИЦЫ НАЧАЛИ ЗАГРУЖАТЬСЯ ОЧЕНЬ БЫСТРО--
     <script>
