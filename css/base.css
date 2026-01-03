@@ -6422,24 +6422,24 @@ footer-anchor {
   border-bottom: none;
 }
 
-.inp-contacts.input-email-footer:focus {
+.input-email-footer:focus {
   outline: none;
   color: yellow;
 }
 
-.inp-contacts.input-email-footer::-webkit-input-placeholder {
+.input-email-footer::-webkit-input-placeholder {
   color: #FDFDFD;
 }
 
-.inp-contacts.input-email-footer:-ms-input-placeholder {
+.input-email-footer:-ms-input-placeholder {
   color: #FDFDFD;
 }
 
-.inp-contacts.input-email-footer::-ms-input-placeholder {
+.input-email-footer::-ms-input-placeholder {
   color: #FDFDFD;
 }
 
-.inp-contacts.input-email-footer::placeholder {
+.input-email-footer::placeholder {
   color: #FDFDFD;
 }
 
