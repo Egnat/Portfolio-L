@@ -500,6 +500,18 @@ linkItemListContentHeaderNavig {
     padding: 7px;
     gap: 15px;
 
+    & > *:nth-child(n+5):nth-child(-n+6) {// ЭТО НЕ ОВЕРКИЛЛ, ТАК ДЕЛАТЬ МОЖНО
+        order: 5;  // 5-й и 6-й толкаем назад
+    }
+
+    & > *:nth-child(7) {//переставляю тикток к инсте с 7-го на 5-ое место, а можно просто добавить дополнительный класс в штмл тиктоку и прописать .social-link.tiktok {order:4;}, как сделал c facebook
+        order: 4;
+    }
+
+    .social-link.facebook {
+        order: 7; 
+    }
+
     .social-iconDropdown {
         width: 32px;
         transition: transform 300ms ease-in-out;
@@ -510,6 +522,12 @@ linkItemListContentHeaderNavig {
         }
     }
 }
+/*.container-social-iconsDropdown > *:nth-child(n+5):nth-child(-n+6) {//это уже overkill ЛУЧШЕ ПИСАТЬ .container-social-iconsDropdown > :nth-child(7) {order: 4;}, НО ЭТО СВОЙСТВО НЕ РАБОТАЕТ, ИЗ-ЗА ТОГО, ЧТО .social-iconDropdown ПРОПИСАН В КОДЕ С УРОВНЕМ ВЛОЖЕННОСТИ
+    order: 5;   /* 5-й и 6-й толкаем назад *
+}
+.container-social-iconsDropdown > :last-child {
+    order: 4;
+}*/
 
 .dropdownShevron-content .linkDropdownShevron-content {
     transition: background-color 300ms ease-in-out;
@@ -534,7 +552,7 @@ linkItemListContentHeaderNavig {
 }
 /*DROPDOWN SHEVRON CONTACT*/
 
-.container-social-icons-header-desktop {
+.container-social-icons-header-desktop {//этот элемент можно убрать, в нем сейчас лежит только одна ссылка Весь Мир мой дом родной. Оставил его просто так
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1122,7 +1140,7 @@ to { left: 840px; } /*1040px ставим размер экрана, чтобы 
 }
 
 .img-slide-1 {
-    transform: matrix(-1, 0, 0, 1, 0, 0);
+    transform: matrix(-1, 0, 0, 1, 0, 0);//matrix(-1, 0, 0, 1, 0, 0) если отзеркалить фото
     msk-image: linear-gradient(to bottom, #000, transparent 95%);//снизу заливка, регулируется плотность заливки
 }
 
@@ -1747,18 +1765,20 @@ button, input, select, textarea, optgroup {
     //mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);//круг-маска
 }
 
-.main-photo-sidebar {//ПЛАВАЮЩАЯ МАСКА ВНИЗУ ФОТО ПОКА НЕ ДВИЖЕТСЯ А ТАК РАБОТАЕТ https://codepen.io/ahaywood/pen/gOPrWOV
+.main-photo-sidebar {//ПЛАВАЮЩАЯ МАСКА ВНИЗУ ФОТО ПОКА НЕ ДВИЖЕТСЯ, А ТАК РАБОТАЕТ https://codepen.io/ahaywood/pen/gOPrWOV
     clip-path: url(#clip);
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: 50% 50%;
+    filter: brightness(0.9);
 }
 
 .svg-sidebar {
     position: absolute;
     width: 500px;
+    //pointer-events: none;
 }
 
 #morphShape {
@@ -4463,17 +4483,17 @@ filter-item-like:hover {
     height: 57vw;//733px / 96vw
     //padding: 70px 0;
     margin: 0 0 70px 0;
-    background-image: linear-gradient(to right, 
-    rgba(0, 0, 0, 0.5) 20%, 
-    rgba(0, 0, 0, 0.3) 62%,
+    background-image: linear-gradient(to bottom, 
+    rgba(0, 0, 0, 0.5) 18%, 
+    rgba(0, 0, 0, 0.3) 33%,
     rgba(0, 0, 0, 0) 100%),
-    url(../images-2/my-photo/cover-dark.png);// 13082009461-3.png / cat-and-me-white-text-1.png/  / result.png
+    url(../images-2/my-photo/My-First-Weavy_Seedream-v4-5-Edit_2026-02-05_15-48-19.png);// img-a-m.png cover-dark.png 13082009461-3.png / cat-and-me-white-text-1.png/  / result.png
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 20% 40%;//center
+    background-position: 0% 40%;//center 20% 40%
     //mask-image: linear-gradient(to left, #000 0%, #000 38%, transparent 92%, transparent 100%);//linear-gradient(to left, #000 0%, #000 30%, transparant 134%, transparant 100%)
     background-color: rgb(0, 0, 0);
-    box-shadow: inset 1280px 844px hwb(0 0% 100% / 0.23); //тонировка фото изнутри. rgb, rgba scss не любит в этом свойстве
+    box-shadow: inset 1280px 844px hwb(0 0% 100% / 0.1); //тонировка фото изнутри. rgb, rgba scss не любит в этом свойстве
     //background: linear-gradient(180.12deg, #5883fd 46%, #FFC700 9%);
     //transform: matrix(-1, 0, 0, 1, 0, 0);
     overflow: hidden;
@@ -4548,7 +4568,7 @@ img-pageAboutMe {
 }
 
 .title-img-pageAboutMe:nth-child(2) {
-    width: 100%;
+    width: 97%;
     font-size: calc(1.1vw + 5px);
     font-weight: 400;
     text-align: end;
@@ -7047,6 +7067,10 @@ footer-anchor {
         //width: 73vw;
         height: 49vh;
     }
+
+    .title-img-pageAboutMe:nth-child(2) {
+        width: 21%;
+    }
     //PAGE FOUR CONTACT ME///
 
     //PAGE FIVE UI KIT
@@ -7293,7 +7317,7 @@ footer-anchor {
     }
 
     .title-img-pageAboutMe:nth-child(1) {
-        width: calc(100% - 0px);
+        width: calc(100% - 0px);//100% - 0px
         text-align: start;
     }
 
@@ -7984,6 +8008,10 @@ footer-anchor {
         line-height: calc(16vh / 4);
     }
 
+    .title-img-pageAboutMe:nth-child(2) {
+        width: 96%;
+    }
+
     .big-pg {
         width: 100%;
     }
@@ -8447,6 +8475,10 @@ footer-anchor {
 
     .big-pg {
         width: 100%;
+    }
+
+    .link-btnMeetMe {
+        margin-top: 7px;
     }
     //PAGE TWO ABOUT ME///
 
