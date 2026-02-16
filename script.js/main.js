@@ -192,11 +192,12 @@ document.addEventListener('DOMContentLoaded', () => {
       mainMenu.classList.toggle('open');//menu
       overlay.classList.toggle('open');
     };
-  //menuToggle
+
+    //menuToggle
     hamburgerToggle.addEventListener('click', () => {
       toggleMenu();
     });
-  
+
     // Закрытие меню при клике на overlay
     overlay.addEventListener('click', () => {
       toggleMenu();
@@ -450,7 +451,7 @@ function closeChatMobile() {
   document.getElementById("showChatMobile").style.display = "none";
 }
 ///ЭТОГО В ОРИГИНАЛЬНОМ КОДЕ НЕТ, Я ДОБАВИЛ, ЧТОБЫ РАБОТАЛО В СЛАЙДЕРЕ КАРУСЕЛЬ //
-//Chat//
+//Chat///
 
 /*
 //ДВИГАЮЩАЯСЯ РУКА ПРИ НАВЕДЕНИИ МЫШИ РАБОТАЕТ ОТКЛЮЧИЛ, ПОТОМУ ЧТО ПОДКЛЮЧИЛ АВТОМАТ
@@ -475,7 +476,7 @@ window.addEventListener('load', () => {
 });
 //ДВИГАЮЩАЯСЯ РУКА АВТОМАТ///
 
-/*Сайдбар*///ДЛЯ ОТКРЫТИЯ САЙДБАРА ВО ВСЕХ СЛЙДАХ СЛАЙДЕРА В ПЕРВОМ ЭКРАНЕ, КОД НИЖЕ 
+/*Сайдбар*///ДЛЯ ОТКРЫТИЯ САЙДБАРА ВО ВСЕХ СЛAЙДАХ СЛАЙДЕРА В ПЕРВОМ ЭКРАНЕ, КОД НИЖЕ 
 /*function openLeftMenu() {
   document.getElementById("leftMenu").style.display = "block";
 }
@@ -483,12 +484,43 @@ function closeLeftMenu() {
   document.getElementById("leftMenu").style.display = "none";
 }*/
 
-function openRightMenu() {
+/*function openRightMenu() {РАБОЧИЙ
   document.getElementById("rightMenu").style.display = "block";
 }
 
 function closeRightMenu() {
   document.getElementById("rightMenu").style.display = "none";
+}*/
+
+//ГРОК3 
+// Открываем сайдбар
+function openRightMenu() {
+  const menu = document.getElementById("rightMenu");
+  menu.style.display = "block";
+  
+  // Включаем прослушивание кликов вне меню
+  setTimeout(() => {
+    document.addEventListener("click", closeOnOutsideClick);
+  }, 0); // setTimeout нужен, чтобы не закрыло сразу от текущего клика
+}
+
+// Закрываем сайдбар
+function closeRightMenu() {
+  const menu = document.getElementById("rightMenu");
+  menu.style.display = "none";
+  
+  // Убираем слушатель, чтобы он не висел постоянно
+  document.removeEventListener("click", closeOnOutsideClick);
+}
+
+// Функция, которая проверяет — кликнули ли мы вне сайдбара
+function closeOnOutsideClick(event) {
+  const menu = document.getElementById("rightMenu");
+  
+  // Если меню открыто И клик произошёл НЕ внутри меню → закрываем
+  if (menu.style.display === "block" && !menu.contains(event.target)) {
+    closeRightMenu();
+  }
 }
 /*/Сайдбар*/ 
 

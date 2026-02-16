@@ -1,0 +1,273 @@
+/**
+ * ADVANCED IMAGE PROTECTION CSS
+ * Add this CSS to your stylesheet for maximum image protection
+ */
+
+/* ==================== BASIC IMAGE PROTECTION ==================== */
+
+/* Disable all user interactions with images */
+img {
+  /* Disable dragging */
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+  
+  /* Disable selection */
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  
+  /* Disable pointer events (can be re-enabled for clickable images) */
+  pointer-events: none;
+  
+  /* Disable callout on touch devices */
+  -webkit-touch-callout: none;
+}
+
+/* ==================== PROTECTED IMAGE CONTAINER ==================== */
+
+.image-protected {
+  position: relative;
+  display: inline-block;
+  user-select: none;
+  overflow: hidden;
+}
+
+.image-protected img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Invisible overlay to prevent right-click */
+.image-protected::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 10;
+  cursor: default;
+}
+
+/* Lock icon on hover (optional) */
+.image-protected::after {
+  content: '🔒';
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 24px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 11;
+  pointer-events: none;
+  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.image-protected:hover::after {
+  opacity: 0.6;
+}
+
+/* ==================== WATERMARK OVERLAY ==================== */
+
+.image-watermark {
+  position: relative;
+  display: inline-block;
+}
+
+.image-watermark::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 100px,
+      rgba(255, 255, 255, 0.03) 100px,
+      rgba(255, 255, 255, 0.03) 200px
+    );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ==================== BACKGROUND IMAGE PROTECTION ==================== */
+
+.bg-image-protected {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  position: relative;
+}
+
+.bg-image-protected::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 1;
+}
+
+/* ==================== DISABLE SELECTION FOR CONTAINERS ==================== */
+
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+/* ==================== FIGURE ELEMENT PROTECTION ==================== */
+
+figure {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+figure img {
+  pointer-events: none;
+}
+
+/* ==================== DISABLE PRINT STYLES FOR IMAGES ==================== */
+
+@media print {
+  img {
+    display: none !important;
+  }
+  
+  .image-protected,
+  .image-watermark {
+    display: none !important;
+  }
+}
+
+/* ==================== RESPONSIVE PROTECTION ==================== */
+
+@media (max-width: 768px) {
+  /* Extra protection for mobile devices */
+  img {
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+  }
+}
+
+/* ==================== OPTIONAL: BLUR ON SCREENSHOT ATTEMPT ==================== */
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  img {
+    /* Slight blur to discourage screenshots (very subtle) */
+    filter: contrast(1.01);
+  }
+}
+
+/* ==================== CUSTOM CURSOR FOR PROTECTED IMAGES ==================== */
+
+.image-protected {
+  cursor: not-allowed;
+}
+
+.image-protected:hover {
+  cursor: not-allowed;
+}
+
+/* ==================== DISABLE SAVE IMAGE AS ON WEBKIT ==================== */
+
+img::-webkit-image-controls {
+  display: none;
+}
+
+img::-webkit-media-controls {
+  display: none !important;
+}
+
+/* ==================== GALLERY PROTECTION ==================== */
+
+.gallery-protected {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.gallery-protected img {
+  pointer-events: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
+.gallery-protected::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  cursor: default;
+}
+
+/* ==================== NO PROTECTION CLASS ==================== */
+
+/* Use this class to exclude specific images from protection */
+.no-protect {
+  -webkit-user-drag: auto !important;
+  user-drag: auto !important;
+  -webkit-user-select: auto !important;
+  user-select: auto !important;
+  pointer-events: auto !important;
+}
+
+/* ==================== LOADING PLACEHOLDER PROTECTION ==================== */
+
+.lazy-image {
+  background: #f0f0f0;
+  position: relative;
+  user-select: none;
+}
+
+.lazy-image::before {
+  content: '🔒';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  opacity: 0.2;
+}
+
+/* ==================== DISABLE CONTEXT MENU GLOBALLY (AGGRESSIVE) ==================== */
+
+/* 
+Uncomment this if you want to disable right-click on entire page
+WARNING: This may affect user experience
+*/
+
+/*
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+p, span, h1, h2, h3, h4, h5, h6, a, li {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+*/

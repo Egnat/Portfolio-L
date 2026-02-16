@@ -440,16 +440,25 @@ body.loaded #content {
   color: #FDFDFD;
 }
 
+.nav-desktop {
+  width: 307px;
+}
+
 .nav-list-desktop {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  /* меню занимает ровно столько, сколько нужно тексту */
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  margin: 0 auto;
   gap: 20px;
 }
 
@@ -643,6 +652,7 @@ linkItemListContentHeaderNavig {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 163px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -706,6 +716,11 @@ linkItemListContentHeaderNavig {
     */
 }
 .social-link .textWorld {
+  text-align: center;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
   color: #28004d;
   -webkit-transition: color 300ms ease-in-out;
   transition: color 300ms ease-in-out;
@@ -727,6 +742,72 @@ linkItemListContentHeaderNavig {
 .social-link .social-icon-desktop:hover {
   -webkit-filter: brightness(0.5);
           filter: brightness(0.5);
+}
+
+/*.googleBtnDesk {
+    //position: fixed;// эти стили были изначально прописаны в штмл через style=""
+    //top:10px; 
+    //right:10px; 
+    z-index:9999;
+}
+
+.goog-te-gadget {
+    font-family: 'Rubik-Bold', sans-serif;
+    font-size: 11px;
+    color: #666;
+    white-space: nowrap;
+}
+
+.goog-te-gadget-simple {
+    display: inline-block;
+    width: 160px;
+    padding-top: 7px !important;
+    padding-bottom: 7px !important;
+    background-color: #fff;
+    border: 1px solid #D5D5D5;
+    //border-left: 1px solid #D5D5D5;
+    //border-top: 1px solid #9B9B9B;
+    //border-bottom: 1px solid #E8E8E8;
+    border-radius: 20px;
+    font-family: 'Rubik-Bold', sans-serif !important;
+    text-align: center;
+    cursor: pointer;
+}*/
+.lang-switcher-desktop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  /* расстояние между флагами */
+}
+
+.lang-link {
+  display: inline-block;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  opacity: 0.7;
+  line-height: 1;
+}
+
+.lang-link:hover,
+.lang-link.active {
+  opacity: 1;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+.lang-link img {
+  display: block;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.lang-switcher-mobile {
+  display: none;
 }
 
 .nav-mobile {
@@ -987,7 +1068,7 @@ to { left: 840px; } /*1040px ставим размер экрана, чтобы 
   0.5em = половина размера базового шрифта*/
   font-weight: 900;
   letter-spacing: 8px;
-  text-align: justify;
+  text-align: center;
   word-wrap: break-word;
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
@@ -1021,6 +1102,7 @@ to { left: 840px; } /*1040px ставим размер экрана, чтобы 
 }
 
 .h2-main-text {
+  text-align: center;
   font-size: clamp(36px, 5vw, 64px);
   font-weight: 600;
   text-transform: uppercase;
@@ -1374,6 +1456,8 @@ to { left: 840px; } /*1040px ставим размер экрана, чтобы 
 .img-slide-1 {
   -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
           transform: matrix(-1, 0, 0, 1, 0, 0);
+  -o-object-position: -119px 50%;
+     object-position: -119px 50%;
   msk-image: linear-gradient(to bottom, #000, transparent 95%);
 }
 
@@ -4402,6 +4486,8 @@ filter-myPhotobefore {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: 50% -10px;
+     object-position: 50% -10px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -6840,6 +6926,16 @@ footer-anchor {
     padding: 0;
   }
 
+  .imgSlide-1Mobile {
+    -o-object-position: -238px 50% !important;
+       object-position: -238px 50% !important;
+  }
+
+  .imgSlide-3Mobile {
+    -o-object-position: -220px 50% !important;
+       object-position: -220px 50% !important;
+  }
+
   .mySwiper {
     height: 490px;
   }
@@ -7117,6 +7213,30 @@ footer-anchor {
 
   .nav-mobile {
     display: block;
+  }
+
+  /*ЭТО К КОДУ В ФАЙЛЕ ДЖС. ЗАКРЫЛ, ПОТМУ ЧТО ... НАПИСАНО В ДЖС ФАЙЛЕ*/
+  /*#google_translate_element-mobile {
+      margin-top: 30px;;
+      text-align: center;
+      //width: 100%;
+      max-width: 200px;
+      //pointer-events: none;ЧТОБЫ ЭЛЕМЕНТ НЕ КЛИКАЛСЯ. ДАША С ДИСКОРД. ЗДЕСЬ НЕ НУЖЕН, ТАК ДЛЯ ОБЩЕГО РАЗВИТИЯ
+  }//БЕЗ ЭТОГО КОДА ТОЖЕ ВСЕ РАБОТАЕТ*/
+  .lang-switcher-desktop {
+    display: none;
+  }
+
+  .lang-switcher-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 10px 0 20px 0;
+    gap: 30px;
+    /* расстояние между флагами */
   }
 
   .nav-list-mobile {
@@ -8657,6 +8777,16 @@ footer-anchor {
     text-align: center;
   }
 
+  .imgSlide-1Mobile {
+    -o-object-position: -313px 50% !important;
+       object-position: -313px 50% !important;
+  }
+
+  .imgSlide-3Mobile {
+    -o-object-position: -281px 50% !important;
+       object-position: -281px 50% !important;
+  }
+
   .titleSectionGet {
     width: 79%;
     text-align: center;
@@ -9075,6 +9205,16 @@ footer-anchor {
     height: 414px;
   }
 
+  .imgSlide-1Mobile {
+    -o-object-position: -188px 50% !important;
+       object-position: -188px 50% !important;
+  }
+
+  .imgSlide-3Mobile {
+    -o-object-position: -176px 50% !important;
+       object-position: -176px 50% !important;
+  }
+
   .dotas-wrapper {
     width: 65%;
     top: 380px;
@@ -9437,6 +9577,16 @@ footer-anchor {
     padding: 0;
   }
 
+  .imgSlide-1Mobile {
+    -o-object-position: -233px 50% !important;
+       object-position: -233px 50% !important;
+  }
+
+  .imgSlide-3Mobile {
+    -o-object-position: -218px 50% !important;
+       object-position: -218px 50% !important;
+  }
+
   .title-pageAboutMe {
     letter-spacing: -1px;
   }
@@ -9748,6 +9898,10 @@ footer-anchor {
     font-size: 3em;
   }
 
+  container-social-icons-mobile {
+    gap: 29px;
+  }
+
   .summary-video-sectionOne {
     margin-top: -44px;
     margin-left: 155px;
@@ -9765,6 +9919,16 @@ footer-anchor {
 
   .filter_img-slider {
     height: 300px;
+  }
+
+  .imgSlide-1Mobile {
+    -o-object-position: -142px 50% !important;
+       object-position: -142px 50% !important;
+  }
+
+  .imgSlide-3Mobile {
+    -o-object-position: -137px 50% !important;
+       object-position: -137px 50% !important;
   }
 
   .dotas-wrapper {
@@ -9976,6 +10140,10 @@ footer-anchor {
   }
 }
 @media screen and (max-width: 320px) {
+  .container-social-icons-mobile {
+    gap: 22px;
+  }
+
   .sectionTitle {
     font-size: 2.5em;
   }
@@ -10005,6 +10173,16 @@ footer-anchor {
 
   .filter_img-slider {
     height: 252px;
+  }
+
+  .imgSlide-1Mobile {
+    -o-object-position: -120px 50% !important;
+       object-position: -120px 50% !important;
+  }
+
+  .imgSlide-3Mobile {
+    -o-object-position: -102px 50% !important;
+       object-position: -102px 50% !important;
   }
 
   .dotas-wrapper {

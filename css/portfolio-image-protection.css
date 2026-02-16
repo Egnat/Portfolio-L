@@ -1,0 +1,158 @@
+/**
+ * МИНИМАЛЬНАЯ CSS ЗАЩИТА ДЛЯ PORTFOLIO
+ * Не влияет на существующие стили, только добавляет защиту
+ * 
+ * ИСПОЛЬЗОВАНИЕ:
+ * Добавьте эти стили в конец вашего основного CSS файла
+ * или подключите как отдельный файл ПОСЛЕ всех остальных стилей
+ */
+
+/* ==================== БАЗОВАЯ ЗАЩИТА ИЗОБРАЖЕНИЙ ==================== */
+
+/* Защита всех изображений БЕЗ изменения их отображения */
+img:not(.no-protect) {
+  /* Отключить перетаскивание */
+  -webkit-user-drag: none !important;
+  -khtml-user-drag: none !important;
+  -moz-user-drag: none !important;
+  -o-user-drag: none !important;
+  user-drag: none !important;
+  
+  /* Отключить выделение */
+  -webkit-user-select: none !important;
+  -khtml-user-select: none !important;
+  -moz-user-select: none !important;
+  -o-user-select: none !important;
+  user-select: none !important;
+  
+  /* Отключить callout на iOS/Safari */
+  -webkit-touch-callout: none !important;
+}
+
+/* ==================== ЗАЩИТА ДЛЯ SWIPER СЛАЙДЕРА ==================== */
+
+/* Сохраняем функциональность Swiper, но блокируем копирование */
+.swiper-slide img {
+  pointer-events: auto !important; /* Разрешаем клики для навигации */
+  -webkit-user-drag: none !important;
+  user-drag: none !important;
+  -webkit-user-select: none !important;
+  user-select: none !important;
+  -webkit-touch-callout: none !important;
+}
+
+/* Защита для контейнеров слайдов */
+.swiper-wrapper,
+.swiper-slide {
+  -webkit-user-select: none !important;
+  user-select: none !important;
+}
+
+/* ==================== СКРЫТЬ КОНТРОЛЫ БРАУЗЕРА ==================== */
+
+/* Убрать встроенные контролы изображений в WebKit */
+img::-webkit-image-controls {
+  display: none !important;
+}
+
+img::-webkit-media-controls {
+  display: none !important;
+}
+
+/* ==================== ЗАЩИТА BACKGROUND IMAGES ==================== */
+
+/* Защита элементов с фоновыми изображениями */
+[style*="background-image"]:not(.no-protect) {
+  -webkit-user-select: none !important;
+  user-select: none !important;
+  -webkit-touch-callout: none !important;
+}
+
+/* ==================== ЗАЩИТА ДЛЯ ГАЛЕРЕИ И ПРОЕКТОВ ==================== */
+
+/* Защита для секции с проектами */
+.visual-container img,
+.gallery img,
+[class*="project"] img,
+[class*="portfolio"] img {
+  -webkit-user-drag: none !important;
+  user-drag: none !important;
+  -webkit-user-select: none !important;
+  user-select: none !important;
+}
+
+/* ==================== ЗАЩИТА ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ ==================== */
+
+@media (max-width: 768px) {
+  img:not(.no-protect) {
+    /* Дополнительная защита для мобильных */
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    pointer-events: none !important;
+  }
+  
+  /* Разрешаем взаимодействие для кликабельных элементов */
+  a img,
+  button img,
+  .swiper-slide img {
+    pointer-events: auto !important;
+  }
+}
+
+/* ==================== ИСКЛЮЧЕНИЯ ==================== */
+
+/* Элементы с классом .no-protect НЕ защищаются */
+.no-protect {
+  -webkit-user-drag: auto !important;
+  user-drag: auto !important;
+  -webkit-user-select: auto !important;
+  user-select: auto !important;
+  pointer-events: auto !important;
+  -webkit-touch-callout: auto !important;
+}
+
+/* Логотипы и иконки можно исключить из защиты */
+.logo img,
+.icon img,
+[class*="logo"] img,
+[class*="icon"] img {
+  /* Раскомментируйте, если нужно разрешить копирование логотипов */
+  /* -webkit-user-drag: auto !important;
+  user-drag: auto !important; */
+}
+
+/* ==================== ОТКЛЮЧЕНИЕ ПЕЧАТИ ИЗОБРАЖЕНИЙ (ОПЦИОНАЛЬНО) ==================== */
+
+/* Раскомментируйте, если хотите скрыть изображения при печати */
+/*
+@media print {
+  img:not(.no-protect) {
+    display: none !important;
+  }
+}
+*/
+
+/* ==================== СОВМЕСТИМОСТЬ СО СТАРЫМИ БРАУЗЕРАМИ ==================== */
+
+/* Для IE и старых браузеров */
+img {
+  -ms-user-select: none !important;
+  -ms-touch-action: none !important;
+}
+
+/* ==================== ПРИМЕЧАНИЯ ==================== */
+
+/*
+ВАЖНО:
+1. Эти стили НЕ изменяют внешний вид изображений
+2. Все существующие классы и стили остаются без изменений
+3. Использует !important только для защиты, не для визуального оформления
+4. Совместимо со всеми современными фреймворками (Swiper, Bootstrap и т.д.)
+5. Для исключения элемента из защиты добавьте класс .no-protect
+
+ИСПОЛЬЗОВАНИЕ:
+<!-- В HTML добавьте перед закрывающим </head> -->
+<link rel="stylesheet" href="portfolio-image-protection.css">
+
+<!-- Или добавьте эти стили в конец вашего основного CSS файла -->
+*/

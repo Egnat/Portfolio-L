@@ -399,10 +399,19 @@ body.loaded #content {
     color: $light-color;
 }
 
+.nav-desktop {
+    width: 307px; // ЕСЛИ ПОСТАВИТЬ В 26%, ТО ТЕКСТ СЖИМАЕТСЯ С УМЕНЬШЕНИЕМ РАЗМЕРА ЭКРАНА //ФИКСИРОВАННАЯ ШИРИНА НУЖНА, ЧТОБЫ ПРИ ИЗМЕНЕНИИ РАЗМЕРА ТЕКСТА, ПРИ ПЕРЕВОДЕ, ОСТАЛЬНЫЕ ЭЛЕМЕНТЫ НЕ ДЁРГАЛИСЬ И ОСТАВАЛИСЬ НА СВОИХ МЕСТАХ 
+}
+
 .nav-list-desktop {
     display: flex;
-    justify-content: space-between;
+    //justify-content: space-between;
     align-items: center;
+    width: fit-content;  /* меню занимает ровно столько, сколько нужно тексту */
+    min-width: fit-content; 
+    margin: 0 auto;//ССЫЛКИ СТАНОВЯТСЯ ПО ЦЕНТРУ НАВА
+    //white-space: nowrap;/* текст в ссылках не переносится → ширина не меняется НУ НЕ ЗНАЮ?*/
+    //flex-shrink: 0;/* элементы не сжимаются при уменьшении пространства НУ ХЗ?*/
     gap: 20px;
 }
 
@@ -555,6 +564,7 @@ linkItemListContentHeaderNavig {
 .container-social-icons-header-desktop {//этот элемент можно убрать, в нем сейчас лежит только одна ссылка Весь Мир мой дом родной. Оставил его просто так
     display: flex;
     justify-content: space-between;
+    width: 163px;
     align-items: center;
     gap: 15px;
 }
@@ -570,6 +580,9 @@ linkItemListContentHeaderNavig {
 
     .textWorld {
         //opacity: 0.1;
+        text-align: center;
+        word-wrap: break-word;
+        hyphens: auto;
         color: $dark-color;
         transition: color 300ms ease-in-out;//opacity
         /*&:hover{//МОЖНО НАПИСАТЬ ХОВЕР ВНУТРИ .textWorld, ВОТ ТАК И ХОВЕР ПРИМЕНЯЕТСЯ ТОЛЬКО К .textWorld
@@ -634,6 +647,72 @@ linkItemListContentHeaderNavig {
     https://apps.skillfactory.ru/learning/course/course-v1:Skillfactory+FR+2020/block-v1:Skillfactory+FR+2020+type@sequential+block@60f23eb56d1b4eacace9c2f7c291b31b/block-v1:Skillfactory+FR+2020+type@vertical+block@d4daed27e5ac4f88a3d55cff7035cc47
     */
 }
+
+//ПЕРЕВОДЧИК ГУГЛ КНОПКА КНОПКА В МОБ ВЕРСИИ НЕАКТИВНА, ПОЭТОМУ ЗАКРЫЛ ВСЕ КОДЫ И ЕЁ ЭЛЕМЕНТЫ
+/*.googleBtnDesk {
+    //position: fixed;// эти стили были изначально прописаны в штмл через style=""
+    //top:10px; 
+    //right:10px; 
+    z-index:9999;
+}
+
+.goog-te-gadget {
+    font-family: 'Rubik-Bold', sans-serif;
+    font-size: 11px;
+    color: #666;
+    white-space: nowrap;
+}
+
+.goog-te-gadget-simple {
+    display: inline-block;
+    width: 160px;
+    padding-top: 7px !important;
+    padding-bottom: 7px !important;
+    background-color: #fff;
+    border: 1px solid #D5D5D5;
+    //border-left: 1px solid #D5D5D5;
+    //border-top: 1px solid #9B9B9B;
+    //border-bottom: 1px solid #E8E8E8;
+    border-radius: 20px;
+    font-family: 'Rubik-Bold', sans-serif !important;
+    text-align: center;
+    cursor: pointer;
+}*/
+//ПЕРЕВОДЧИК ГУГЛ КНОПКА///
+
+//СТИЛИ ДЛЯ ПЕРЕКЛЮЧАТЕЛЯ ЯЗЫКОВ в html и js пока отключил, потому что добавил гугл переводчик 
+.lang-switcher-desktop {
+    display: flex;
+  //flex-direction: column;
+    align-items: center;
+    gap: 20px;                /* расстояние между флагами */
+    //margin-left: auto;       /* прижать вправо, если в flex-контейнере */
+    //padding: 8px 0;
+}
+
+.lang-link {
+    display: inline-block;
+    transition: all 0.2s ease;
+    opacity: 0.7;
+    line-height: 1;
+}
+
+.lang-link:hover,
+.lang-link.active {
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+.lang-link img {
+    display: block;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.lang-switcher-mobile {
+    display: none;
+}
+//СТИЛИ ДЛЯ ПЕРЕКЛЮЧАТЕЛЯ ЯЗЫКОВ ФЛАГИ///
 
 .nav-mobile {
     display: none;
@@ -836,7 +915,8 @@ to { left: 840px; } /*1040px ставим размер экрана, чтобы 
     font-weight: 900;
     //line-height: normal;
     letter-spacing: 8px;
-    text-align: justify;
+    //text-align: justify;
+    text-align: center;
     word-wrap: break-word;
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
@@ -866,6 +946,7 @@ to { left: 840px; } /*1040px ставим размер экрана, чтобы 
 }
 
 .h2-main-text {
+    text-align: center;
     font-size: clamp(36px, 5vw, 64px);//4em-64px
     font-weight: 600;
     text-transform: uppercase;
@@ -1141,6 +1222,7 @@ to { left: 840px; } /*1040px ставим размер экрана, чтобы 
 
 .img-slide-1 {
     transform: matrix(-1, 0, 0, 1, 0, 0);//matrix(-1, 0, 0, 1, 0, 0) если отзеркалить фото
+    object-position: -119px 50%;
     msk-image: linear-gradient(to bottom, #000, transparent 95%);//снизу заливка, регулируется плотность заливки
 }
 
@@ -3615,6 +3697,7 @@ filter-myPhotobefore { //если фото отключено в штмл, те�
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: 50% -10px;
     flex-grow: 1;
     clip-path: polygon(100% 50%,84.70057014808336% 54.5684167277018%,91.0518476172854% 60.99980941685713%,82.33578363789503% 63.39392013277814%,93.30127018922194% 75%,77.76736691019323% 71.30665001530522%,80.05203820042827% 80.05203820042827%,71.30665001530522% 77.76736691019323%,75% 93.30127018922192%,63.39392013277814% 82.33578363789503%,60.99980941685714% 91.0518476172854%,54.56841672770181% 84.70057014808336%,50% 100%,45.4315832722982% 84.70057014808336%,39.000190583142874% 91.0518476172854%,36.606079867221865% 82.33578363789505%,25.00000000000001% 93.30127018922194%,28.693349984694787% 77.76736691019323%,19.947961799571733% 80.05203820042827%,22.23263308980677% 71.30665001530522%,6.698729810778076% 75.00000000000001%,17.664216362104966% 63.39392013277815%,8.948152382714603% 60.99980941685715%,15.299429851916635% 54.568416727701816%,0% 50.00000000000001%,15.299429851916635% 45.431583272298205%,8.94815238271459% 39.00019058314288%,17.66421636210496% 36.60607986722188%,6.698729810778062% 25.000000000000014%,22.23263308980676% 28.693349984694787%,19.947961799571715% 19.947961799571747%,28.69334998469477% 22.232633089806775%,24.99999999999998% 6.698729810778083%,36.60607986722184% 17.664216362104973%,39.00019058314284% 8.948152382714603%,45.43158327229816% 15.299429851916642%,49.99999999999999% 0%,54.568416727701795% 15.299429851916635%,60.99980941685711% 8.94815238271459%,63.39392013277812% 17.66421636210496%,74.99999999999997% 6.6987298107780475%,71.3066500153052% 22.23263308980675%,80.05203820042826% 19.947961799571722%,77.76736691019323% 28.69334998469477%,93.30127018922192% 24.99999999999998%,82.33578363789502% 36.60607986722184%,91.0518476172854% 39.00019058314283%,84.70057014808336% 45.43158327229816%);
     //https://css-tricks.com/clipping-masking-css/ ССЫЛКА НА ЭТУ ЖИВУЮ МАСКУ
@@ -5469,6 +5552,14 @@ footer-anchor {
         padding: 0;
     }
 
+    .imgSlide-1Mobile {
+    object-position: -238px 50% !important;
+    }
+
+    .imgSlide-3Mobile {
+    object-position: -220px 50% !important;
+    }
+
     .mySwiper {
         height: 490px;
     }
@@ -5775,10 +5866,36 @@ footer-anchor {
         display:block;
     }
 
+    //ПЕРЕВОДЧИК ГУГЛ КНОПКА
+    /*ЭТО К КОДУ В ФАЙЛЕ ДЖС. ЗАКРЫЛ, ПОТМУ ЧТО ... НАПИСАНО В ДЖС ФАЙЛЕ*/
+    /*#google_translate_element-mobile {
+        margin-top: 30px;;
+        text-align: center;
+        //width: 100%;
+        max-width: 200px;
+        //pointer-events: none;ЧТОБЫ ЭЛЕМЕНТ НЕ КЛИКАЛСЯ. ДАША С ДИСКОРД. ЗДЕСЬ НЕ НУЖЕН, ТАК ДЛЯ ОБЩЕГО РАЗВИТИЯ
+    }//БЕЗ ЭТОГО КОДА ТОЖЕ ВСЕ РАБОТАЕТ*/
+
+    //ПЕРЕВОДЧИК ФЛАГИ
+    .lang-switcher-desktop {
+        display: none;
+    }
+
+    .lang-switcher-mobile {
+        display: flex;
+        //flex-direction: column;
+        align-items: center;
+        margin: 10px 0 20px 0;  
+        gap: 30px;              /* расстояние между флагами */
+        //margin-left: auto;       /* прижать вправо, если в flex-контейнере */
+        //padding: 8px 0;
+    }
+    //ПЕРЕВОДЧИК ФЛАГИ/////
+
     .nav-list-mobile {
         display: flex;
         flex-direction: column;
-        }
+    }
     
     .nav-item-list-mobile {
         margin: 20px 0;
@@ -7133,6 +7250,14 @@ footer-anchor {
         text-align: center;
     }
 
+    .imgSlide-1Mobile {
+        object-position: -313px 50% !important;
+    }
+
+    .imgSlide-3Mobile {
+        object-position: -281px 50% !important;
+    }
+
     .titleSectionGet {
         width: 79%;
         text-align: center;
@@ -7504,6 +7629,15 @@ footer-anchor {
         height: 414px;
     }
 
+    .imgSlide-1Mobile {
+        object-position: -188px 50% !important;
+    }
+
+    .imgSlide-3Mobile {
+        object-position: -176px 50% !important;
+    }
+
+
     .dotas-wrapper {
         width: 65%;
         top: 380px;
@@ -7830,6 +7964,14 @@ footer-anchor {
         padding: 0;
     }
 
+    .imgSlide-1Mobile {
+        object-position: -233px 50% !important;
+    }
+
+    .imgSlide-3Mobile {
+        object-position: -218px 50% !important;
+    }
+
     .title-pageAboutMe {
         letter-spacing: -1px;
     }
@@ -8130,6 +8272,10 @@ footer-anchor {
         font-size: 3em;
     }
 
+    container-social-icons-mobile {
+        gap: 29px;
+    }
+
     .summary-video-sectionOne {
         margin-top: -44px;//69px
         margin-left: 155px;
@@ -8148,6 +8294,14 @@ footer-anchor {
 
     .filter_img-slider {
         height: 300px;
+    }
+
+    .imgSlide-1Mobile {
+        object-position: -142px 50% !important;
+    }
+
+    .imgSlide-3Mobile {
+        object-position: -137px 50% !important;
     }
 
     .dotas-wrapper {
@@ -8358,6 +8512,10 @@ footer-anchor {
 
 @media screen and (max-width: 320px) {
 
+    .container-social-icons-mobile {
+        gap: 22px;
+    }
+
     .sectionTitle {
         font-size: 2.5em;
     }
@@ -8387,6 +8545,14 @@ footer-anchor {
     
     .filter_img-slider {
         height: 252px;
+    }
+
+    .imgSlide-1Mobile {
+        object-position: -120px 50% !important;
+    }
+
+    .imgSlide-3Mobile {
+        object-position: -102px 50% !important;
     }
 
     .dotas-wrapper {

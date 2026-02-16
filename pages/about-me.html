@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" href="../images/logos_atom-icon-favicon.png">
     <!--<link rel="stylesheet" type="text/css" href="../fonts/font.css">ПОДКЛЮЧИЛ В БЕЙЗ.СЦСС--><noscript>первыми подключаются шрифты, а потом стили</noscript>
     <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <link rel="stylesheet" href="css/portfolio-image-protection.css"><!--ЧТОБЫ НЕ КОПИРОВАЛИ ФОТО CLAUD CODE AI-->
     <link rel="stylesheet" type="text/css" href="../normalize/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!--<link rel="stylesheet" type="text/css" href="css/animate.css"> !--ПОДКЛЮЧЕНИЕ БИБЛИОТЕК АНИМЭЙТ.ЦСС И WOW.JS https://www.youtube.com/watch?v=jamSm4rICEQ-->
@@ -24,6 +25,7 @@
     <!-- MorphSVGPlugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/MorphSVGPlugin.min.js"></script>
     <script type="text/javascript" defer src="../script.js/main.js"></script>
+    <script src="../script.js/portfolio-image-protection.js"></script><!--ЧТОБЫ НЕ КОПИРОВАЛИ ФОТО CLAUD CODE AI-->
     <link rel="stylesheet" media="screen and (max-width: 1300px)" href="../css/base.css">
     <noscript>
         <link rel="stylesheet" href=" https://use.fontawesome.com/releases/v6.4.4/css/all.css">
@@ -93,7 +95,7 @@
                 <picture class="container-social-icons-header-desktop">
                     <a class="social-link" style="cursor: no-drop;"><!--style="cursor: pointer;"-->
                         <img class="social-icon-desktop" src="../images/globe-world.svg" alt="world">
-                        <p class="textWorld">Весь Мир <br> Мой Дом Родной</p>
+                        <p data-i18n="textWorld" class="textWorld">Весь Мир <br> Мой Дом Родной</p>
                     </a><!--href="#"-->
                     <a href="#" class="social-link" style="display: none;"><img class="social-icon-desktop" src="../images/telegram-1.png" alt="telegram"></a>
                     <a href="#" class="social-link" style="display: none;"><img class="social-icon-desktop" src="../images/instagram.png" alt="instagram"></a>
@@ -106,6 +108,23 @@
                     <a href="#" class="social-link" style="display: none;"><img class="social-icon-desktop" src="../images/linkedin.png" alt="linkedin"></a>
                     <a href="#" class="social-link" style="display: none;"><img class="social-icon-desktop" src="../images/upwork-1.png" alt="upwork"></a>
                 </picture>
+                <div class="lang-switcher-desktop">
+                    <a href="#" class="lang-link" data-lang="ru" title="Русский">
+                        <img src="https://flagcdn.com/24x18/ru.png" alt="Русский" width="30" height="24">
+                    </a>
+                    <a href="#" class="lang-link" data-lang="en" title="English">
+                        <img src="https://flagcdn.com/24x18/gb.png" alt="English" width="30" height="24">
+                    </a>
+                    <a href="#" class="lang-link" data-lang="uk" title="Українська">
+                        <img src="https://flagcdn.com/24x18/ua.png" alt="Українська" width="30" height="24">
+                    </a>
+                    <!--<a href="#" class="lang-link" data-lang="fr" title="Français">
+                        <img src="https://flagcdn.com/24x18/fr.png" alt="Français" width="24" height="18">
+                    </a>
+                    <a href="#" class="lang-link" data-lang="zh" title="中文">
+                        <img src="https://flagcdn.com/24x18/cn.png" alt="中文" width="24" height="18">
+                    </a>-->
+                </div>
                 <a href="#" style="transform: rotate(-180deg);" class="light-dark-theme" id="theme_toggle">◑</a><!--🌚 ◑ Choice Theme <span class="themes-span">Themes</span>-->
                 <nav class="nav-mobile">
                     <button class="menu-toggle" id="hamburger">
@@ -114,6 +133,23 @@
                     <div class="overlay" id="overlay"></div>
                     <div class="menu" id="menu">
                         <div class="menu-scroll">
+                            <div class="lang-switcher-mobile">
+                                <a href="#" class="lang-link" data-lang="ru" title="Русский">
+                                    <img src="https://flagcdn.com/24x18/ru.png" alt="Русский" width="30" height="24">
+                                </a>
+                                <a href="#" class="lang-link" data-lang="en" title="English">
+                                    <img src="https://flagcdn.com/24x18/gb.png" alt="English" width="30" height="24">
+                                </a>
+                                <a href="#" class="lang-link" data-lang="uk" title="Українська">
+                                    <img src="https://flagcdn.com/24x18/ua.png" alt="Українська" width="30" height="24">
+                                </a>
+                                <!--<a href="#" class="lang-link" data-lang="fr" title="Français">
+                                    <img src="https://flagcdn.com/24x18/fr.png" alt="Français" width="24" height="18">
+                                </a>
+                                <a href="#" class="lang-link" data-lang="zh" title="中文">
+                                    <img src="https://flagcdn.com/24x18/cn.png" alt="中文" width="24" height="18">
+                                </a>-->
+                            </div>
                             <ul class="nav-list-mobile">
                                 <li class="nav-item-list-mobile"><a href="#" class="nav-link" style="text-decoration: underline; opacity: 0.7;">Обо Мне</a></li>
                                 <li class="nav-item-list-mobile"><a href="skills.html" class="nav-link">Навыки</a></li>

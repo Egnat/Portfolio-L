@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Автоматический перевод без атрибутов</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .lang-switcher {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .lang-label {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 30px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #3498db;
+      transition: 0.4s;
+      border-radius: 30px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 22px;
+      width: 22px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #e74c3c;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(30px);
+    }
+
+    .lang-text {
+      font-weight: bold;
+      font-size: 0.9rem;
+      min-width: 30px;
+      text-align: center;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #34495e;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #34495e;
+    }
+
+    h4 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    mark {
+      background-color: #f39c12;
+      padding: 2px 5px;
+      border-radius: 3px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 4rem 2rem;
+      border-radius: 10px;
+      margin-bottom: 3rem;
+    }
+
+    .hero h1 {
+      color: white;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .skill-card {
+      background: #f8f9fa;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .contact-section {
+      background: #ecf0f1;
+      padding: 2rem;
+      border-radius: 10px;
+    }
+
+    button {
+      background: #3498db;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #2980b9;
+    }
+
+    .info-box {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 1rem;
+      margin: 2rem 0;
+    }
+
+    .info-box h3 {
+      color: #856404;
+      margin-bottom: 0.5rem;
+    }
+
+    .info-box p {
+      color: #856404;
+      margin: 0;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    /* Элемент который НЕ переводится */
+    .no-translate {
+      background: #e8f5e9;
+      padding: 1rem;
+      border-radius: 5px;
+      margin: 1rem 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <div class="logo">Портфолио</div>
+      
+      <div class="lang-switcher">
+        <span class="lang-label">Язык:</span>
+        <span class="lang-text">RU</span>
+        <label class="switch">
+          <input type="checkbox" id="langToggle">
+          <span class="slider"></span>
+        </label>
+        <span class="lang-text">EN</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Info Box -->
+    <div class="info-box">
+      <h3>✨ Автоматический перевод</h3>
+      <p>Эта страница переводится автоматически БЕЗ добавления атрибутов data-i18n к элементам. Просто нажмите переключатель выше!</p>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Всем привет</h1>
+      <p>Я фронтенд-разработчик / веб / ux / ui дизайнер / видео мейкер</p>
+    </section>
+
+    <!-- About Section -->
+    <section>
+      <h2>Обо Мне</h2>
+      <p>Я специализируюсь на создании пользовательского опыта и интерфейса для веб-приложений и веб-сайтов, а также реализацией их на уровне кода. Эта совместная роль UX/UI дизайнера и фронтенд-разработчика объединяют усилия для создания эффективного пользовательского опыта, от исследований и проектирования до реализации и кодирования.</p>
+      <p>Магия единого интерфейса</p>
+    </section>
+
+    <!-- Manifesto Section -->
+    <section>
+      <h2>Манифест</h2>
+      <h3>Мой Манифест</h3>
+      <p>Когда я начал глубже вникать в мир профессий, которые я освоил, я почувствовал, что важно создать манифест для моей работы</p>
+      <h4>Итак, здесь я обрисую <b><mark>мои убеждения, мою миссию и мой подход</mark></b> как мы будем сотрудничать по вашему проекту</h4>
+    </section>
+
+    <!-- Skills Section -->
+    <section>
+      <h2>Навыки</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>фронтенд-разработчик</h3>
+          <p>Создание интерактивных веб-приложений</p>
+        </div>
+        <div class="skill-card">
+          <h3>веб/ux/ui дизайнер</h3>
+          <p>Проектирование пользовательского опыта</p>
+        </div>
+        <div class="skill-card">
+          <h3>видео мейкер</h3>
+          <p>Производство видео контента</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Element that should NOT be translated -->
+    <div class="no-translate">
+      <h3>🔒 Этот блок НЕ переводится</h3>
+      <p>К этому элементу добавлен класс .no-translate, поэтому он остается на русском языке при переводе страницы.</p>
+      <p>Код: &lt;div class="no-translate"&gt;...&lt;/div&gt;</p>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <h2>Контакты</h2>
+      <p>Связаться со Мной</p>
+      
+      <form>
+        <input type="text" placeholder="Ваше имя" required>
+        <input type="email" placeholder="Ваш email" required>
+        <textarea rows="5" placeholder="Ваше сообщение"></textarea>
+        <button type="submit">Отправить</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Подключаем скрипт автопереводчика -->
+  <script src="auto-translator-no-attributes.js"></script>
+  
+  <!-- Дополнительный код для демонстрации -->
+  <script>
+    // Слушаем событие смены языка
+    document.addEventListener('languageChanged', (e) => {
+      console.log(`Язык изменен: ${e.detail.fromLang} → ${e.detail.lang}`);
+    });
+    
+    // Пример добавления новых переводов динамически
+    // addTranslations({
+    //   "Новая фраза": "New phrase",
+    //   "Еще текст": "More text"
+    // });
+  </script>
+</body>
+</html>
