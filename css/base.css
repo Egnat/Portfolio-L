@@ -5665,8 +5665,8 @@ filter-item-like:hover {
   width: 100%;
   height: 57vw;
   margin: 0 0 70px 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(18%, rgba(0, 0, 0, 0.5)), color-stop(33%, rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0))), url(../images-2/my-photo/My-First-Weavy_Seedream-v4-5-Edit_2026-02-05_15-48-19.png);
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 18%, rgba(0, 0, 0, 0.3) 33%, rgba(0, 0, 0, 0) 100%), url(../images-2/my-photo/My-First-Weavy_Seedream-v4-5-Edit_2026-02-05_15-48-19.png);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(22%, rgba(0, 0, 0, 0.5)), color-stop(27%, rgba(0, 0, 0, 0.3)), color-stop(37%, rgba(0, 0, 0, 0))), url(../images-2/my-photo/image_Pippit_202602181430-1.png);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 22%, rgba(0, 0, 0, 0.3) 27%, rgba(0, 0, 0, 0) 37%), url(../images-2/my-photo/image_Pippit_202602181430-1.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0% 40%;
@@ -5753,7 +5753,7 @@ img-pageAboutMe {
   width: 97%;
   font-size: calc(1.1vw + 5px);
   font-weight: 400;
-  text-align: end;
+  text-align: left;
   color: #FDFDFD;
 }
 
@@ -6927,8 +6927,8 @@ footer-anchor {
   }
 
   .imgSlide-1Mobile {
-    -o-object-position: -238px 50% !important;
-       object-position: -238px 50% !important;
+    -o-object-position: -270px 50% !important;
+       object-position: -270px 50% !important;
   }
 
   .imgSlide-3Mobile {
@@ -7583,6 +7583,11 @@ footer-anchor {
   .filter_img-slider {
     width: 100%;
     height: 560px;
+  }
+
+  .imgSlide-1Mobile {
+    -o-object-position: -375px 50% !important;
+       object-position: -375px 50% !important;
   }
 
   .wrapp-slide-text {
@@ -8778,8 +8783,8 @@ footer-anchor {
   }
 
   .imgSlide-1Mobile {
-    -o-object-position: -313px 50% !important;
-       object-position: -313px 50% !important;
+    -o-object-position: -281px 50% !important;
+       object-position: -281px 50% !important;
   }
 
   .imgSlide-3Mobile {
@@ -9206,8 +9211,8 @@ footer-anchor {
   }
 
   .imgSlide-1Mobile {
-    -o-object-position: -188px 50% !important;
-       object-position: -188px 50% !important;
+    -o-object-position: -266px 50% !important;
+       object-position: -266px 50% !important;
   }
 
   .imgSlide-3Mobile {
@@ -9577,16 +9582,6 @@ footer-anchor {
     padding: 0;
   }
 
-  .imgSlide-1Mobile {
-    -o-object-position: -233px 50% !important;
-       object-position: -233px 50% !important;
-  }
-
-  .imgSlide-3Mobile {
-    -o-object-position: -218px 50% !important;
-       object-position: -218px 50% !important;
-  }
-
   .title-pageAboutMe {
     letter-spacing: -1px;
   }
@@ -9611,6 +9606,16 @@ footer-anchor {
 
   .h2-main-text {
     letter-spacing: 0px;
+  }
+
+  .imgSlide-1Mobile {
+    -o-object-position: -207px 50% !important;
+       object-position: -207px 50% !important;
+  }
+
+  .imgSlide-3Mobile {
+    -o-object-position: -218px 50% !important;
+       object-position: -218px 50% !important;
   }
 
   .slide-text {
@@ -9922,8 +9927,8 @@ footer-anchor {
   }
 
   .imgSlide-1Mobile {
-    -o-object-position: -142px 50% !important;
-       object-position: -142px 50% !important;
+    -o-object-position: -185px 50% !important;
+       object-position: -185px 50% !important;
   }
 
   .imgSlide-3Mobile {
@@ -10176,8 +10181,8 @@ footer-anchor {
   }
 
   .imgSlide-1Mobile {
-    -o-object-position: -120px 50% !important;
-       object-position: -120px 50% !important;
+    -o-object-position: -154px 50% !important;
+       object-position: -154px 50% !important;
   }
 
   .imgSlide-3Mobile {

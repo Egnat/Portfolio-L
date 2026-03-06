@@ -4567,10 +4567,10 @@ filter-item-like:hover {
     //padding: 70px 0;
     margin: 0 0 70px 0;
     background-image: linear-gradient(to bottom, 
-    rgba(0, 0, 0, 0.5) 18%, 
-    rgba(0, 0, 0, 0.3) 33%,
-    rgba(0, 0, 0, 0) 100%),
-    url(../images-2/my-photo/My-First-Weavy_Seedream-v4-5-Edit_2026-02-05_15-48-19.png);// img-a-m.png cover-dark.png 13082009461-3.png / cat-and-me-white-text-1.png/  / result.png
+    rgba(0, 0, 0, 0.5) 22%, /*18*/
+    rgba(0, 0, 0, 0.3) 27%, /*33*/
+    rgba(0, 0, 0, 0) 37%),  /*100*/
+    url(../images-2/my-photo/image_Pippit_202602181430-1.png);// img-a-m.png cover-dark.png 13082009461-3.png / cat-and-me-white-text-1.png/  / result.png
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0% 40%;//center 20% 40%
@@ -4654,7 +4654,7 @@ img-pageAboutMe {
     width: 97%;
     font-size: calc(1.1vw + 5px);
     font-weight: 400;
-    text-align: end;
+    text-align: left;//end
     color: $light-color;
 }
 
@@ -5553,7 +5553,7 @@ footer-anchor {
     }
 
     .imgSlide-1Mobile {
-    object-position: -238px 50% !important;
+    object-position: -270px 50% !important;//-238px 50% для фото с самолетом
     }
 
     .imgSlide-3Mobile {
@@ -6155,6 +6155,10 @@ footer-anchor {
     .filter_img-slider {
         width: 100%;
         height: 560px
+    }
+
+    .imgSlide-1Mobile {//для фото с самолетом на этом медиазапросе этот элемент прописывать не нужно
+    object-position: -375px 50% !important;//-238px 50% для фото с самолетом
     }
 
     .wrapp-slide-text {
@@ -7251,7 +7255,7 @@ footer-anchor {
     }
 
     .imgSlide-1Mobile {
-        object-position: -313px 50% !important;
+        object-position: -281px 50% !important;//-313рх для фото с самолетом
     }
 
     .imgSlide-3Mobile {
@@ -7630,7 +7634,7 @@ footer-anchor {
     }
 
     .imgSlide-1Mobile {
-        object-position: -188px 50% !important;
+        object-position: -266px 50% !important;//-188рх для фото с самолетом
     }
 
     .imgSlide-3Mobile {
@@ -7964,14 +7968,6 @@ footer-anchor {
         padding: 0;
     }
 
-    .imgSlide-1Mobile {
-        object-position: -233px 50% !important;
-    }
-
-    .imgSlide-3Mobile {
-        object-position: -218px 50% !important;
-    }
-
     .title-pageAboutMe {
         letter-spacing: -1px;
     }
@@ -7997,6 +7993,14 @@ footer-anchor {
 
     .h2-main-text {
         letter-spacing: 0px;
+    }
+
+    .imgSlide-1Mobile {
+        object-position: -207px 50% !important;//-233рх для фото с самолетом
+    }
+
+    .imgSlide-3Mobile {
+        object-position: -218px 50% !important;
     }
 
     .slide-text {
@@ -8297,7 +8301,7 @@ footer-anchor {
     }
 
     .imgSlide-1Mobile {
-        object-position: -142px 50% !important;
+        object-position: -185px 50% !important;//-142рх для фото с самолетом
     }
 
     .imgSlide-3Mobile {
@@ -8548,7 +8552,7 @@ footer-anchor {
     }
 
     .imgSlide-1Mobile {
-        object-position: -120px 50% !important;
+        object-position: -154px 50% !important;//-120рх для фото с самолетом
     }
 
     .imgSlide-3Mobile {
