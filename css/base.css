@@ -2252,6 +2252,10 @@ button, input, select, textarea, optgroup {
           hyphens: auto;
 }
 .subtitle-common-process-work mark {
+  padding: 0 0px;
+  /* отступы */
+  background-color: yellow;
+  /* желтый фон */
   color: #28004d;
 }
 
@@ -2906,7 +2910,7 @@ https://www.youtube.com/watch?v=UNaWqWvytKk&list=PLVTUJUbFu7UeD0HL7zOgkoe7fu_n0c
   display: inline-block;
   font: 600 1.55rem/1.4 "Rubik";
   text-transform: uppercase;
-  letter-spacing: 0.4em;
+  letter-spacing: 0.3em;
   ord-spacing: 0.3em;
   background-color: #c35100;
   padding: 7px;
@@ -3480,6 +3484,42 @@ swiper-slide img {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 5px;
+}
+
+.fromPrice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 10px;
+}
+.fromPrice > .from {
+  font-size: 18px;
+  font-weight: 500;
+  color: #FDFDFD;
+}
+
+.blockdescription-commonMobileApp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 10px;
+}
+.blockdescription-commonMobileApp > .from {
+  font-size: 18px;
+  font-weight: 500;
+  color: #FDFDFD;
 }
 
 .h4-cube {
@@ -6927,8 +6967,8 @@ footer-anchor {
   }
 
   .imgSlide-1Mobile {
-    -o-object-position: -270px 50% !important;
-       object-position: -270px 50% !important;
+    -o-object-position: -80px 36% !important;
+       object-position: -80px 36% !important;
   }
 
   .imgSlide-3Mobile {
@@ -7586,8 +7626,8 @@ footer-anchor {
   }
 
   .imgSlide-1Mobile {
-    -o-object-position: -375px 50% !important;
-       object-position: -375px 50% !important;
+    -o-object-position: -107px 31% !important;
+       object-position: -107px 31% !important;
   }
 
   .wrapp-slide-text {
@@ -7941,6 +7981,11 @@ footer-anchor {
 @media screen and (max-width: 768px) {
   .container {
     max-width: 720px;
+  }
+
+  .imgSlide-1Mobile {
+    -o-object-position: -107px 31% !important;
+       object-position: -107px 31% !important;
   }
 
   .container-sectionGallery {
@@ -8783,6 +8828,11 @@ footer-anchor {
   }
 
   .imgSlide-1Mobile {
+    -o-object-position: -43px 26% !important;
+       object-position: -43px 26% !important;
+  }
+
+  imgSlide-1Mobile {
     -o-object-position: -281px 50% !important;
        object-position: -281px 50% !important;
   }
@@ -9211,6 +9261,11 @@ footer-anchor {
   }
 
   .imgSlide-1Mobile {
+    -o-object-position: -43px 26% !important;
+       object-position: -43px 26% !important;
+  }
+
+  imgSlide-1Mobile {
     -o-object-position: -266px 50% !important;
        object-position: -266px 50% !important;
   }
@@ -9609,6 +9664,11 @@ footer-anchor {
   }
 
   .imgSlide-1Mobile {
+    -o-object-position: -43px 26% !important;
+       object-position: -43px 26% !important;
+  }
+
+  imgSlide-1Mobile {
     -o-object-position: -207px 50% !important;
        object-position: -207px 50% !important;
   }
@@ -9927,6 +9987,11 @@ footer-anchor {
   }
 
   .imgSlide-1Mobile {
+    -o-object-position: -43px 26% !important;
+       object-position: -43px 26% !important;
+  }
+
+  imgSlide-1Mobile {
     -o-object-position: -185px 50% !important;
        object-position: -185px 50% !important;
   }
@@ -10181,6 +10246,11 @@ footer-anchor {
   }
 
   .imgSlide-1Mobile {
+    -o-object-position: -43px 26% !important;
+       object-position: -43px 26% !important;
+  }
+
+  imgSlide-1Mobile {
     -o-object-position: -154px 50% !important;
        object-position: -154px 50% !important;
   }

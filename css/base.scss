@@ -1462,7 +1462,7 @@ to { left: 840px; } /*1040px ставим размер экрана, чтобы 
         transition: color 300ms ease-in-out;
     }
     &:hover .cta.tech-service-btn {
-        border: 1px solid $dark-color;
+        border: 1px solid $dark-color;//#c35100
         transition: border 300ms ease-in-out;
     }
 }
@@ -1511,6 +1511,7 @@ tech-service {
     border: 1px solid $light-color;
     border-radius: 50%;
     background-color: transparent;
+    //background-color: opacify($color: #000000, $amount: 1);
     transform: skewY(4deg);
     z-index: 1;
     cursor: pointer;
@@ -1847,7 +1848,7 @@ button, input, select, textarea, optgroup {
     //mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);//круг-маска
 }
 
-.main-photo-sidebar {//ПЛАВАЮЩАЯ МАСКА ВНИЗУ ФОТО ПОКА НЕ ДВИЖЕТСЯ, А ТАК РАБОТАЕТ https://codepen.io/ahaywood/pen/gOPrWOV
+.main-photo-sidebar {//ПЛАВАЮЩАЯ МАСКА ВНИЗУ ФОТО. РАБОТАЕТ https://codepen.io/ahaywood/pen/gOPrWOV
     clip-path: url(#clip);
     display: block;
     width: 100%;
@@ -1883,7 +1884,9 @@ button, input, select, textarea, optgroup {
     word-wrap: break-word;
     hyphens: auto;
 
-    mark {
+    mark {//mark B SIDEBAR ВЫДЕЛЕННЫЙ ТЕМНО-ФИОЛЕТОВЫМ С ЖЕЛТЫМ БГ. Стиль по умолчанию: Браузеры по умолчанию применяют желтый фон к тексту внутри тега <mark>, чтобы он выделялся(ИНФА С ПЕРПЛЕКСИТИ, КОД/ВЕРСТКА, ЧУТЬ НИЖЕ СЕРЕДИНЫ ОКНА)
+        padding: 0 0px; /* отступы */
+        background-color: rgb(255, 255, 0); /* желтый фон */ //https://www.perplexity.ai/search/c71a4a3f-200d-4bc0-8223-75c1c3baca0f
         color: $dark-color;
     }
 }
@@ -2406,7 +2409,7 @@ https://www.youtube.com/watch?v=UNaWqWvytKk&list=PLVTUJUbFu7UeD0HL7zOgkoe7fu_n0c
     display: inline-block;
     font: 600 1.55rem/1.4 "Rubik"; //"IBM Plex Serif"
     text-transform: uppercase;
-    letter-spacing: 0.4em;
+    letter-spacing: 0.3em;
     ord-spacing: 0.3em;
     background-color: $btnCTA-color;
     padding: 7px;
@@ -2897,6 +2900,32 @@ swiper-slide img {
     justify-content: space-between;
     align-items: flex-start;
     gap: 5px;
+}
+
+.fromPrice {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 10px;
+
+    & > .from {
+        font-size: 18px;
+        font-weight: 500;
+        color: #FDFDFD
+    }
+}
+
+.blockdescription-commonMobileApp {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 10px;
+
+    & > .from {
+        font-size: 18px;
+        font-weight: 500;
+        color: #FDFDFD;
+    }
 }
 
 .h4-cube {
@@ -5553,7 +5582,7 @@ footer-anchor {
     }
 
     .imgSlide-1Mobile {
-    object-position: -270px 50% !important;//-238px 50% для фото с самолетом
+    object-position: -80px 36% !important;//-238px 50% для фото с самолетом, -270px 50% ФОТО image_Pippit_202602181603.png 
     }
 
     .imgSlide-3Mobile {
@@ -6158,7 +6187,7 @@ footer-anchor {
     }
 
     .imgSlide-1Mobile {//для фото с самолетом на этом медиазапросе этот элемент прописывать не нужно
-    object-position: -375px 50% !important;//-238px 50% для фото с самолетом
+    object-position: -107px 31% !important;//-238px 50% для фото с самолетом, -375px 50% ДЛЯ ФОТО image_Pippit_202602181603.png
     }
 
     .wrapp-slide-text {
@@ -6506,6 +6535,10 @@ footer-anchor {
 /*,screen and (max-width: calc(1536px)) and (orientation: landscape)*/ {
     .container {
         max-width: 720px;
+    }
+
+    .imgSlide-1Mobile {
+        object-position: -107px 31% !important;
     }
 
     .container-sectionGallery{//чтобы слайдер был на всю страницу нужно подключить элемент
@@ -7255,6 +7288,10 @@ footer-anchor {
     }
 
     .imgSlide-1Mobile {
+    object-position: -43px 26% !important;
+    }
+
+    imgSlide-1Mobile {
         object-position: -281px 50% !important;//-313рх для фото с самолетом
     }
 
@@ -7634,6 +7671,9 @@ footer-anchor {
     }
 
     .imgSlide-1Mobile {
+        object-position: -43px 26% !important;
+    }
+    imgSlide-1Mobile {
         object-position: -266px 50% !important;//-188рх для фото с самолетом
     }
 
@@ -7996,6 +8036,9 @@ footer-anchor {
     }
 
     .imgSlide-1Mobile {
+    object-position: -43px 26% !important;
+    }
+    imgSlide-1Mobile {
         object-position: -207px 50% !important;//-233рх для фото с самолетом
     }
 
@@ -8301,6 +8344,9 @@ footer-anchor {
     }
 
     .imgSlide-1Mobile {
+    object-position: -43px 26% !important;
+    }
+    imgSlide-1Mobile {
         object-position: -185px 50% !important;//-142рх для фото с самолетом
     }
 
@@ -8552,6 +8598,9 @@ footer-anchor {
     }
 
     .imgSlide-1Mobile {
+    object-position: -43px 26% !important;
+    }
+    imgSlide-1Mobile {
         object-position: -154px 50% !important;//-120рх для фото с самолетом
     }
 

@@ -8,7 +8,7 @@
   Когда мы делаем сайт, в котором больше одной страницы, мы в папке public или src,если в реакте, если в обычной вёрстке, то просто, создаём папку PAGES, в которой будут ледать эти страницы.В каждой из страниц в штмл, в хэде нужно прописать соответствующий путь к каждой странице, чтобы они открывались по клику на ссылку, соответствующей странице (
     Сайт должен содержать три страницы и более: Главную, «О нас» и «Контакты», и др.
     На всех страницах должны быть шапка, основное содержимое и подвал.
-    Все страницы должны быть связаны.) Фото с примером сохранил в папке ПРОЕКТЫ ВЭЙАП УЧЁБА КУРС - КАК СОСТОИТ САЙТ. Мод-1.12 Создание сайта Скиллфектори https://apps.skillfactory.ru/learning/course/course-v1:Skillfactory+FR+2020/block-v1:Skillfactory+FR+2020+type@sequential+block@a3800354abc64f8bb5ab40ed3c0e6b04/block-v1:Skillfactory+FR+2020+type@vertical+block@065fe81be88b4de58c449ed69eaa8f9b
+    Все страницы должны быть связаны.) Фото с примером сохранил в папке ПРОЕКТЫ ВЭЙАП УЧЁБА КУРС - КАК СОСТОИТ САЙТ. Мод-1.12 Создание сайта atributs: <br> <pre></pre> и др. Скиллфектори https://apps.skillfactory.ru/learning/course/course-v1:Skillfactory+FR+2020/block-v1:Skillfactory+FR+2020+type@sequential+block@a3800354abc64f8bb5ab40ed3c0e6b04/block-v1:Skillfactory+FR+2020+type@vertical+block@065fe81be88b4de58c449ed69eaa8f9b
     https://www.figma.com/file/b5OCFfcP1M1Gbi9y3bxZbb/%D0%9E%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2-WAYUP-%D0%A2%D1%80%D0%B5%D0%BD%D0%B0%D0%B6%D1%91%D1%80%D1%8B?type=design&node-id=768-2&mode=design&t=AHPp9NSnp9fbGvMk-0
 Чтобы создать проект в Реакт, сначала нужно на комп глобально установить Node.js, npm https://nodejs.org/en/download Потом глобально устанавливаем Реакт npm install -g create-react-app Потм переходим в папку, где хотим создать проект, в данном случае My PR in React - Verstka Laptop. 
 Создание Нового проекта в реакт npx create-react-app my-app, вместо my-app пишу название своего проекта, на пример, tresha_sass. Сборку проекта можно делать одновременно и в локахост, и не в локахосте, но при отправке проекта в гитхаб, нужно заблокировать индекс.штмл в папблик, скопировав предварительно весь код в индекс.штмл, который лежит в корневой папкеДелая сборку не в локахост, нужно заблокировать индекс.штмл, находящийся в папке паблик. Делая сборку в реакт, чтобы потом отправить в гитхаб и со страницы гитхаба, чтобы фотки открылись, фотки нужно использовать с расширением png, когда используешь фотки с компа, jpg гитхаб не принимает. Изменить расширение фоток можно через фигму, скопировав нужное фото в фигму и с фигмы обратно в проект с нужным расширением. Чтобы со страницы гитхаба проект, собранный в реакте открылся, нужно файл штмл из папки паблик вынести в корневую папку и правильно прописать пути к файлам css, js. Один путь прописан в линке, в хэде href="public/scss/base.css", другой в футере для js. Также если использую фотку с компа для бэкграунда в styles.css, base.scss, нужно также прописать правильно путь к фотке, один путь прописан в base.scss, в body background-image: url('../images/abstractfirebloom.png'); если не использую для сборки локахост 3000 и второй путь прописан в файле App.css, в body background-image: url('../public/images/abstractfirebloom.png');, когда использую сборку в локахосте 3000, подключая его через терминал, зайдя в корневую папку проекта tresh_sass, используя команду npm run sart, нужно ещё разблокировать файл индекс.штмл, находящийся в папке паблик. Сборка при написании проекта в компе проходит без вопросов расширение jpg принимает. Обычный проект, такой как New year, Pandorium  и другие можно писать в штмл документе данном реактом, как в этом проекте. Для того, чтобы писать проект с запросами, ответами и т.д., как фин.проект, канбан доска, нужно писать функциями или классами, рендер, ретюрн использовать и т.д. Команда установки SASS в проект npm install sass. В этом проекте сасс можно не устанавливать. Изменить номер локахоста можно прописав в скрипте "start":"set PORT=8086 && react-scripts start", номер порта, который нужен --port 8086(работает, проверил), ещё так "start": "PORT=3006 react-scripts start" (пока не проверял). Ссылка на слайдеры, лайтбокс, css, js написания всяких интересных штук https://www.w3schools.com/howto/howto_js_slideshow.asp. -Swiper.com тоже слайдеры-
@@ -175,6 +175,7 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
       <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     </noscript>
     <noscript>ССЫЛКИ ДЛЯ РАБОТЫ СЛАЙДЕРА КАРУСЕЛЬ С UIKit
+      @@ -261,108 +261,108 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/css/uikit.min.css" />
       <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit-icons.min.js"></script>
@@ -221,13 +222,13 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                   <a class="linkDropdownShevron-content" style="cursor: auto;">
                     <figure class="block-phoneShevron" style="cursor:auto;">
                       <img class="icon-phone" src="images/svg-programms-shavron/logo-zangi.svg" alt="zangi"><!--logo-zangi-text.svg icon-phone.svg-->
-                      <number class="text-phone">86-8978-3142</number>
+                      <number class="text-phone" data-i18n="i18nTextPhone1">86-8978-3142</number>
                     </figure>
                   </a><!--href="#"-->
                   <a class="linkDropdownShevron-content" style="cursor: auto;">
                     <figure class="block-emailShevron" style="cursor: auto;">
                       <img class="icon-phone" src="images/svg-programms-shavron/email-cirkle-stroke.svg" alt="email"><!--email-32px.svg-->
-                      <p class="text-email">Sergey.s.v100879@gmail.com</p>
+                      <p class="text-email" data-i18n="i18nTextEmail1">Sergey.s.v100879@gmail.com</p>
                     </figure>
                   </a><!--href="#"-->
                   <picture class="container-social-iconsDropdown">
@@ -250,7 +251,7 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
         <picture class="container-social-icons-header-desktop">
           <a class="social-link" style="cursor: no-drop;"><!--style="cursor: pointer;"-->
             <img class="social-icon-desktop" src="images/globe-world.svg" alt="world">
-            <p data-i18n="textWorld" class="textWorld">Весь Мир <br> Мой Дом Родной</p>
+            <p data-i18n="textWorld" class="textWorld">Весь Мир -<br> Мой Дом Родной</p>
           </a><!--href="#"-->
           <a href="#" class="social-link" style="display: none;"><img class="social-icon-desktop" src="images/telegram-1.png" alt="telegram"></a>
           <a href="#" class="social-link" style="display: none;"><img class="social-icon-desktop" src="images/instagram.png" alt="instagram"></a>
@@ -332,7 +333,7 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                 <div class="block-connection">
                   <figure class="block-phoneShevron" style="cursor:auto;">
                     <img class="icon-phone" src="images/svg-programms-shavron/logo-zangi.svg" alt="zangi"><!--icon-phone.svg logo-zangi-text.svg-->
-                    <number class="text-phone">86-8978-3142</number>
+                    <number class="text-phone" data-i18n="i18nTextPhone2">86-8978-3142</number>
                   </figure>
                     <!--<figure class="block-phone">
                       <img class="icon-phone" src="images/phone.png" alt="phone">
@@ -340,7 +341,7 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                     </figure>-->
                     <picture class="block-email">
                       <img class="icon-email" src="images/svg-programms-shavron/email-cirkle-stroke.svg" alt="email"><!--email-32px.svg-->
-                      <p class="text-email">Sergey.s.v100879@gmail.com</p>
+                      <p class="text-email" data-i18n="i18nTextEmail2">Sergey.s.v100879@gmail.com</p>
                     </picture>
                 </div>
                 <picture class="container-social-icons-mobile">
@@ -539,7 +540,7 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
           <!--SIDEBAR-->
           <div class="offer">
             <article class="block-main-text">
-              <h1 data-wow-duration = "5s" class="h1-main-text wow animate__animated animate__fadeInDown">
+              <h1 data-wow-duration = "5s" class="h1-main-text wow animate__animated animate__fadeInDown" data-i18n="i18nH1MainText1">
                 SERGEY <span class="span">SVN</span>
               </h1>
               <!--<h2 class="h2-main-text">web/ux/ui design front-end development video installation</h2>-->
@@ -774,7 +775,7 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                   <div class="numbertext">1 / 4</div>
                   <picture class="wrapp-content-slide">
                     <figure class="filter_img-slider">
-                      <img class="img-slider img-slide-1 imgSlide-1Mobile" src="images-2/my-photo/image_Pippit_202602181603.png" style="transform: matrix(1, 0, 0, 1, 0, 0); width: 201%; object-position: -346px 50%;" alt="slide-1" ><!--diggen-ai.png object-position: -119px 50%; для фото с самолетом, width: 201% для фото с самолетом не нужен и если фото с самолетом буду оставлять вместо конференции, то в файле scss нужно в медиазапросах поменять значения px у object-postion-->
+                      <img class="img-slider img-slide-1 imgSlide-1Mobile" src="images-2/my-photo/Frame 435515.png" style="transform: matrix(1, 0, 0, 1, 0, 0); width: 119%; object-position: -111px 35%;" alt="slide-1" ><!--diggen-ai.png object-position: -119px 50%; для фото с самолетом, width: 201% для фото с самолетом не нужен и если фото с самолетом буду оставлять вместо конференции, то в файле scss нужно в медиазапросах поменять значения px у object-postion object-position: -346px 50%; ДЛЯ ФОТО image_Pippit_202602181603.png-->
                     </figure>
                     <div class="wrapp-slide-text">
                       <article class="slide-text">
@@ -964,7 +965,7 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                     </figure>
                     <div class="wrapp-slide-text">
                       <article class="slide-text">
-                        <p class="pg-gretting" style="font-size: 18p;">* Как дизайнер, я создаю привлекательный и
+                        <p class="pg-gretting" style="font-size: 18p;" data-i18n="pgDesign">* Как дизайнер, я создаю привлекательный и
                           функциональный веб-дизайн. Я проектирую пользовательский интерфейс (UI) и
                           пользовательский опыт (UX) веб-платформ, уделяя особое внимание эффективной
                           навигации, визуальному дизайну и разработке макета. Я создаю
@@ -973,13 +974,13 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                           согласованность и совместимость дизайна на различных 
                           устройствах и платформах.
                         </p>
-                        <p class="pg-gretting" style="height: auto; cursor: context-menu;">* Улучшение качества и добавление видеоматериалов
+                        <p class="pg-gretting" style="height: auto; cursor: context-menu;" data-i18n="i18nPgGretting2">* Улучшение качества и добавление видеоматериалов
                           <br>* Полное понимание пользовательского опыта <br>* Эффективная визуальная коммуникация
                           <br>* Синергия дизайна и разработки
                           <br>* Лучшее общение
                         </p>
                         <article class="section-programms">
-                          <p class="pg-gretting" style="height: auto;">Навыки:</p>
+                          <p class="pg-gretting" style="height: auto;" data-i18n="skiilsSlider1">Навыки:</p>
                           <picture class="block-programms">
                             <figure class="filter-img-programms-slide-1">
                               <img class="img-programms-slide-1" src="images/programms/FIGMA.svg" title="Figma" alt="figma">
@@ -1073,14 +1074,14 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                           <!--КНОПКУ СО ССЫЛКОЙ НА ТЕЛЕГУ ОСТАВИТЬ ЕСЛИ НЕ БУДЕТ РАБОТАТЬ ЧАТ И В СЛАЙДЕРЕ ПЕРВОЙ СЕКЦИИ ТОЖЕ ЗАМЕНИТЬ ВО ВСЕХ СЛАЙДАХ ЧАТ НА ТЕЛЕГУ-->
                           <a href="https://t.me/Sergey_p_i" class="link-btn-carusel" target="_blank" style="text-decoration: none;">
                             <button type="submit" class="btn-submit carusel-submit" name="submit" id="submit" style="margin-top: 0;">
-                              <span class="oval-1-btn-submit"><p class="text-btn-submit">Спросить Меня</p></span>
+                              <span class="oval-1-btn-submit"><p class="text-btn-submit" data-i18n="txtBtnSlider1">Спросить Меня</p></span>
                               <span class="oval-2-btn-submit"></span>
                             </button>
                           </a>
                           <!--КНОПКУ СО ССЫЛКОЙ НА ТЕЛЕГУ ОСТАВИТЬ ЕСЛИ НЕ БУДЕТ РАБОТАТЬ ЧАТ-->
                           <a href="pages/skills.html" class="link-btnSkills">
                             <div class="btnSkills">
-                              <span class="oval-1"><p class="textBtnCTA">Навыки</p>
+                              <span class="oval-1"><p class="textBtnCTA" data-i18n="txtBtn2Slider1">Навыки</p>
                                 <img class="vector-more" src="images/vector-more.svg" alt="sign more"> 
                               </span> 
                               <span class="oval-2"></span>
@@ -1113,7 +1114,7 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                     </figure>
                     <div class="wrapp-slide-text">
                       <article class="slide-text">
-                        <p class="pg-gretting">* Как разработчик, я работаю над созданием клиентских веб-приложений и веб-сайтов
+                        <p class="pg-gretting" data-i18n="pgFrontEnd">* Как разработчик, я работаю над созданием клиентских веб-приложений и веб-сайтов
                           ,созданием интерактивных пользовательских
                           интерфейсов путем реализации дизайна и визуальной компановки веб-страниц.
                           Я использую HTML, CSS и JavaScript для создания динамических и адаптивных веб-интерфейсов.
@@ -1121,13 +1122,13 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                           различными браузерами и устройствами.
                           Трансформирую концепции дизайна в функциональные веб-сайты.
                         </p>
-                        <p class="pg-gretting" style="height: auto; cursor: context-menu;">* Улучшение качества и добавление видеоматериалов
+                        <p class="pg-gretting" style="height: auto; cursor: context-menu;" data-i18n="i18nPgGretting3">* Улучшение качества и добавление видеоматериалов
                           <br>* Полное понимание пользовательского опыта <br>* Эффективная визуальная коммуникация
                           <br>* Синергия дизайна и разработки
                           <br>* Лучшее общение
                         </p>
                         <article class="section-programms">
-                          <p class="pg-gretting" style="height: auto;">Навыки:</p>
+                          <p class="pg-gretting" style="height: auto;" data-i18n="skiilsSlider1">Навыки:</p>
                           <picture class="block-programms">
                             <figure class="filter-img-programms-slide-1">
                               <img class="img-programms-slide-1" src="images/programms/HTML-5.svg" alt="photo">
@@ -1205,14 +1206,14 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                           <!--КНОПКУ СО ССЫЛКОЙ НА ТЕЛЕГУ ОСТАВИТЬ ЕСЛИ НЕ БУДЕТ РАБОТАТЬ ЧАТ И В СЛАЙДЕРЕ ПЕРВОЙ СЕКЦИИ ТОЖЕ ЗАМЕНИТЬ ВО ВСЕХ СЛАЙДАХ ЧАТ НА ТЕЛЕГУ-->
                           <a href="https://t.me/Sergey_p_i" class="link-btn-carusel" target="_blank" style="text-decoration: none;">
                             <button type="submit" class="btn-submit carusel-submit" name="submit" id="submit" style="margin-top: 0;">
-                              <span class="oval-1-btn-submit"><p class="text-btn-submit">Спросить Меня</p></span>
+                              <span class="oval-1-btn-submit"><p class="text-btn-submit" data-i18n="txtBtnSlider1">Спросить Меня</p></span>
                               <span class="oval-2-btn-submit"></span>
                             </button>
                           </a>
                           <!--КНОПКУ СО ССЫЛКОЙ НА ТЕЛЕГУ ОСТАВИТЬ ЕСЛИ НЕ БУДЕТ РАБОТАТЬ ЧАТ-->
                           <a href="pages/skills.html" class="link-btnSkills">
                             <div class="btnSkills">
-                              <span class="oval-1"><p class="textBtnCTA">Навыки</p>
+                              <span class="oval-1"><p class="textBtnCTA" data-i18n="txtBtn2Slider1">Навыки</p>
                                 <img class="vector-more" src="images/vector-more.svg" alt="sign more">
                               </span>
                               <span class="oval-2"></span>
@@ -1245,7 +1246,7 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                     </figure>
                     <div class="wrapp-slide-text">
                       <article class="slide-text">
-                        <p class="pg-gretting" style="font-size: 18p;">* Как видео мейкер, в мои обязанности 
+                        <p class="pg-gretting" style="font-size: 18p;" data-i18n="videoMaiker">* Как видео мейкер, в мои обязанности 
                           входит создание и разработка идей и концепций для видеопроектов, 
                           редактирование и монтаж отснятого материала с использованием программного 
                           обеспечения для видеомонтажа, обработка и добавление звуковых эффектов, 
@@ -1260,13 +1261,13 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                           видеопроектов под их требования, публикация видео на различных платформах 
                           и работа над его продвижением.
                         </p>
-                        <p class="pg-gretting" style="height: auto; cursor: context-menu;">* Улучшение качества и добавление видеоматериалов
+                        <p class="pg-gretting" style="height: auto; cursor: context-menu;" data-i18n="i18nPgGretting4">* Улучшение качества и добавление видеоматериалов
                           <br>* Полное понимание пользовательского опыта <br>* Эффективная визуальная коммуникация
                           <br>* Синергия дизайна и разработки
                           <br>* Лучшее общение
                         </p>
                         <article class="section-programms">
-                          <p class="pg-gretting" style="height: auto;">Навыки:</p>
+                          <p class="pg-gretting" style="height: auto;" data-i18n="skiilsSlider1">Навыки:</p>
                           <picture class="block-programms">
                             <figure class="filter-img-programms-slide-1">
                               <img class="img-programms-slide-1" src="images/programms/DAVINCI.svg" alt="photo">
@@ -1320,14 +1321,14 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                           <!--КНОПКУ СО ССЫЛКОЙ НА ТЕЛЕГУ ОСТАВИТЬ ЕСЛИ НЕ БУДЕТ РАБОТАТЬ ЧАТ И В СЛАЙДЕРЕ ПЕРВОЙ СЕКЦИИ ТОЖЕ ЗАМЕНИТЬ ВО ВСЕХ СЛАЙДАХ ЧАТ НА ТЕЛЕГУ-->
                           <a href="https://t.me/Sergey_p_i" class="link-btn-carusel" target="_blank" style="text-decoration: none;">
                             <button type="submit" class="btn-submit carusel-submit" name="submit" id="submit" style="margin-top: 0;">
-                              <span class="oval-1-btn-submit"><p class="text-btn-submit">Спросить Меня</p></span>
+                              <span class="oval-1-btn-submit"><p class="text-btn-submit" data-i18n="txtBtnSlider1">Спросить Меня</p></span>
                               <span class="oval-2-btn-submit"></span>
                             </button>
                           </a>
                           <!--КНОПКУ СО ССЫЛКОЙ НА ТЕЛЕГУ ОСТАВИТЬ ЕСЛИ НЕ БУДЕТ РАБОТАТЬ ЧАТ-->
                           <a href="pages/skills.html" class="link-btnSkills">
                             <div class="btnSkills">
-                              <span class="oval-1"><p class="textBtnCTA">Навыки</p>
+                              <span class="oval-1"><p class="textBtnCTA" data-i18n="txtBtn2Slider1">Навыки</p>
                                 <img class="vector-more" src="images/vector-more.svg" alt="sign more">
                               </span>
                               <span class="oval-2"></span>
@@ -1365,14 +1366,14 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
               </div>
             </article>
           </div>
-          <!--ПОДКЛЮЧИТЬ В МОБ ВЕРСИИ НА 768 РХ-->
+          <!--ПОДКЛЮЧИТЬ В МОБ ВЕРСИИ НА 768 РХ ОТКЛЮЧИЛ В BASE.SCSS В БРЕЙКПОИНТЕ 768РХ-->
           <div data-wow-duration = "35s" class="section-descriptionOfSpecialties-mobile wow animate__animated animate__fadeInUpBig">
             <picture class="filter-myPhoto"><!--data-wow-duration = "25s" class="filter-myPhoto wow animate__animated animate__fadeInLeftBig">-->
               <img class="myPhoto" src="images/my-photo.png" alt="my photo">
             </picture>
             <article class="blockGretting wrapp-chat">
               <div class="blockHand">
-                  <h4 class="h4-gretting">Hello everyone</h4>
+                  <h4 class="h4-gretting" data-i18n="i18nH4Gretting1">Hello everyone</h4>
                   <div class="hand"><h6 class="touch">👋</h6></div>
               </div>  
               <div class="block-paragraphs-gretting">
@@ -1680,23 +1681,23 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
     <section class="sectionAdvantages" id="sectionAdvantages">
       <div class="container container-sectionAdvantages">
         <div class="sectionAdvantages-container-content">
-          <h3 class="sectionTitle sectionAdvantagesTitle">Почему я</h3><!--Advantages-->
+          <h3 class="sectionTitle sectionAdvantagesTitle" data-i18n="sectiontitle1WhyMe">Почему я</h3><!--Advantages-->
           <picture class="blockAdvantages wow"><!--анимация с библиотеки wow.js, если отключить мою анимацию и кейфреймс, то эту конструкцию  data-wow-duration = "3s"  нужно вставить в анимируемый элемент перед class и подключить в голове сайт анимейт.цсс через линк или файл, который я скачал в папку цсс. эти классы animate__animated animate__fadeInUpBig сейчас можно убрать, так как использую свою анимацию, а не анимэйт.цсс -->
             <div class="itemAdvantages" style=" border-radius: 0px 0 0 0px">
-              <h3 class="h3-itemAdvantages">2 Y +</h3>
-              <p class="text-itemAdvantages">опыта</p>
+              <h3 class="h3-itemAdvantages" data-i18n="year2">2 Y +</h3>
+              <p class="text-itemAdvantages" data-i18n="pgExperience">опыта</p>
             </div>
             <div class="itemAdvantages">
-              <h3 class="h3-itemAdvantages">30 T +</h3>
-              <p class="text-itemAdvantages">проектов</p>
+              <h3 class="h3-itemAdvantages" data-i18n="types30">30 T +</h3>
+              <p class="text-itemAdvantages" data-i18n="pgPjs">проектов</p>
             </div>
             <div class="itemAdvantages">
-              <h3 class="h3-itemAdvantages">100 P +</h3>
-              <p class="text-itemAdvantages">доверяют</p>
+              <h3 class="h3-itemAdvantages" data-i18n="people100">100 P +</h3>
+              <p class="text-itemAdvantages" data-i18n="pgTrust">доверяют</p>
             </div>
             <div class="itemAdvantages" style="border: none; border-radius: 0 0px 0px 0">
               <img class="img-itemAdvantages" src="images/solar_infinity-bold.svg" alt="infinity">
-              <p class="text-itemAdvantages">идиеи</p>
+              <p class="text-itemAdvantages"  data-i18n="pgIdeas">идиеи</p>
             </div>
           </picture>
         </div>
@@ -1705,34 +1706,34 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
     <section class="sectionGet" id="sectionGet">
       <div class="container container-sectionGet">
         <div class="sectionGet-container-content">
-          <h3 class="sectionTitle titleSectionGet">Что Вы получите</h3>
+          <h3 class="sectionTitle titleSectionGet" data-i18n="section3Get">Что Вы получите</h3>
           <div class="accordion">
             <div data-wow-duration = "3s" class="contentBx wow animate__animated animate__fadeInLeftBig">
                 <div class="label"><!--web / ux / ui design-->
                     <img class="icon-lable-accordion" src="images/eye-dark.svg" alt="eye">
-                    <h4 class="title-lable">веб / ux / ui</h4><!--style="width: 75%;"-->
+                    <h4 class="title-lable" data-i18n="h4WebUxUi">веб / ux / ui</h4><!--style="width: 75%;"-->
                   </div>
                 <div class="content content-design">
                 <article class="block-paragraphs-accordions">
-                  <p class="pg-accordions">* Исследование и целевой аудитории
+                  <p class="pg-accordions" data-i18n="pgDesign1">* Исследование и целевой аудитории
                   </p>
-                  <p class="pg-accordions">* Создание вайрфреймов и интерактивных прототипов
+                  <p class="pg-accordions" data-i18n="pgDesign2">* Создание вайрфреймов и интерактивных прототипов
                   </p>
-                  <p class="pg-accordions">* Разработка привлекательного и интуитивно понятного пользовательского интерфейса
+                  <p class="pg-accordions" data-i18n="pgDesign3">* Разработка привлекательного и интуитивно понятного пользовательского интерфейса
                   </p>
-                  <p class="pg-accordions">* Оптимизированный пользовательский интерфейс с упрощенными процессами навигации
+                  <p class="pg-accordions" data-i18n="pgDesign4">* Оптимизированный пользовательский интерфейс с упрощенными процессами навигации
                   </p>
-                  <p class="pg-accordions">* Адаптивный дизайн на различных устройствах
+                  <p class="pg-accordions" data-i18n="pgDesign5">* Адаптивный дизайн на различных устройствах
                   </p>
-                  <p class="pg-accordions">* Создание дизайн-системы и стандартизированных компонентов
+                  <p class="pg-accordions" data-i18n="pgDesign6">* Создание дизайн-системы и стандартизированных компонентов
                   </p>
-                  <p class="pg-accordions">* Разработка визуальных макетов и интерактивных элементов
+                  <p class="pg-accordions" data-i18n="pgDesign7">* Разработка визуальных макетов и интерактивных элементов
                   </p>
-                  <p class="pg-accordions">* Подготовка документации и рекомендаций для разработчиков
+                  <p class="pg-accordions" data-i18n="pgDesign8">* Подготовка документации и рекомендаций для разработчиков
                   </p>
-                  <p class="pg-accordions">* Постоянное улучшение продукта на основе отзывов
+                  <p class="pg-accordions" data-i18n="pgDesign9">* Постоянное улучшение продукта на основе отзывов
                   </p>
-                  <p class="pg-accordions">* Создание уникального дизайна, отражающего бренд и привлекающего целевую аудиторию
+                  <p class="pg-accordions" data-i18n="pgDesign10">* Создание уникального дизайна, отражающего бренд и привлекающего целевую аудиторию
                   </p>
                 </article>
                 <!--<picture class="filter-img-accordions filter-img-design">
@@ -1743,29 +1744,29 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
             <div data-wow-duration = "3s" class="contentBx wow animate__animated animate__fadeInUpBig">
               <div class="label"><!--front-end developer-->
                   <img class="icon-lable-accordion" src="images/comp-dark.svg" alt="comp" style="width: 30px;">
-                  <h4 class="title-lable">fr - pro</h4>            
+                  <h4 class="title-lable" data-i18n="frPro">fr - pro</h4>            
                 </div>
               <div class="content content-layout" style="box-shadow: inset 1280px 844px rgba(0, 0, 0, 0.7);">
                 <article class="block-paragraphs-accordions">
-                  <p class="pg-accordions">* Кроссбраузерность и адаптивный макет для различных устройств и браузеров
+                  <p class="pg-accordions" data-i18n="pgFrPro1">* Кроссбраузерность и адаптивный макет для различных устройств и браузеров
                   </p>
-                  <p class="pg-accordions">* Чистый семантический HTML для улучшения SEO и доступности
+                  <p class="pg-accordions" data-i18n="pgFrPro2">* Чистый семантический HTML для улучшения SEO и доступности
                   </p>
-                  <p class="pg-accordions">* Стилизация с использованием CSS и препроцессоров
+                  <p class="pg-accordions" data-i18n="pgFrPro3">* Стилизация с использованием CSS и препроцессоров
                   </p>
-                  <p class="pg-accordions">* Базовая интерактивность с помощью JavaScript
+                  <p class="pg-accordions" data-i18n="pgFrPro4">* Базовая интерактивность с помощью JavaScript
                   </p>
-                  <p class="pg-accordions">* Оптимизация производительности (минимизация, объединение файлов)
+                  <p class="pg-accordions" data-i18n="pgFrPro5">* Оптимизация производительности (минимизация, объединение файлов)
                   </p>
-                  <p class="pg-accordions">* Точное выполнение макетов дизайна
+                  <p class="pg-accordions" data-i18n="pgFrPro6">* Точное выполнение макетов дизайна
                   </p>
-                  <p class="pg-accordions">* Использование систем контроля версий (Git)
+                  <p class="pg-accordions" data-i18n="pgFrPro7">* Использование систем контроля версий (Git)
                   </p>
-                  <p class="pg-accordions">* Внедрение методов обеспечения доступности
+                  <p class="pg-accordions" data-i18n="pgFrPro8">* Внедрение методов обеспечения доступности
                   </p>
-                  <p class="pg-accordions">* Подготовка кода для интеграции с CMS
+                  <p class="pg-accordions" data-i18n="pgFrPro9">* Подготовка кода для интеграции с CMS
                   </p>
-                  <p class="pg-accordions">* Тестирование, отладка и документирование
+                  <p class="pg-accordions" data-i18n="pgFrPro10">* Тестирование, отладка и документирование
                   </p>
                 </article>
                 <!--<picture class="filter-img-accordions filter-img-layout">
@@ -1776,29 +1777,29 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
             <div data-wow-duration = "3s" class="contentBx wow animate__animated animate__fadeInRightBig">
               <div class="label"><!--video editing-->
                 <img class="icon-lable-accordion" src="images/video-youtube-2-dark.svg" alt="comp">
-                <h4 class="title-lable">Монтаж видео</h4><!--style="width: 53%;"-->     
+                <h4 class="title-lable" data-i18n="pgvideoEditing">Монтаж видео</h4><!--style="width: 53%;"-->     
               </div>
               <div class="content content-video">
                 <article class="block-paragraphs-accordions">
-                  <p class="pg-accordions">* Разработка оригинальных идей и концепций, создание сценариев и раскодировок
+                  <p class="pg-accordions" data-i18n="pgVideo1">* Разработка оригинальных идей и концепций, создание сценариев и раскодировок
                   </p>
-                  <p class="pg-accordions">* Монтаж и редактирование видео, добавление переходов и эффектов
+                  <p class="pg-accordions" data-i18n="pgVideo2">* Монтаж и редактирование видео, добавление переходов и эффектов
                   </p>
-                  <p class="pg-accordions">* Цветокоррекция для улучшения визуального качества
+                  <p class="pg-accordions" data-i18n="pgVideo3">* Цветокоррекция для улучшения визуального качества
                   </p>
-                  <p class="pg-accordions">* Звуковое оформление, включая добавление и обработку звуков
+                  <p class="pg-accordions" data-i18n="pgVideo4">* Звуковое оформление, включая добавление и обработку звуков
                   </p>
-                  <p class="pg-accordions">* Создание графики и анимации, внедрение интерактивных элементов
+                  <p class="pg-accordions" data-i18n="pgVideo5">* Создание графики и анимации, внедрение интерактивных элементов
                   </p>
-                  <p class="pg-accordions">* Подготовка видео к публикации, экспорт в нужных форматах
+                  <p class="pg-accordions" data-i18n="pgVideo6">* Подготовка видео к публикации, экспорт в нужных форматах
                   </p>
-                  <p class="pg-accordions">* Соответствие техническим требованиям и оптимизация для различных платформ
+                  <p class="pg-accordions" data-i18n="pgVideo7">* Соответствие техническим требованиям и оптимизация для различных платформ
                   </p>
-                  <p class="pg-accordions">* Консультации по стратегии продвижения и поддержка при публикации
+                  <p class="pg-accordions" data-i18n="pgVideo8">* Консультации по стратегии продвижения и поддержка при публикации
                   </p>
-                  <p class="pg-accordions">* Управление проектами и взаимодействие с клиентами
+                  <p class="pg-accordions" data-i18n="pgVideo9">* Управление проектами и взаимодействие с клиентами
                   </p>
-                  <p class="pg-accordions">* Постоянное совершенствование и анализ эффективности видео
+                  <p class="pg-accordions" data-i18n="pgVideo10">* Постоянное совершенствование и анализ эффективности видео
                   </p>
                 </article> 
                 <div class="tech-service-dialog">
@@ -1832,7 +1833,7 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
     <section class="sectionGallery" id="sectionGallery">
       <div class="container container-sectionGallery">
         <div class="sectionGallery-container-content">
-          <h3 class="sectionTitle sectionTitleGalleryCarusel">Визуальное путешествие</h3>
+          <h3 class="sectionTitle sectionTitleGalleryCarusel" data-i18n="section3Title">Визуальное путешествие</h3>
             <!-- ДЕЛАЛ, ЧТОБЫ КНОПКИ СЛАЙДЕРА СДЕЛАТЬ НАПРОТИВ ЗАГОЛОВКА, ПОКА НЕ АЛЁ--
           <picture class="block-title-section">!--ДОБАВИЛ САМ--
             <h1 class="sectionTitle">projects gallery</h1>
@@ -1851,7 +1852,7 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                     <path id="link-circle" class="link__path" d="M 20, 100 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0" stroke="none" fill="none" />
                     <path class="link__arrow" d="M 75 100 L 125 100 L 110 85 M 125 100 L 110 115"  fill="none" />
                     <text class="link__text">
-                      <textPath href="#link-circle" stroke="none">
+                      <textPath href="#link-circle" stroke="none" data-i18n="textBtnCircle">
                         Хочу такой Хочу такой
                       </textPath>
                     </text>
@@ -1872,223 +1873,223 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                     </svg>
                   </a>-->
                   <a href="https://www.behance.net/gallery/187966969/Design-of-an-informational-combi-site-Inside-Surf" class="link-slider-carusel" target="_blank"> 
-                    <article class="description-carusel">Посмотреть проект на Behance</article>
+                    <article class="description-carusel" data-i18n="articlepjsBe">Посмотреть проект на Behance</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/rivolty.png" alt="">
                   <a href="https://www.behance.net/gallery/204682745/Website-redesign-Rivolty-inc?" class="link-slider-carusel" target="_blank"> 
-                    <article class="description-carusel">Посмотреть проект на Behance</article>
+                    <article class="description-carusel" data-i18n="articlepjsBe">Посмотреть проект на Behance</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/almak-procat.png" alt="">
                   <a href="#" class="link-slider-carusel" target="_blank"> 
-                    <article class="description-carusel">Посмотреть проект на Behance</article>
+                    <article class="description-carusel" data-i18n="articlepjsBe">Посмотреть проект на Behance</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/e-com.png" alt=""><!--https://previews.dropbox.com/p/thumb/ACXm-veyU4QfVVAmFvvkwHEjhFnKHfVkWH19ar_B78Rggs9ZewK6cdQnANZzLTL3NeCq3mjHHm4KfM69awY2c4xhcjyUY1fLYX8iI-U9JMHTO_VMWBwCLkfawC69Ub85cELjFYK-lJJ6ocbxvnasV3XffIw0O5fuWeOSbRjfs4bHeUuAPfXMp7a4PwOtQ0FAxcoIycHmgZebBZ1h7sKar4R61MZ2zTvzkCnaCEwmtPXvcc6jZLByqwZeLW6cNMq7mOUi46HThYq-_x1w_t64SlIqDEvw7vsrn38aRdgW-ZlBErn1UWyb2mhLGgqgQO7K542u0tqLtol_5_Qc8QefA2hJvMHZbpXpJ4QPH7L2ExLWf34-wKCTC6RJjv71L82aaXc/p.png -->
                   <a href="https://www.behance.net/gallery/181191299/ViTech-Empier" target="_blank" class="link-slider-carusel"> 
-                    <article class="description-carusel">Посмотреть проект на Behance</article>
+                    <article class="description-carusel" data-i18n="articlepjsBe">Посмотреть проект на Behance</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/airlince-ticket.png"  alt=""><!--https://previews.dropbox.com/p/thumb/ACVcn2esWz9UybxTbAA6IiC5owglRtjXv6FugVXw8jq_Mtm3PizwvkpNORooYBgx0-IJh20J9hv2yGs_bcUc3oaOAsQ1gdUxR_Fczvo490rqAP9hk2L9Dmmf5XOlyt_r9cKJ586wGlWpyp7O7EoaNqrTqT0yiE50X4Ar4IsIwHBK3wmmWES1Uc2jgffQ0aUnUpc_HOzNkOp67tcsO26oWELKJWvdD4szbOnbXcwE3M8-c47GPgB2Aw0MrVt_8M2CEk_inMoTjQtr56LVEZwXp2O6A7O2VKCE2DI2h9W-ijYz1jbPVqv3enxiX_-rMlsyYlJbIAai3oO0yLjV-v5NBjkCkTsL88Xium5oHzZqu_3FxeN_VHIJhj6RWDOdQa2o8p92Ns_aV2EDFgShgDysNtFVpE7M14f1PJquuITxgvEskg/p.png "-->
                   <a href="https://www.behance.net/gallery/180979505/Airline-tickets-SkyQuest" target="_blank" class="link-slider-carusel">
-                    <article class="description-carusel">Посмотреть проект на Behance</article>
+                    <article class="description-carusel" data-i18n="articlepjsBe">Посмотреть проект на Behance</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/tattoo.jpg" alt="">
                   <a href="https://www.behance.net/gallery/180733251/Custom-Concepts-Studio-Tattoo-LA" target="_blank" class="link-slider-carusel">
-                    <article class="description-carusel">Посмотреть проект на Behance</article>
+                    <article class="description-carusel" data-i18n="articlepjsBe">Посмотреть проект на Behance</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/shadow-sails.png" alt="">
                   <a href="https://www.behance.net/gallery/181543311/Landing-page-design-for-company-SkySail-" target="_blank" class="link-slider-carusel">
-                    <article class="description-carusel">Посмотреть проект на Behance</article>
+                    <article class="description-carusel" data-i18n="articlepjsBe">Посмотреть проект на Behance</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/minimalism.png" alt="">
                   <a href="https://egnat.github.io/Dreams/" target="_blank" class="link-slider-carusel">
-                    <article class="description-carusel">Посмотреть проект на GitHub</article>
+                    <article class="description-carusel" data-i18n="articlepjsGitHub">Посмотреть проект на GitHub</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/happy-pets.png" alt="">
                   <a href="https://www.behance.net/gallery/182314203/Website-homepage-design-for-a-kennel-Happy-pets" target="_blank" class="link-slider-carusel">
-                    <article class="description-carusel">Посмотреть проект на Behance</article>
+                    <article class="description-carusel" data-i18n="articlepjsBe">Посмотреть проект на Behance</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/GrandArhitek.png" alt="">
                   <a href="https://www.behance.net/gallery/186803295/Landing-page-design-for-a-company-GrandArhitek" target="_blank" class="link-slider-carusel">
-                    <article class="description-carusel">Посмотреть проект на Behance</article>
+                    <article class="description-carusel" data-i18n="articlepjsBe">Посмотреть проект на Behance</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/city-pro-new.png" alt="">
                   <a href="https://egnat.github.io/city-pro/index.html" target="_blank" class="link-slider-carusel">
-                    <article class="description-carusel">Посмотреть проект на GitHub</article>
+                    <article class="description-carusel" data-i18n="articlepjsGitHub">Посмотреть проект на GitHub</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/halloween.png" alt="">
                   <a href="https://www.behance.net/gallery/182813589/Landing-page-design-for-a-company-Pumpkin-Farm" target="_blank" class="link-slider-carusel">
-                    <article class="description-carusel">Посмотреть проект на Behance</article>
+                    <article class="description-carusel" data-i18n="articlepjsBe">Посмотреть проект на Behance</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/time-shop.png" alt="">
                   <a href="https://www.behance.net/gallery/174632593/Antique-Watch-Shop-TimeShop-Landing-page-design" target="_blank" class="link-slider-carusel">
-                    <article class="description-carusel">Посмотреть проект на Behance</article>
+                    <article class="description-carusel" data-i18n="articlepjsBe">Посмотреть проект на Behance</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/photographer.jpg" alt="">
                   <a href="https://www.behance.net/gallery/164505901/Photographer" target="_blank" class="link-slider-carusel">
-                    <article class="description-carusel">Посмотреть проект на Behance</article>
+                    <article class="description-carusel" data-i18n="articlepjsBe">Посмотреть проект на Behance</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/freddy.png" alt="">
                   <a href="https://www.behance.net/gallery/172833105/Bloody-nightmare" target="_blank" class="link-slider-carusel">
-                    <article class="description-carusel">Посмотреть проект на Behance</article>
+                    <article class="description-carusel" data-i18n="articlepjsBe">Посмотреть проект на Behance</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/witch.png" alt="">
                   <a href="https://egnat.github.io/witch/" target="_blank" class="link-slider-carusel">
-                    <article class="description-carusel">Посмотреть проект на GitHub</article>
+                    <article class="description-carusel" data-i18n="articlepjsGitHub">Посмотреть проект на GitHub</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/casts.png" alt="">
                   <a href="https://egnat.github.io/Casts/" target="_blank" class="link-slider-carusel">
-                    <article class="description-carusel">Посмотреть проект на GitHub</article>
+                    <article class="description-carusel" data-i18n="articlepjsGitHub">Посмотреть проект на GitHub</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/lawyer.png" alt="">
                   <a href="https://www.behance.net/gallery/166902845/Landing-page-Lawyer" target="_blank" class="link-slider-carusel">
-                    <article class="description-carusel">Посмотреть проект на Behance</article>
+                    <article class="description-carusel" data-i18n="articlepjsBe">Посмотреть проект на Behance</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/farm-game-big.png" alt="">
                   <a href="https://www.behance.net/gallery/164530601/Farm-game" target="_blank" class="link-slider-carusel">
-                    <article class="description-carusel">Посмотреть проект на Behance</article>
+                    <article class="description-carusel" data-i18n="articlepjsBe">Посмотреть проект на Behance</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/design-interiors.png" alt="">
                   <a href="https://www.behance.net/gallery/174131733/Landing-page-design-for-Interior-design-company-page" target="_blank" class="link-slider-carusel">
-                    <article class="description-carusel">Посмотреть проект на Behance</article>
+                    <article class="description-carusel" data-i18n="articlepjsBe">Посмотреть проект на Behance</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/cine-stream.png" alt="">
                   <a href="https://www.behance.net/gallery/172631139/Streaming-servis-CineStream" target="_blank" class="link-slider-carusel">
-                    <article class="description-carusel">Посмотреть проект на Behance</article>
+                    <article class="description-carusel" data-i18n="articlepjsBe">Посмотреть проект на Behance</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/agroton.png" alt="">
                   <a href="https://www.behance.net/gallery/240720957/Website-redesign-and-Layout" target="_blank" class="link-slider-carusel">
-                    <article class="description-carusel">Посмотреть проект на Behance</article>
+                    <article class="description-carusel" data-i18n="articlepjsBe">Посмотреть проект на Behance</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/lawyer-new.png" alt="">
                   <a href="https://www.behance.net/gallery/174654479/Landing-page-design-for-immigration-lawyer" target="_blank" class="link-slider-carusel">
-                    <article class="description-carusel">Посмотреть проект на Behance</article>
+                    <article class="description-carusel" data-i18n="articlepjsBe">Посмотреть проект на Behance</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/smart-watch.png" alt="">
                   <a href="https://egnat.github.io/smart-watch/" target="_blank" class="link-slider-carusel">
-                    <article class="description-carusel">Посмотреть проект на GitHub</article>
+                    <article class="description-carusel" data-i18n="articlepjsGitHub">Посмотреть проект на GitHub</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/MORBY-DVIGENS-NATURE.png" alt="">
                   <a href="https://www.youtube.com/watch?v=HSr803ekskg&t=37s" target="_blank" class="link-slider-carusel">
-                    <article class="description-carusel">Посмотреть проект на Youtube</article>
+                    <article class="description-carusel" data-i18n="articlepjsYoutube">Посмотреть проект на Youtube</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/mountins.png" alt="">
                   <a href="https://www.youtube.com/watch?v=qHnYzzb6qsU" target="_blank" class="link-slider-carusel">
-                    <article class="description-carusel">Посмотреть проект на Youtube</article>
+                    <article class="description-carusel" data-i18n="articlepjsYoutube">Посмотреть проект на Youtube</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/surfing-2.jpg" alt="">
                   <a href="https://www.youtube.com/watch?v=EnLRTgvpbow&t=1s" target="_blank" class="link-slider-carusel">
-                    <article class="description-carusel">Посмотреть проект на Youtube</article>
+                    <article class="description-carusel" data-i18n="articlepjsYoutube">Посмотреть проект на Youtube</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/scerry-story.png" alt="">
                   <a href="https://www.youtube.com/watch?v=XOqBepa-09w" target="_blank" class="link-slider-carusel">
-                    <article class="description-carusel">Посмотреть проект на Youtube</article>
+                    <article class="description-carusel" data-i18n="articlepjsYoutube">Посмотреть проект на Youtube</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/WEBUXUI.png" alt="">
                   <a href="https://www.youtube.com/watch?v=-XDBFEZXjlw&t=4s" target="_blank" class="link-slider-carusel">
-                    <article class="description-carusel">Посмотреть проект на Youtube</article>
+                    <article class="description-carusel" data-i18n="articlepjsYoutube">Посмотреть проект на Youtube</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/surfing-3.png" alt="">
                   <a href="https://www.youtube.com/watch?v=-6fLgIXhLIs" target="_blank" class="link-slider-carusel">
-                    <article class="description-carusel">Посмотреть проект на Youtube</article>
+                    <article class="description-carusel" data-i18n="articlepjsYoutube">Посмотреть проект на Youtube</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/rouds.png" alt="">
                   <a href="https://www.youtube.com/watch?v=kACzVZKf8Kk" target="_blank" class="link-slider-carusel">
-                    <article class="description-carusel">Посмотреть проект на Youtube</article>
+                    <article class="description-carusel" data-i18n="articlepjsYoutube">Посмотреть проект на Youtube</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/bicycle.png" alt="">
                   <a href="https://www.youtube.com/watch?v=aqPJ7N4-KYE" target="_blank" class="link-slider-carusel">
-                    <article class="description-carusel">Посмотреть проект на Youtube</article>
+                    <article class="description-carusel" data-i18n="articlepjsYoutube">Посмотреть проект на Youtube</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/LA-CA.jpg" alt="">
                   <a href="https://www.youtube.com/watch?v=2mm2s8fouqM" target="_blank" class="link-slider-carusel">
-                    <article class="description-carusel">Посмотреть проект на Youtube</article>
+                    <article class="description-carusel" data-i18n="articlepjsYoutube">Посмотреть проект на Youtube</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/SURFING.png" alt="">
                   <a href="https://www.youtube.com/watch?v=j_9_MrIesFU" target="_blank" class="link-slider-carusel">
-                    <article class="description-carusel">Посмотреть проект на Youtube</article>
+                    <article class="description-carusel" data-i18n="articlepjsYoutube">Посмотреть проект на Youtube</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/iron-eagle.png" alt="">
                   <a href="https://www.youtube.com/watch?v=-hjO7PMy-bw&t=10s" target="_blank" class="link-slider-carusel">
-                    <article class="description-carusel">Посмотреть проект на Youtube</article>
+                    <article class="description-carusel" data-i18n="articlepjsYoutube">Посмотреть проект на Youtube</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/design-pjs.png" alt="">
                   <a href="https://www.youtube.com/watch?v=QsQ6xHBJLdE&t=5s" target="_blank" class="link-slider-carusel">
-                    <article class="description-carusel">Посмотреть проект на Youtube</article>
+                    <article class="description-carusel" data-i18n="articlepjsYoutube">Посмотреть проект на Youtube</article>
                   </a>
                 </div>
                 <div class="item">
                   <img class="img-slider-carusel" src="images-3/my-projects/shots-video-cover-for-my-portfolio.png" alt="">
                   <a href="https://www.youtube.com/shorts/mHcuH71jTAE" target="_blank"class="link-slider-carusel">
-                    <article class="description-carusel">Посмотреть проект на Youtube</article>
+                    <article class="description-carusel" data-i18n="articlepjsYoutube">Посмотреть проект на Youtube</article>
                   </a>
                 </div>
               </div>
@@ -2097,32 +2098,32 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                 <div class="tech-service-dialog tech-service-dialog-carusel" nclick="closeChat()" id="showChat"><!--onclick="closeChat()"-->
                   <div class="chat-log">
                     <div class="chat-message chat-message-carusel">
-                      <span class="chat-message-content">Здравствуйте! <br> <br> Как я могу Вам помочь?</span>
+                      <span class="chat-message-content" data-i18n="chatHello">Здравствуйте! <br> <br> Как я могу Вам помочь?</span>
                       <img class="cross-close-chat" src="images/cross-1.svg" onclick="closeChat()" alt="">
                     </div>
                     <form class="chat-form" action="https://formspree.io/f/xdknopvk" method="post">
-                      <input type="text" class="chat-input" name="message" placeholder="Введите ваше сообщение..." autocomplete="off">
+                      <input type="text" class="chat-input" data-i18n="chatInput" name="message" placeholder="Введите ваше сообщение..." autocomplete="off">
                       <input type="hidden" name="_replyto" value="sergey.s.v100879@gmail.com"><!--Добавьте скрытое поле для email (опционально):-->
                       <input type="hidden" name="_captcha" value="false"><!-- это инструкция для отключения встроенной капчи сервиса обработки форм.-->
                       <input type="text" name="_gotcha" style="display:none" /><!--это "honeypot" для защиты от спам-ботов.-->
-                      <button type="submit" class="chat-send-btn">Отправить</button>
+                      <button type="submit" class="chat-send-btn" data-i18n="chatBtnSend">Отправить</button>
                     </form>
                   </div>
                 </div>
                 <div class="btnCTA tech-service" onclick="openChat()"><!--onclick="openChat()"-->
-                  <span class="oval-1-chat cta tech-service-btn"><p class="text-btnCTA-chat">Заказать PJ</p></span><!--Order PJ  cta tech-service-btn-->
+                  <span class="oval-1-chat cta tech-service-btn"><p class="text-btnCTA-chat" data-i18n="chatBtnOrderPj">Заказать PJ</p></span><!--Order PJ  cta tech-service-btn-->
                   <span class="oval-2-chat cta tech-service-btn" nclick="closeChat()"></span><!--onclick="closeChat()" oval-2-chat cta tech-service-btn-->
                 </div>
                 <a href="pages/skills.html" class="link-btnSkills">
                   <div class="btnSkills"><!--onclick="openRightMenu()"-->
-                    <span class="oval-1"><p class="textBtnCTA">Навыки</p>
+                    <span class="oval-1"><p class="textBtnCTA" data-i18n="txtBtn2Slider1">Навыки</p>
                       <img class="vector-more" src="images/vector-more.svg" alt="sign more">
                     </span><!--➞-->
                     <span class="oval-2"></span>
                   </div>
                 </a>
                 <div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none; right:0; top:0;" id="rightMenu">
-                  <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large">Закрыть &times;</button>
+                  <button onclick="closeRightMenu()" data-i18n="btnCloseSidebar" class="w3-bar-item w3-button w3-large">Закрыть &times;</button>
                   <figure class="filter__img-sidebar">
                     <img class="img-sidebar-1-glow" src="https://i.pinimg.com/originals/a6/74/ed/a674edab9c1218bbefab2cc859f845bf.gif" alt="Santa">
                   </figure>
@@ -2147,7 +2148,7 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
       <figure class="cubiks"></figure>
       <div class="container container-sectionPrice">
         <div class="sectionPrice-container-content">
-          <h3 class="sectionTitle sectionTitlePrice">цена успеха</h3>
+          <h3 class="sectionTitle sectionTitlePrice" data-i18n="section4Title">цена успеха</h3>
           <noscript><!--<div class="swiper">Слайдер Свайпер Кодэпен
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -2307,12 +2308,12 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <article class="block-description-cube block-description-cube-landing"><!--style="top: 40.5%;" если записать это свойство, тогда нужно удалить нижние пиктури, у которых опасити 0-->
-                    <h3 class="title-cube">веб / ux / ui дизайн</h3>
+                    <h3 class="title-cube" data-i18n="titleCubeDesign">веб / ux / ui дизайн</h3>
                     <article class="subtitle-description-cube">
-                      <h3 class="subtitle-cube">Базовый</h3>
+                      <h3 class="subtitle-cube" data-i18n="typeBase">Базовый</h3>
                       <div class="blockdescription-common">
-                        <h4 class="h4-cube">Лендинг</h4>
-                        <h2 class="h2-cube">14000 ₽</h2>
+                        <h4 class="h4-cube" data-i18n="lending">Лендинг</h4>
+                        <h2 class="h2-cube" data-i18n="price14k">14000 ₽</h2>
                       </div>
                     </article>
                     <div class="block-paragraphs-cube">
@@ -2320,31 +2321,31 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Анализ и исследования конкурентов</p>
+                        <p class="pg-cube" data-i18n="pgAnalysis">Анализ и исследования конкурентов</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Вайрфрейминг</p>
+                        <p class="pg-cube" data-i18n="pgWirefreming">Вайрфрейминг</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Создание руководства по стилю и цвету</p>
+                        <p class="pg-cube" data-i18n="pgCreate">Создание руководства по стилю и цвету</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Дизайн-макет (до 3 ревизий)</p>
+                        <p class="pg-cube" data-i18n="pgDesignLayout">Дизайн-макет (до 3 ревизий)</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Адаптивность (ПК / планшет / мобильное устройство)</p>
+                        <p class="pg-cube" data-i18n="pgResponsive">Адаптивность (ПК / планшет / мобильное устройство)</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
@@ -2372,12 +2373,12 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                 </div>
                 <div class="swiper-slide">
                   <article class="block-description-cube block-description-cube-site-five">
-                    <h3 class="title-cube">веб / ux / ui дизайн</h3>
+                    <h3 class="title-cube" data-i18n="titleCubeDesign">веб / ux / ui дизайн</h3>
                     <article class="subtitle-description-cube">
-                      <h3 class="subtitle-cube">Плюс</h3>
+                      <h3 class="subtitle-cube" data-i18n="typePlus">Плюс</h3>
                       <div class="blockdescription-common">
-                        <h4 class="h4-cube">До 5 страниц</h4>
-                        <h2 class="h2-cube">42000 ₽</h2>
+                        <h4 class="h4-cube" data-i18n="before5Pages">До 5 страниц</h4>
+                        <h2 class="h2-cube" data-i18n="price42k">42000 ₽</h2>
                       </div>
                     </article>
                     <div class="block-paragraphs-cube">
@@ -2385,37 +2386,37 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Анализ и исследования конкурентов</p>
+                        <p class="pg-cube" data-i18n="pgAnalysis">Анализ и исследования конкурентов</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">CJM (Карта пути пользователя)</p>
+                        <p class="pg-cube" data-i18n="pgCjm">CJM (Карта пути пользователя)</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Вайрфрейминг</p>
+                        <p class="pg-cube" data-i18n="pgWirefreming">Вайрфрейминг</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Создание руководства по стилю и цвету</p>
+                        <p class="pg-cube" data-i18n="pgCreateColor">Создание руководства по стилю и цвету</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Дизайн-макет (до 3 ревизий)</p>
+                        <p class="pg-cube" data-i18n="pgDesignLayout">Дизайн-макет (до 3 ревизий)</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Адаптивность (ПК / планшет / мобильное устройство)</p>
+                        <p class="pg-cube" data-i18n="pgResponsive">Адаптивность (ПК / планшет / мобильное устройство)</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
@@ -2427,7 +2428,7 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Кликабельный прототип и анимация</p>
+                        <p class="pg-cube" data-i18n="pgAnimation">Кликабельный прототип и анимация</p>
                       </picture>
                     </div>
                   </article>
@@ -2437,12 +2438,12 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                 </div>
                 <div class="swiper-slide">
                   <article class="block-description-cube block-description-cube-site-ten">
-                    <h3 class="title-cube">веб/ux/ui дизайн</h3>
+                    <h3 class="title-cube" data-i18n="titleCubeDesign">веб/ux/ui дизайн</h3>
                     <article class="subtitle-description-cube">
-                      <h3 class="subtitle-cube">профессиональный</h3>
+                      <h3 class="subtitle-cube" data-i18n="typeProfessional">профессиональный</h3>
                       <div class="blockdescription-common">
-                        <h4 class="h4-cube">До 10 страниц</h4>
-                        <h2 class="h2-cube">70000 ₽</h2>
+                        <h4 class="h4-cube" data-i18n="before10Pages">До 10 страниц</h4>
+                        <h2 class="h2-cube" data-i18n="price70k">70000 ₽</h2>
                       </div>
                     </article>
                     <div class="block-paragraphs-cube">
@@ -2450,37 +2451,37 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Анализ и исследования конкурентов</p>
+                        <p class="pg-cube" data-i18n="pgAnalysis">Анализ и исследования конкурентов</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">CJM (Карта пути пользователя)</p>
+                        <p class="pg-cube" data-i18n="pgCjm">CJM (Карта пути пользователя)</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Вайрфрейминг</p>
+                        <p class="pg-cube" data-i18n="pgWirefreming">Вайрфрейминг</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Создание руководства по стилю и цвету</p>
+                        <p class="pg-cube" data-i18n="pgCreateColor">Создание руководства по стилю и цвету</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Дизайн-макет (до 5 ревизий)</p>
+                        <p class="pg-cube" data-i18n="pgDesignLayout5">Дизайн-макет (до 5 ревизий)</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Адаптивность (ПК / планшет /мобильное устройство)</p>
+                        <p class="pg-cube" data-i18n="pgResponsive">Адаптивность (ПК / планшет /мобильное устройство)</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
@@ -2492,7 +2493,7 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Кликабельный прототип и анимация</p>
+                        <p class="pg-cube" data-i18n="pgAnimation">Кликабельный прототип и анимация</p>
                       </picture>
                     </div>
                   </article>
@@ -2502,12 +2503,13 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                 </div>
                 <div class="swiper-slide">
                   <article class="block-description-cube block-description-cube-app">
-                    <h3 class="title-cube">веб/ux/ui дизайн</h3>
+                    <h3 class="title-cube" data-i18n="titleCubeDesign">веб/ux/ui дизайн</h3>
                     <article class="subtitle-description-cube">
-                      <h3 class="subtitle-cube">мобильное приложение</h3>
-                      <div class="blockdescription-common">
+                      <h3 class="subtitle-cube" data-i18n="typeMobileApp">мобильное приложение</h3>
+                      <div class="blockdescription-commonMobileApp">
                         <!--<h4 class="h4-cube">от</h4>-->
-                        <h2 class="h2-cube"><span class="from">от</span> 70000 ₽</h2>
+                        <span class="from" data-i18n="spanFrom">от</span>
+                        <h2 class="h2-cube" data-i18n="priceFrom70k"> 70000 ₽</h2><!--<span class="from" data-i18n="spanFrom">от</span>-->
                       </div>
                     </article>
                     <div class="block-paragraphs-cube">
@@ -2515,31 +2517,31 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Анализ и исследования конкурентов</p>
+                        <p class="pg-cube" data-i18n="pgAnalysis">Анализ и исследования конкурентов</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">CJM (Карта пути пользователя)</p>
+                        <p class="pg-cube" data-i18n="pgCjm">CJM (Карта пути пользователя)</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Вайрфрейминг</p>
+                        <p class="pg-cube" data-i18n="pgWirefreming">Вайрфрейминг</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Создание руководства по стилю и цвету</p>
+                        <p class="pg-cube" data-i18n="pgCreateColor">Создание руководства по стилю и цвету</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Дизайн-макет (до 5 ревизий)</p>
+                        <p class="pg-cube" data-i18n="pgDesignLayout5">Дизайн-макет (до 5 ревизий)</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
@@ -2551,7 +2553,7 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Кликабельный прототип и анимация</p>
+                        <p class="pg-cube" data-i18n="pgAnimation">Кликабельный прототип и анимация</p>
                       </picture>
                       <picture class="block-pg-cube" style="opacity: 0;">
                         <figure class="filter-img-pg-cube">
@@ -2571,13 +2573,13 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
             <div class="swiper mySwiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <article class="block-description-cube block-description-cube-fd" tyle="top: 45%;"><!--style="top: 40.5%;" если записать это свойство, тогда нужно удалить нижние пиктури, у которых опасити 0-->
-                    <h3 class="title-cube">вёрстка сайта</h3>
+                  <article class="block-description-cube block-description-cube-fd" tyle="top: 50%;"><!--style="top: 40.5%;" если записать это свойство, тогда нужно удалить нижние пиктури, у которых опасити 0-->
+                    <h3 class="title-cube" data-i18n="titleCubeCode">вёрстка сайта</h3>
                     <article class="subtitle-description-cube">
-                      <h3 class="subtitle-cube">по макету</h3><!--Layout based on PSD layout-->
+                      <h3 class="subtitle-cube" data-i18n="typeLayuotLayout">по макету</h3><!--Layout based on PSD layout-->
                       <div class="blockdescription-common">
-                        <h4 class="h4-cube">Простой лендинг</h4>
-                        <h2 class="h2-cube">7000 ₽</h2>
+                        <h4 class="h4-cube" data-i18n="typeSimpleLanding">Простой лендинг</h4>
+                        <h2 class="h2-cube" data-i18n="priceFrom7k">7000 ₽</h2>
                       </div>
                     </article>
                     <div class="block-paragraphs-cube">
@@ -2585,43 +2587,43 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Простые блоки</p>
+                        <p class="pg-cube" data-i18n="pgSimpleBlocks">Простые блоки</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Сложные блоки</p>
+                        <p class="pg-cube" data-i18n="pgComplexOnesBlocks">Сложные блоки</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Блоки с дополнением JS</p>
+                        <p class="pg-cube" data-i18n="pgBlocksWithAnAddendumJS">Блоки с дополнением JS</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Добавление формы</p>
+                        <p class="pg-cube" data-i18n="pgWithAnAddendumForms">Добавление формы</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Добавление слайдера фотографий</p>
+                        <p class="pg-cube" data-i18n="pgWithAnAddendumSlider">Добавление слайдера фотографий</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Отзывчивость</p>
+                        <p class="pg-cube" data-i18n="pgwResponsiveness">Отзывчивость</p>
                       </picture>
                       <picture class="block-pg-cube"><!-- style="opacity: 0;"-->
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Кроссбраузерная совместимость</p>
+                        <p class="pg-cube" data-i18n="pgwBrowserCompatibility">Кроссбраузерная совместимость</p>
                       </picture>
                       <picture class="block-pg-cube" style="opacity: 0;"><!-- style="opacity: 0;"-->
                         <figure class="filter-img-pg-cube">
@@ -2637,12 +2639,12 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                 </div>
                 <div class="swiper-slide">
                   <article class="block-description-cube block-description-cube-fd" tyle="top: 45%;"><!--style="top: 40.5%;" если записать это свойство, тогда нужно удалить нижние пиктури, у которых опасити 0-->
-                    <h3 class="title-cube">вёрстка сайта</h3>
+                    <h3 class="title-cube" data-i18n="titleCubeCode">вёрстка сайта</h3>
                     <article class="subtitle-description-cube">
-                      <h3 class="subtitle-cube">по макету</h3><!--Layout based on PSD layout-->
+                      <h3 class="subtitle-cube" data-i18n="typeLayuotLayout">по макету</h3><!--Layout based on PSD layout-->
                       <div class="blockdescription-common">
-                        <h4 class="h4-cube">Сложный лендинг</h4>
-                        <h2 class="h2-cube">10500 ₽</h2>
+                        <h4 class="h4-cube" data-i18n="typeDifficultLanding">Сложный лендинг</h4>
+                        <h2 class="h2-cube" data-i18n="priceFrom105Kk">10500 ₽</h2>
                       </div>
                     </article>
                     <div class="block-paragraphs-cube">
@@ -2650,43 +2652,43 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Простые блоки</p>
+                        <p class="pg-cube" data-i18n="pgSimpleBlocks">Простые блоки</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Сложные блоки</p>
+                        <p class="pg-cube" data-i18n="pgComplexOnesBlocks">Сложные блоки</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Блоки с дополнением JS</p>
+                        <p class="pg-cube" data-i18n="pgBlocksWithAnAddendumJS">Блоки с дополнением JS</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Добавление формы</p>
+                        <p class="pg-cube" data-i18n="pgWithAnAddendumForms">Добавление формы</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Добавление слайдера фотографий</p>
+                        <p class="pg-cube" data-i18n="pgWithAnAddendumSlider">Добавление слайдера фотографий</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Отзывчивость</p>
+                        <p class="pg-cube" data-i18n="pgwResponsiveness">Отзывчивость</p>
                       </picture>
                       <picture class="block-pg-cube"><!-- style="opacity: 0;"-->
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Кроссбраузерная совместимость</p>
+                        <p class="pg-cube" data-i18n="pgwBrowserCompatibility">Кроссбраузерная совместимость</p>
                       </picture>
                       <picture class="block-pg-cube" style="opacity: 0;"><!-- style="opacity: 0;"-->
                         <figure class="filter-img-pg-cube">
@@ -2702,12 +2704,15 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                 </div>
                 <div class="swiper-slide">
                   <article class="block-description-cube block-description-cube-fd" tyle="top: 45%;"><!--style="top: 40.5%;" если записать это свойство, тогда нужно удалить нижние пиктури, у которых опасити 0-->
-                    <h3 class="title-cube">Вёрстка сайта</h3>
+                    <h3 class="title-cube" data-i18n="titleCubeCode">Вёрстка сайта</h3>
                     <article class="subtitle-description-cube">
-                      <h3 class="subtitle-cube">по макету</h3><!--Layout based on PSD layout-->
+                      <h3 class="subtitle-cube" data-i18n="typeLayuotLayout">по макету</h3><!--Layout based on PSD layout-->
                       <div class="blockdescription-common">
-                        <h4 class="h4-cube">Многостраничный сайт</h4>
-                        <h2 class="h2-cube"><span class="from">от</span> 10500 ₽</h2>
+                        <h4 class="h4-cube" data-i18n="typeMultiPageSite">Многостраничный сайт</h4>
+                        <article class="fromPrice">
+                          <span class="from" data-i18n="spanFrom">от</span>
+                          <h2 class="h2-cube" data-i18n="priceFrom105Kk">10500 ₽</h2><!--<span class="from">от</span>-->
+                        </article>
                       </div>
                     </article>
                     <div class="block-paragraphs-cube">
@@ -2715,43 +2720,43 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Простые блоки</p>
+                        <p class="pg-cube" data-i18n="pgSimpleBlocks">Простые блоки</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Сложные блоки</p>
+                        <p class="pg-cube" data-i18n="pgComplexOnesBlocks">Сложные блоки</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Блоки с дополнением JS</p>
+                        <p class="pg-cube" data-i18n="pgBlocksWithAnAddendumJS">Блоки с дополнением JS</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Добавление формы</p>
+                        <p class="pg-cube" data-i18n="pgWithAnAddendumForms">Добавление формы</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Добавление слайдера фотографий</p>
+                        <p class="pg-cube" data-i18n="pgWithAnAddendumSlider">Добавление слайдера фотографий</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Отзывчивость</p>
+                        <p class="pg-cube" data-i18n="pgwResponsiveness">Отзывчивость</p>
                       </picture>
                       <picture class="block-pg-cube"><!-- style="opacity: 0;"-->
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Кроссбраузерная совместимость</p>
+                        <p class="pg-cube" data-i18n="pgwBrowserCompatibility">Кроссбраузерная совместимость</p>
                       </picture>
                       <picture class="block-pg-cube" style="opacity: 0;"><!-- style="opacity: 0;"-->
                         <figure class="filter-img-pg-cube">
@@ -2767,12 +2772,15 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                 </div>
                 <div class="swiper-slide">
                   <article class="block-description-cube block-description-cube-fd" tyle="top: 45%;"><!--style="top: 40.5%;" если записать это свойство, тогда нужно удалить нижние пиктури, у которых опасити 0-->
-                    <h3 class="title-cube">Вёрстка сайта</h3>
+                    <h3 class="title-cube" data-i18n="titleCubeCode">Вёрстка сайта</h3>
                     <article class="subtitle-description-cube">
-                      <h3 class="subtitle-cube">по макету</h3><!--Layout based on PSD layout-->
+                      <h3 class="subtitle-cube" data-i18n="typeLayuotLayout">по макету</h3><!--Layout based on PSD layout-->
                       <div class="blockdescription-common">
-                        <h4 class="h4-cube">Интернет магазин</h4>
-                        <h2 class="h2-cube"><span class="from">от</span> 21000 ₽</h2>
+                        <h4 class="h4-cube" data-i18n="typeECom">Интернет магазин</h4>
+                        <article class="fromPrice">
+                          <span class="from" data-i18n="spanFrom">от</span>
+                          <h2 class="h2-cube" data-i18n="priceFrom21Kk">21000 ₽</h2><!--<span class="from">от</span>-->
+                        </article>
                       </div>
                     </article>
                     <div class="block-paragraphs-cube">
@@ -2780,43 +2788,43 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Простые блоки</p>
+                        <p class="pg-cube" data-i18n="pgSimpleBlocks">Простые блоки</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Сложные блоки</p>
+                        <p class="pg-cube" data-i18n="pgComplexOnesBlocks">Сложные блоки</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Блоки с дополнением JS</p>
+                        <p class="pg-cube" data-i18n="pgBlocksWithAnAddendumJS">Блоки с дополнением JS</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Добавление формы</p>
+                        <p class="pg-cube" data-i18n="pgWithAnAddendumForms">Добавление формы</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Добавление слайдера фотографий</p>
+                        <p class="pg-cube" data-i18n="pgWithAnAddendumSlider">Добавление слайдера фотографий</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Отзывчивость</p>
+                        <p class="pg-cube" data-i18n="pgwResponsiveness">Отзывчивость</p>
                       </picture>
                       <picture class="block-pg-cube"><!-- style="opacity: 0;"-->
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Кроссбраузерная совместимость</p>
+                        <p class="pg-cube" data-i18n="pgwBrowserCompatibility">Кроссбраузерная совместимость</p>
                       </picture>
                       <picture class="block-pg-cube" style="opacity: 0;"><!-- style="opacity: 0;"-->
                         <figure class="filter-img-pg-cube">
@@ -2837,12 +2845,12 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <article class="block-description-cube block-description-cube-youtube" tyle="top: 45%;"><!--style="top: 40.5%;" если записать это свойство, тогда нужно удалить нижние пиктури, у которых опасити 0-->
-                    <h3 class="title-cube">монтаж видео</h3>
+                    <h3 class="title-cube" data-i18n="titleVideo">монтаж видео</h3>
                     <article class="subtitle-description-cube">
-                      <h3 class="subtitle-cube">для yotube</h3>
+                      <h3 class="subtitle-cube" data-i18n="youtube">для yotube</h3>
                       <div class="blockdescription-common">
-                        <h4 class="h4-cube">Видеоклип</h4>
-                        <h2 class="h2-cube">2100 ₽ / час</h2>
+                        <h4 class="h4-cube" data-i18n="typeMp4">Видеоклип</h4>
+                        <h2 class="h2-cube" data-i18n="priceYoutube2K">2100 ₽ / час</h2>
                       </div>
                     </article>
                     <div class="block-paragraphs-cube">
@@ -2850,37 +2858,37 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Выбор лучшего видео</p>
+                        <p class="pg-cube" data-i18n="pgwChoiceMp4">Выбор лучшего видео</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Подборка идеальной музыки</p>
+                        <p class="pg-cube" data-i18n="pgwChoiceMp3">Подборка идеальной музыки</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Работа с современными эффектами и переходами</p>
+                        <p class="pg-cube" data-i18n="pgwWorkWithEffects">Работа с современными эффектами и переходами</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Написание оригинального сценария</p>
+                        <p class="pg-cube" data-i18n="pgWrittingTheScript">Написание оригинального сценария</p>
                       </picture>
                       <picture class="block-pg-cube"><!-- style="opacity: 0;"-->
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Коррекция цвета</p>
+                        <p class="pg-cube" data-i18n="pgCorrectiontColor">Коррекция цвета</p>
                       </picture>
                       <picture class="block-pg-cube"><!-- style="opacity: 0;"-->
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Красивое визуальное представление</p>
+                        <p class="pg-cube" data-i18n="pgButiful">Красивое визуальное представление</p>
                       </picture>
                       <picture class="block-pg-cube" style="opacity: 0;">
                         <figure class="filter-img-pg-cube">
@@ -2912,12 +2920,12 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                 </div>
                 <div class="swiper-slide">
                   <article class="block-description-cube block-description-cube-shorts" tyle="top: 45%;">
-                    <h3 class="title-cube">монтаж видео</h3>
+                    <h3 class="title-cube" data-i18n="titleVideo">монтаж видео</h3>
                     <article class="subtitle-description-cube">
                       <h3 class="subtitle-cube">shorts</h3>
                       <div class="blockdescription-common">
-                        <h4 class="h4-cube">Видеоклип</h4>
-                        <h2 class="h2-cube">2100 ₽ за одно видео</h2>
+                        <h4 class="h4-cube" data-i18n="typeMp4">Видеоклип</h4>
+                        <h2 class="h2-cube" data-i18n="priceYoutube2K1Video">2100 ₽ за одно видео</h2>
                       </div>
                     </article>
                     <div class="block-paragraphs-cube">
@@ -2925,37 +2933,37 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Выбор лучшего видео</p>
+                        <p class="pg-cube" data-i18n="pgwChoiceMp4">Выбор лучшего видео</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Подборка идеальной музыки</p>
+                        <p class="pg-cube" data-i18n="pgwChoiceMp3">Подборка идеальной музыки</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Работа с современными эффектами и переходами</p>
+                        <p class="pg-cube" data-i18n="pgwWorkWithEffects">Работа с современными эффектами и переходами</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Написание оригинального сценария</p>
+                        <p class="pg-cube" data-i18n="pgWrittingTheScript">Написание оригинального сценария</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Коррекция цвета</p>
+                        <p class="pg-cube" data-i18n="pgCorrectiontColor">Коррекция цвета</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Красивое визуальное представление</p>
+                        <p class="pg-cube" data-i18n="pgButiful">Красивое визуальное представление</p>
                       </picture>
                       <picture class="block-pg-cube" style="opacity: 0;">
                         <figure class="filter-img-pg-cube">
@@ -2987,12 +2995,12 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                 </div>
                 <div class="swiper-slide">
                   <article class="block-description-cube block-description-cube-insta" tyle="top: 45%;">
-                    <h3 class="title-cube">Монтаж видео</h3>
+                    <h3 class="title-cube" data-i18n="titleVideo">Монтаж видео</h3>
                     <article class="subtitle-description-cube">
-                      <h3 class="subtitle-cube">видео instagram</h3>
+                      <h3 class="subtitle-cube" data-i18n="insta">видео instagram</h3>
                       <div class="blockdescription-common">
-                        <h4 class="h4-cube">Видеоклип</h4>
-                        <h2 class="h2-cube">700 ₽ за одно видео</h2>
+                        <h4 class="h4-cube" data-i18n="typeMp4">Видеоклип</h4>
+                        <h2 class="h2-cube" data-i18n="priceInsta">700 ₽ за одно видео</h2>
                       </div>
                     </article>
                     <div class="block-paragraphs-cube">
@@ -3000,37 +3008,37 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Выбор лучшего видео</p>
+                        <p class="pg-cube" data-i18n="pgwChoiceMp4">Выбор лучшего видео</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Подборка идеальной музыки</p>
+                        <p class="pg-cube" data-i18n="pgwChoiceMp3">Подборка идеальной музыки</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Работа с современными эффектами и переходами</p>
+                        <p class="pg-cube" data-i18n="pgwWorkWithEffects">Работа с современными эффектами и переходами</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Написание оригинального сценария</p>
+                        <p class="pg-cube" data-i18n="pgWrittingTheScript">Написание оригинального сценария</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Коррекция цвета</p>
+                        <p class="pg-cube" data-i18n="pgCorrectiontColor">Коррекция цвета</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Красивое визуальное представление</p>
+                        <p class="pg-cube" data-i18n="pgButiful">Красивое визуальное представление</p>
                       </picture>
                       <picture class="block-pg-cube" style="opacity: 0;">
                         <figure class="filter-img-pg-cube">
@@ -3062,12 +3070,12 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                 </div>
                 <div class="swiper-slide">
                   <article class="block-description-cube block-description-cube-reels" tyle="top: 45%;">
-                    <h3 class="title-cube">монтаж видео</h3>
+                    <h3 class="title-cube" data-i18n="titleVideo">монтаж видео</h3>
                     <article class="subtitle-description-cube">
                       <h3 class="subtitle-cube">reels</h3>
                       <div class="blockdescription-common">
-                        <h4 class="h4-cube">Видеоклип</h4>
-                        <h2 class="h2-cube">700 ₽ за одно видео</h2>
+                        <h4 class="h4-cube" data-i18n="typeMp4">Видеоклип</h4>
+                        <h2 class="h2-cube" data-i18n="priceInsta">700 ₽ за одно видео</h2>
                       </div>
                     </article>
                     <div class="block-paragraphs-cube">
@@ -3075,37 +3083,37 @@ UIKIT https://getuikit.com/docs/slider SLIDERS АКОРДИОН
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Выбор лучшего видео</p>
+                        <p class="pg-cube" data-i18n="pgwChoiceMp4">Выбор лучшего видео</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Подборка идеальной музыки</p>
+                        <p class="pg-cube" data-i18n="pgwChoiceMp3">Подборка идеальной музыки</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Работа с современными эффектами и переходами</p>
+                        <p class="pg-cube" data-i18n="pgwWorkWithEffects">Работа с современными эффектами и переходами</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Написание оригинального сценария</p>
+                        <p class="pg-cube" data-i18n="pgWrittingTheScript">Написание оригинального сценария</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Коррекция цвета</p>
+                        <p class="pg-cube" data-i18n="pgCorrectiontColor">Коррекция цвета</p>
                       </picture>
                       <picture class="block-pg-cube">
                         <figure class="filter-img-pg-cube">
                           <img class="img-cube" src="images/bird2.svg" alt="bird">
                         </figure>
-                        <p class="pg-cube">Красивое визуальное представление</p>
+                        <p class="pg-cube" data-i18n="pgButiful">Красивое визуальное представление</p>
                       </picture>
                       <picture class="block-pg-cube" style="opacity: 0;">
                         <figure class="filter-img-pg-cube">
